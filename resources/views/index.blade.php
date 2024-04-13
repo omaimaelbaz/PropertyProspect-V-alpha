@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>EstateAgency Bootstrap Template - Index</title>
+  <title>RealEstate</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -15,6 +15,10 @@
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+  <!-- Link Ionicons CSS -->
+  <link href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet">
+
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
@@ -259,7 +263,7 @@
 
   <main id="main">
 
-    <!-- ======= Services how it work ======= -->
+    <!-- =======  how it work ======= -->
     <section class="section service" id="service">
         <div class="container">
             <h2 class="section-title">How It Works</h2>
@@ -296,6 +300,7 @@
         </div>
     </section>
     <!-- ======= end how it work ======= -->
+   
 
 
 
