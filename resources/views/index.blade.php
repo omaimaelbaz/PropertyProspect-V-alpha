@@ -259,6 +259,48 @@
 
   <main id="main">
 
+    <!-- ======= Services how it work ======= -->
+    <section class="section service" id="service">
+        <div class="container">
+            <h2 class="section-title">How It Works</h2>
+            <p class="section-text">A great platform to buy, sell and rent your properties without any agent or commissions</p>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="service-card">
+                        <div class="card-icon">
+                            <i class="fas fa-home"></i>
+                        </div>
+                        <h3 class="h3 card-title">Evaluate Property</h3>
+                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga suscipit neque nemo voluptatibus! Quas quis delectus sunt incidunt numquam.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="service-card">
+                        <div class="card-icon">
+                            <i class="fas fa-briefcase"></i>
+                        </div>
+                        <h3 class="h3 card-title">Meeting With Agent</h3>
+                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga suscipit neque nemo voluptatibus! Quas quis delectus sunt incidunt numquam.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="service-card">
+                        <div class="card-icon">
+                            <i class="fas fa-key"></i>
+                        </div>
+                        <h3 class="h3 card-title">Close The Deal</h3>
+                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga suscipit neque nemo voluptatibus! Quas quis delectus sunt incidunt numquam.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ======= end how it work ======= -->
+
+
+
+
+
     <!-- ======= Services Section ======= -->
     <section class="section-services section-t8">
       <div class="container">
@@ -348,7 +390,7 @@
       </div>
     </section><!-- End Services Section -->
 
-  
+
 
     <!-- ======= Latest Properties Section ======= -->
     <section class="section-property section-t8">
