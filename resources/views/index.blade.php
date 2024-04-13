@@ -155,7 +155,7 @@
             <a class="nav-link " href="blog-grid.html">Blog</a>
           </li>
 
-          <li class="nav-item dropdown">
+          {{--  <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Pages</a>
             <div class="dropdown-menu">
               <a class="dropdown-item " href="property-single.html">Property Single</a>
@@ -163,7 +163,7 @@
               <a class="dropdown-item " href="agents-grid.html">Agents Grid</a>
               <a class="dropdown-item " href="agent-single.html">Agent Single</a>
             </div>
-          </li>
+          </li>  --}}
           <li class="nav-item">
             <a class="nav-link " href="contact.html">Contact</a>
           </li>
@@ -426,8 +426,8 @@
 
     <section class="grids-4" id="properties">
 
-        <div class="main-title mt2">
-            <h1>Featured Properties</h1>
+        <div class="main-title ">
+            <h1  class="mt-4">Featured Properties</h1>
             <div class="list-inline-listing">
                 <ul class="filters filteriz-navigation clearfix">
                     <li class="active btn filtr-button filtr" data-filter="all">All</li>
@@ -437,51 +437,10 @@
                 </ul>
             </div>
         </div>
-        <style>
-            .main-title h1 {
-              font-size: 30px;
-                font-weight: 700;
-                margin-bottom: 25px;
-                text-align: center;
-                margin-top: 50px;
 
-            }
-            .list-inline-listing{
-              display: flex;
-              justify-content: center;
-
-
-            }
-            .list-inline-listing ul li{
-              font-size: large;
-              border: #0c0c0c;
-              font-family: Arial, Helvetica, sans-serif;
-              transition: background-color 0.3s;
-
-            }
-            .list-inline-listing ul li:hover {
-              background-color: #6dc381;
-              color: #fff;
-          }
-            .list-inline-listing ul{
-
-              max-width: 430px;
-              display: inline-block;
-
-              padding: 7px 15px;
-              border-radius: 50px;
-
-              background: #fff;
-               box-shadow: 0 0 35px rgba(0, 0, 0, 0.1);
-
-
-            }
-
-          </style>
-
-                <div class="row mt-5 pt-3">
+                {{--  <div class="row mt-5 pt-3">
                     <div class="grids4-info  col-lg-4 col-md-6">
-                            <a href="blog-single.html"><img src="assets/images/g7.jpg" class="img-fluid" alt=""></a>
+                            <a href="blog-single.html"><img src="assets/img/property-1.jpg" class="img-fluid" alt=""></a>
                             <ul class="location-top">
                                 <li class="rent">For Rent</li>
                                 <li class="open-1">Open House</li>
@@ -577,7 +536,59 @@
                             </div>
                         </div>
                     </div>
-               </div>
+               </div>  --}}
+               <div class="row mt-5 pt-3">
+                <div class="grids4-info col-lg-4 col-md-6">
+                    <a href="blog-single.html"><img src="assets/img/post-1.jpg" class="img-fluid" alt=""></a>
+                    <ul class="location-top">
+                        <li class="rent">For Rent</li>
+                        <li class="open-1">Open House</li>
+                    </ul>
+                    <div class="info-bg">
+                        <h5><a href="blog-single.html">Luxury Apartment In chelsea</a></h5>
+                        <p>$ 450,000 $777 / sqft</p>
+                        <ul>
+                            <li><span class="fas fa-bed"></span> 4 Beds</li>
+                            <li><span class="fas fa-bath"></span> 3 Baths</li>
+                            <li><span class="fas fa-share-square"></span> 1200 sq ft</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="grids4-info col-lg-4 col-md-6 mt-md-0 mt-5">
+                    <a href="blog-single.html"><img src="assets/images/g8.jpg" class="img-fluid" alt=""></a>
+                    <ul class="location-top">
+                        <li class="sale">For Sale</li>
+                        <li class="open-1">Open House</li>
+                    </ul>
+                    <div class="info-bg">
+                        <h5><a href="blog-single.html">Nature-Friendly Family Houses</a></h5>
+                        <p>$ 1,350 / per month</p>
+                        <ul>
+                            <li><span class="fas fa-bed"></span> 3 Beds</li>
+                            <li><span class="fas fa-bath"></span> 2 Baths</li>
+                            <li><span class="fas fa-share-square"></span> 1200 sq ft</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="grids4-info col-lg-4 col-md-6 mt-lg-0 mt-5">
+                    <a href="blog-single.html"><img src="assets/images/g7.jpg" class="img-fluid" alt=""></a>
+                    <ul class="location-top">
+                        <li class="rent">For Rent</li>
+                        <li class="open-1">Open House</li>
+                    </ul>
+                    <div class="info-bg">
+                        <h5><a href="blog-single.html">House Rent in Hydepark</a></h5>
+                        <p>$ 2,500 /per month</p>
+                        <ul>
+                            <li><span class="fas fa-bed"></span> 4 Beds</li>
+                            <li><span class="fas fa-bath"></span> 3 Baths</li>
+                            <li><span class="fas fa-share-square"></span> 1200 sq ft</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Ajoutez d'autres éléments ici selon vos besoins -->
+            </div>
+
         </div>
     </section>
 

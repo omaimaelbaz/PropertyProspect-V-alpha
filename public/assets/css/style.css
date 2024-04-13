@@ -354,6 +354,55 @@ a:hover {
         /* ========== end What We Do ========== */
 
 
+        /* Proprety section */
+        .main-title
+        {
+            margin: 20px;
+        }
+        .main-title h1 {
+
+            text-align: center;
+            margin: 15px;
+
+        }
+        .list-inline-listing{
+          display: flex;
+          justify-content: center;
+
+
+        }
+        .list-inline-listing ul li{
+          font-size: large;
+          border: #0c0c0c;
+          font-family: Arial, Helvetica, sans-serif;
+          transition: background-color 0.3s;
+
+        }
+        .list-inline-listing ul li:hover {
+          background-color: #6dc381;
+          color: #fff;
+      }
+        .list-inline-listing ul{
+
+          max-width: 430px;
+          display: inline-block;
+
+          padding: 7px 15px;
+          border-radius: 50px;
+
+          background: #fff;
+           box-shadow: 0 0 35px rgba(0, 0, 0, 0.1);
+
+
+        }
+
+
+
+
+
+        /* end */
+
+
 /*------/ Bg Image /------*/
 .bg-image {
   background-repeat: no-repeat;
