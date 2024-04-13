@@ -300,7 +300,55 @@
         </div>
     </section>
     <!-- ======= end how it work ======= -->
-   
+
+    <!-- =======  What we do  section  ======= -->
+    <div class="full-row bg-gray">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h2 class="text-secondary double-down-line text-center mb-5">What We Do</h2>
+                </div>
+            </div>
+            <div class="text-box-one">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="p-4 text-center hover-bg-white hover-shadow rounded mb-4 transation-3s service-card">
+                            <i class="fas fa-home text-success fa-icon"></i>
+                            <h5 class="text-secondary hover-text-success py-3 m-0"><a href="#">Selling Service</a></h5>
+                            <p>Efficient, Transparent, Reliable, Streamlined</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="p-4 text-center hover-bg-white hover-shadow rounded mb-4 transation-3s service-card">
+                            <i class="fas fa-building text-success fa-icon"></i>
+                            <h5 class="text-secondary hover-text-success py-3 m-0"><a href="#">Rental Service</a></h5>
+                            <p>Convenient, Flexible, Hassle-free, Affordable</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="p-4 text-center hover-bg-white hover-shadow rounded mb-4 transation-3s service-card">
+                            <i class="fas fa-list text-success fa-icon"></i>
+                            <h5 class="text-secondary hover-text-success py-3 m-0"><a href="#">Property Listing</a></h5>
+                            <p>Extensive, Diverse, Verified, User-friendly</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="p-4 text-center hover-bg-white hover-shadow rounded mb-4 transation-3s service-card">
+                            <i class="fas fa-gavel text-success fa-icon"></i>
+                            <h5 class="text-secondary hover-text-success py-3 m-0"><a href="#">Legal Investment</a></h5>
+                            <p>Secure, Compliant, Transparent, Trustworthy</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ======= end what we do section ======= -->
+
+
+
+
+
 
 
 
