@@ -2386,15 +2386,6 @@ footer .credits {
 
 
 /* test */
-
-
-@charset "UTF-8";
-/*!
- *  Font Awesome 4.7.0 by @davegandy - http://fontawesome.io - @fontawesome
- *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
- */
-/* FONT PATH
- * -------------------------- */
 @font-face {
   font-family: 'FontAwesome';
   src: url("../fonts/fontawesome-webfont.eot?v=4.7.0");
@@ -13070,8 +13061,15 @@ h4.sub-title {
     margin-bottom: 30px; } }
 
 .grids-4 #grids4-block {
-  background: #f4f6fd; }
+  background: #f4f6fd;
+}
+.grids-4{
+    background-color: #f4f6fd;
 
+
+
+
+}
 .grids-4 .parent-flex {
   flex-wrap: wrap;
   justify-content: space-between; }

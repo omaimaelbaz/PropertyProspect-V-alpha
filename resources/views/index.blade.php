@@ -422,105 +422,164 @@
 
     <!-- ======= end What We Offer section ======= -->
 
+        <!-- ======= end What We Offer section ======= -->
 
+    <section class="grids-4" id="properties">
 
-
-
-
-
-
-
-
-
-    <!-- ======= Services Section ======= -->
-    <section class="section-services section-t8">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <div class="title-wrap d-flex justify-content-between">
-              <div class="title-box">
-                <h2 class="title-a">Our Services</h2>
-              </div>
+        <div class="main-title mt2">
+            <h1>Featured Properties</h1>
+            <div class="list-inline-listing">
+                <ul class="filters filteriz-navigation clearfix">
+                    <li class="active btn filtr-button filtr" data-filter="all">All</li>
+                    <li data-filter="1" class="btn btn-inline filtr-button filtr">Apartment</li>
+                    <li data-filter="2" class="btn btn-inline filtr-button filtr">House</li>
+                    <li data-filter="3" class="btn btn-inline filtr-button filtr">Office</li>
+                </ul>
             </div>
-          </div>
         </div>
-        <div class="row">
-          <div class="col-md-4">
-            <div class="card-box-c foo">
-              <div class="card-header-c d-flex">
-                <div class="card-box-ico">
-                  <span class="bi bi-cart"></span>
-                </div>
-                <div class="card-title-c align-self-center">
-                  <h2 class="title-c">Lifestyle</h2>
-                </div>
-              </div>
-              <div class="card-body-c">
-                <p class="content-c">
-                  Sed porttitor lectus nibh. Cras ultricies ligula sed magna dictum porta. Praesent sapien massa,
-                  convallis a pellentesque
-                  nec, egestas non nisi.
-                </p>
-              </div>
-              <div class="card-footer-c">
-                <a href="#" class="link-c link-icon">Read more
-                  <span class="bi bi-chevron-right"></span>
-                </a>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card-box-c foo">
-              <div class="card-header-c d-flex">
-                <div class="card-box-ico">
-                  <span class="bi bi-calendar4-week"></span>
-                </div>
-                <div class="card-title-c align-self-center">
-                  <h2 class="title-c">Loans</h2>
-                </div>
-              </div>
-              <div class="card-body-c">
-                <p class="content-c">
-                  Nulla porttitor accumsan tincidunt. Curabitur aliquet quam id dui posuere blandit. Mauris blandit
-                  aliquet elit, eget tincidunt
-                  nibh pulvinar a.
-                </p>
-              </div>
-              <div class="card-footer-c">
-                <a href="#" class="link-c link-icon">Read more
-                  <span class="bi bi-calendar4-week"></span>
-                </a>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card-box-c foo">
-              <div class="card-header-c d-flex">
-                <div class="card-box-ico">
-                  <span class="bi bi-card-checklist"></span>
-                </div>
-                <div class="card-title-c align-self-center">
-                  <h2 class="title-c">Sell</h2>
-                </div>
-              </div>
-              <div class="card-body-c">
-                <p class="content-c">
-                  Sed porttitor lectus nibh. Cras ultricies ligula sed magna dictum porta. Praesent sapien massa,
-                  convallis a pellentesque
-                  nec, egestas non nisi.
-                </p>
-              </div>
-              <div class="card-footer-c">
-                <a href="#" class="link-c link-icon">Read more
-                  <span class="bi bi-chevron-right"></span>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section><!-- End Services Section -->
+        <style>
+            .main-title h1 {
+              font-size: 30px;
+                font-weight: 700;
+                margin-bottom: 25px;
+                text-align: center;
+                margin-top: 50px;
 
+            }
+            .list-inline-listing{
+              display: flex;
+              justify-content: center;
+
+
+            }
+            .list-inline-listing ul li{
+              font-size: large;
+              border: #0c0c0c;
+              font-family: Arial, Helvetica, sans-serif;
+              transition: background-color 0.3s;
+
+            }
+            .list-inline-listing ul li:hover {
+              background-color: #6dc381;
+              color: #fff;
+          }
+            .list-inline-listing ul{
+
+              max-width: 430px;
+              display: inline-block;
+
+              padding: 7px 15px;
+              border-radius: 50px;
+
+              background: #fff;
+               box-shadow: 0 0 35px rgba(0, 0, 0, 0.1);
+
+
+            }
+
+          </style>
+
+                <div class="row mt-5 pt-3">
+                    <div class="grids4-info  col-lg-4 col-md-6">
+                            <a href="blog-single.html"><img src="assets/images/g7.jpg" class="img-fluid" alt=""></a>
+                            <ul class="location-top">
+                                <li class="rent">For Rent</li>
+                                <li class="open-1">Open House</li>
+                            </ul>
+                            <div class="info-bg">
+                                <h5><a href="blog-single.html">Luxury Apartment In chelsea</a></h5>
+                                <p>$ 450,000 $777 / sqft</p>
+                                <ul>
+                                    <li><span class="fa fa-bed"></span> 4 Beds</li>
+                                    <li><span class="fa fa-bath"></span> 3 Baths</li>
+                                    <li><span class="fa fa-share-square-o"></span> 1200 sq ft</li>
+                                </ul>
+                            </div>
+                        </div>
+                    <div class="grids4-info col-lg-4 col-md-6 mt-md-0 mt-5">
+                            <a href="blog-single.html"><img src="assets/images/g8.jpg" class="img-fluid" alt=""></a>
+                            <ul class="location-top">
+                                <li class="sale">For Sale</li>
+                                <li class="open-1">Open House</li>
+                            </ul>
+                            <div class="info-bg">
+                                <h5><a href="blog-single.html">Nature-Friendly Family Houses</a></h5>
+                                <p>$ 1,350 / per month</p>
+                                <ul>
+                                    <li><span class="fa fa-bed"></span> 3 Beds</li>
+                                    <li><span class="fa fa-bath"></span> 2 Baths</li>
+                                    <li><span class="fa fa-share-square-o"></span> 1200 sq ft</li>
+                                </ul>
+                            </div>
+                        </div>
+                     <div class="grids4-info col-lg-4 col-md-6 mt-lg-0 mt-5">
+                            <a href="blog-single.html"><img src="assets/images/g7.jpg" class="img-fluid" alt=""></a>
+                            <ul class="location-top">
+                                <li class="rent">For Rent</li>
+                                <li class="open-1">Open House</li>
+                            </ul>
+                            <div class="info-bg">
+                                <h5><a href="blog-single.html">House Rent in Hydepark</a></h5>
+                                <p>$ 2,500 /per month</p>
+                               <ul>
+                                    <li><span class="fa fa-bed"></span> 4 Beds</li>
+                                    <li><span class="fa fa-bath"></span> 3 Baths</li>
+                                    <li><span class="fa fa-share-square-o"></span> 1200 sq ft</li>
+                                </ul>
+                            </div>
+                        </div>
+                         <div class="grids4-info  col-lg-4 col-md-6 mt-5">
+                            <a href="blog-single.html"><img src="assets/images/g8.jpg" class="img-fluid" alt=""></a>
+                            <ul class="location-top">
+                                <li class="sale">For Sale</li>
+                                <li class="open-1">Open House</li>
+                            </ul>
+                            <div class="info-bg">
+                                <h5><a href="blog-single.html">Apartment in Memorial Texas</a></h5>
+                                <p>$ 220,000 550 / Sqft</p>
+                                <ul>
+                                    <li><span class="fa fa-bed"></span> 5 Beds</li>
+                                    <li><span class="fa fa-bath"></span> 3 Baths</li>
+                                    <li><span class="fa fa-share-square-o"></span> 1200 sq ft</li>
+                                </ul>
+                            </div>
+                        </div>
+                         <div class="grids4-info  col-lg-4 col-md-6 mt-5">
+                            <a href="blog-single.html"><img src="assets/images/g9.jpg" class="img-fluid" alt=""></a>
+                            <ul class="location-top">
+                                <li class="rent">For Rent</li>
+                                <li class="open-1">Open House</li>
+                            </ul>
+                            <div class="info-bg">
+                                <h5><a href="blog-single.html">Villa in Miami beach Florida</a></h5>
+                                <p>$ 150,000 500 / Per Sqft</p>
+                                <ul>
+                                    <li><span class="fa fa-bed"></span> 2 Beds</li>
+                                    <li><span class="fa fa-bath"></span> 1 Baths</li>
+                                    <li><span class="fa fa-share-square-o"></span> 1200 sq ft</li>
+                                </ul>
+                            </div>
+                        </div>
+                         <div class="grids4-info  col-lg-4 col-md-6 mt-5">
+                            <a href="blog-single.html"><img src="assets/images/g10.jpg" class="img-fluid" alt=""></a>
+                            <ul class="location-top">
+                                <li class="sale">For Sale</li>
+                                <li class="open-1">Open House</li>
+                            </ul>
+                            <div class="info-bg">
+                                <h5><a href="blog-single.html">Apartment Jacksonville</a></h5>
+                                <p>$ 750 /per month</p>
+                                <ul>
+                                    <li><span class="fa fa-bed"></span> 4 Beds</li>
+                                    <li><span class="fa fa-bath"></span> 3 Baths</li>
+                                    <li><span class="fa fa-share-square-o"></span> 1200 sq ft</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+               </div>
+        </div>
+    </section>
 
 
     <!-- ======= Latest Properties Section ======= -->
