@@ -20,6 +20,16 @@ Route::get('/', function () {
 
 // Ath routes
 
-Route::get('/register',[AuthController::class,'registerform']);
 
 Route::get('/login',[AuthController::class,'loginform']);
+
+Route::post('/login',[AuthController::class,'login']);
+
+Route::get('/register', [AuthController::class, 'registerform']);
+Route::post('/register', [AuthController::class, 'register']);
+
+
+
+
+
+

@@ -37,15 +37,18 @@
                         <a href="/register" class="link-btn btn-2 active-bg">Register</a>
                     </div>
                     <div class="clearfix"></div>
-                    <form action="#" method="GET">
+                        <form action="/register" method="POST">
+
+                        @csrf
+
                         <div class="form-group form-box">
-                            <input type="email" name="email" class="input-text" placeholder="Full Name">
+                            <input type="name" name="name" class="input-text" placeholder="Full Name">
                         </div>
                         <div class="form-group form-box">
                             <input type="email" name="email" class="input-text" placeholder="Email Address">
                         </div>
                         <div class="form-group form-box clearfix">
-                            <input type="password" name="Password" class="input-text" placeholder="Password">
+                            <input type="password" name="password" class="input-text" placeholder="Password">
                         </div>
                         <div class="form-group clearfix mb-0">
                             <button type="submit" class="btn-md btn-theme float-left">Register</button>

@@ -37,18 +37,20 @@
                         <a href="/register" class="link-btn btn-2 default-bg">Register</a>
                     </div>
                     <div class="clearfix"></div>
-                    <form action="#" method="GET">
+                    <form action="/login" method="POST">
+                        @csrf
                         <div class="form-group form-box">
                             <input type="email" name="email" class="input-text" placeholder="Email Address">
                         </div>
                         <div class="form-group form-box clearfix">
-                            <input type="password" name="Password" class="input-text" placeholder="Password">
+                            <input type="password" name="password" class="input-text" placeholder="Password"> <!-- Update to lowercase "password" -->
                         </div>
                         <div class="form-group clearfix mb-0">
                             <button type="submit" class="btn-md btn-theme float-left">Login</button>
                             <a href="forgot-password-5.html" class="forgot-password">Forgot Password</a>
                         </div>
                     </form>
+
                 </div>
             </div>
             <div class="col-lg-6 bg-color-5 align-self-center pad-0 none-992">
