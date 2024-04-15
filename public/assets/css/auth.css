@@ -1,0 +1,360 @@
+
+/** Login 5 start **/
+.login-5 {
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px 0;
+}
+
+.login-5 .login-box {
+    background: #f5f5f5;
+    max-width: 950px;
+    margin: 0 auto;
+    box-shadow: 0 0 35px rgba(0, 0, 0, 0.1);
+}
+
+.login-5 .form-section {
+    text-align: center;
+    padding: 50px;
+    border-radius: 10px 0 0 10px;
+    width: 100%;
+}
+
+.login-5 .bg-img {
+    background: rgba(0, 0, 0, 0.04) url(../img/img-3.jpg) top left repeat;
+    background-size: cover;
+    top: 0;
+    bottom: 0;
+    opacity: 1;
+    width: 100%;
+    z-index: 999;
+    min-height: 496px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-5 .pad-0{
+    padding: 0;
+}
+
+.login-5 .info{
+    padding: 30px;
+    text-align: center;
+    border: solid 5px #ffffff;
+    box-shadow: 0 0 35px rgba(0, 0, 0, 0.1);
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+.login-5 .info h3{
+    font-size: 18px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.login-5 .form-section p{
+    color: #fff;
+    margin-bottom: 0;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.login-5 .form-section p a{
+    color: #fff;
+    font-weight: 500;
+}
+
+.login-5 .form-section ul{
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px;
+}
+
+.login-5 .form-section .social-list li {
+    display: inline-block;
+    margin-bottom: 5px;
+}
+
+.login-5 .logo-2 img{
+    margin-bottom: 20px;
+    height: 30px;
+}
+
+.login-5 .form-section .thembo{
+    margin-left: 4px;
+}
+
+.login-5 .form-section h3 {
+    margin: 0 0 25px;
+    font-size: 25px;
+    font-weight: 400;
+    font-family: 'Open Sans', sans-serif;
+    color: #fff;
+}
+
+.login-5 .form-section .form-group {
+    margin-bottom: 25px;
+}
+
+.login-5 .form-section .form-box {
+    float: left;
+    width: 100%;
+    text-align: left;
+    position: relative;
+}
+
+.login-5 .form-section .form-box input {
+    float: left;
+    width: 100%;
+}
+
+.login-5 .form-section .input-text {
+    padding: 10px 20px;
+    font-size: 15px;
+    font-weight: 500;
+    outline: none;
+    color: #c5c4c4;
+    border-radius: 3px;
+    height: 50px;
+    border: 1px solid rgba(23, 23, 23, 0.72);
+    background: rgba(23, 23, 23, 0.72);
+}
+
+.login-5 .form-section input::placeholder{
+    color: #c5c4c4;
+}
+
+.login-5 .form-section .checkbox .terms{
+    margin-left: 3px;
+}
+
+.login-5 .form-section .btn-md {
+    cursor: pointer;
+    padding: 13px 50px 15px 50px;
+    font-size: 15px;
+    font-weight: 400;
+    font-family: 'Open Sans', sans-serif;
+    border-radius: 3px;
+}
+
+.login-5 .form-section input[type=checkbox], input[type=radio] {
+    margin-right: 3px;
+}
+
+.login-5 .form-section button:focus {
+    outline: none;
+    outline: 0 auto -webkit-focus-ring-color;
+}
+
+.login-5 .form-section .btn-theme.focus, .btn-theme:focus {
+    box-shadow: none;
+}
+
+.login-5 .form-section .btn-theme {
+    background: #fff;
+    border: none;
+    color: #353333;
+    font-weight: 600;
+}
+
+.login-5 .form-section .btn-theme:hover {
+    background: #e6e6e6;
+}
+
+.login-5 .none-2{
+    display: none;
+}
+
+.login-5 .logo{
+    top: 40px;
+    position: absolute;
+    left: 65px;
+}
+
+.login-5 .form-section .terms{
+    margin-left: 3px;
+}
+
+.login-5 .btn-section {
+    border-radius: 50px;
+    display: inline-block;
+    margin-bottom: 30px;
+}
+
+.login-5 .btn-section .btn-1 {
+    border-radius: 50px 0 0 50px;
+    border-right: solid 2px #2d201e;
+}
+
+.login-5 .btn-section .link-btn {
+    font-size: 13px;
+    float: left;
+    background: transparent;
+    letter-spacing: 1px;
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+    text-decoration: blink;
+    line-height: 35px;
+    width: 90px;
+    color: #a0a0a0;
+}
+
+.login-5 .btn-section .active-bg {
+    background: rgba(23, 23, 23, 0.72);
+    color: #fff;
+}
+
+.login-5 .btn-section .default-bg {
+    background: rgba(23, 23, 23, 0.72);
+}
+
+.login-5 .btn-section .btn-2 {
+    border-radius: 0 50px 50px 0;
+}
+
+.login-5 .form-section .checkbox {
+    font-size: 14px;
+}
+
+.login-5 .form-section .form-check{
+    float: left;
+    margin-bottom: 0;
+}
+
+.login-5 .form-section .form-check a {
+    color: #fff;
+    float: right;
+}
+
+.login-5 .form-section .form-check-input {
+    position: absolute;
+    margin-left: 0;
+}
+
+.login-5 .form-section .form-check label::before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    width: 17px;
+    height: 17px;
+    margin-left: -25px;
+    border: 1px solid #c5c3c3;
+    border-radius: 3px;
+    background-color: #fff;
+}
+
+.login-5 .form-section .form-check-label {
+    padding-left: 25px;
+    margin-bottom: 0;
+    font-size: 15px;
+    font-weight: 500;
+    color: #fff;
+}
+
+.login-5 .form-section .checkbox-theme input[type="checkbox"]:checked + label::before {
+    background-color: #23a0d2;
+    border-color: #23a0d2;
+}
+
+.login-5 .form-section input[type=checkbox]:checked + label:before {
+    font-weight: 300;
+    color: #f3f3f3;
+    line-height: 15px;
+    font-size: 14px;
+    content: "\2713";
+}
+
+.login-5 .form-section input[type=checkbox], input[type=radio] {
+    margin-top: 4px;
+}
+
+.login-5 .form-section a.forgot-password {
+    font-size: 15px;
+    color: #fff;
+    float: right;
+    line-height: 50px;
+}
+
+.login-5 .social-list a {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    display: inline-block;
+    font-size: 17px;
+    margin: 2px;
+    border-radius: 5%;
+    background: #fff;
+    box-shadow: 0 0 35px rgba(0, 0, 0, 0.1);
+}
+
+.login-5 .social-list a:hover{
+    color: #fff;
+}
+
+/** Social media **/
+.login-5 .facebook-bg{
+    color: #4867aa;
+}
+
+.login-5 .facebook-bg:hover {
+    background: #4867aa;
+}
+
+.login-5 .twitter-bg {
+    color: #33CCFF;
+}
+
+.login-5 .twitter-bg:hover {
+    background: #33CCFF;
+}
+
+.login-5 .google-bg {
+    color: #db4437;
+}
+
+.login-5 .google-bg:hover {
+    background: #db4437;
+}
+
+.login-5 .linkedin-bg {
+    color: #2392e0;
+}
+
+.login-5 .linkedin-bg:hover {
+    background: #2392e0;
+}
+
+@media (max-width: 992px) {
+    .login-5 .form-section {
+        width: 100%;
+    }
+
+    .login-5 .none-992{
+        display: none;
+    }
+
+    .login-5 .bg-img {
+        min-height: 100%;
+        border-radius: 5px;
+    }
+
+    .login-5 .login-box {
+        max-width: 500px;
+        margin: 0 auto;
+        padding: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .login-5 .form-section{
+        padding: 30px;
+    }
+}
+/** Login 5 end **/
