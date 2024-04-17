@@ -1,8 +1,14 @@
 <!DOCTYPE html>
 <html lang="zxx">
 <head>
-
-    <title> Register</title>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-TAGCODE');</script>
+    <!-- End Google Tag Manager -->
+    <title>Logee - Login and Register HTML5 Template</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
     <!-- External CSS libraries -->
@@ -21,33 +27,34 @@
     <link rel="stylesheet" type="text/css" id="style_sheet" href="assets/css/skins/default.css">
 
 </head>
-<body id="top" class="login-5-bg">
-
+<body id="top">
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TAGCODE"
+                  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
 <div class="page_loader"></div>
 
-<!-- Login 5 start -->
-<div class="login-5">
+<!-- Login 6 start -->
+<div class="login-6">
     <div class="container">
         <div class="row login-box">
-            <div class="col-lg-6 align-self-center pad-0 bg-img">
+            <div class="col-lg-6 align-self-center pad-0">
                 <div class="form-section clearfix">
                     <h3>Create an account</h3>
                     <div class="btn-section clearfix">
-                        <a href="/login" class="link-btn active btn-1 default-bg">Login</a>
-                        <a href="/register" class="link-btn btn-2 active-bg">Register</a>
+                        <a href="login-6.html" class="link-btn active btn-1 default-bg">Login</a>
+                        <a href="register-6.html" class="link-btn btn-2 active-bg">Register</a>
                     </div>
                     <div class="clearfix"></div>
-                        <form action="/register" method="POST">
-                        @csrf
-
+                    <form action="#" method="GET">
                         <div class="form-group form-box">
-                            <input type="name" name="name" class="input-text" placeholder="Full Name">
+                            <input type="email" name="email" class="input-text" placeholder="Full Name">
                         </div>
                         <div class="form-group form-box">
                             <input type="email" name="email" class="input-text" placeholder="Email Address">
                         </div>
                         <div class="form-group form-box clearfix">
-                            <input type="password" name="password" class="input-text" placeholder="Password">
+                            <input type="password" name="Password" class="input-text" placeholder="Password">
                         </div>
                         <div class="form-group clearfix mb-0">
                             <button type="submit" class="btn-md btn-theme float-left">Register</button>
@@ -55,11 +62,11 @@
                     </form>
                 </div>
             </div>
-            <div class="col-lg-6 bg-color-5 align-self-center pad-0 none-992">
+            <div class="col-lg-6 bg-color-15 align-self-center pad-0 none-992 bg-img">
                 <div class="info clearfix">
                     <div class="logo-2">
-                        <a href="login-5.html">
-                            <img src="assets/img/logo-2.png" alt="logo">
+                        <a href="login-6.html">
+                            <img src="assets/img/logos/logo.png" alt="logo">
                         </a>
                     </div>
                     <h3>Welcome to Logee</h3>
@@ -82,7 +89,7 @@
         </div>
     </div>
 </div>
-<!-- Login 5 end -->
+<!-- Login 6 end -->
 
 <!-- External JS libraries -->
 <script src="assets/js/jquery-2.2.0.min.js"></script>

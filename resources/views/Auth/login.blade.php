@@ -1,92 +1,269 @@
 <!DOCTYPE html>
-<html lang="zxx">
+<html lang="en">
 <head>
-
-    <title>Logee - Login </title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
-    <!-- External CSS libraries -->
-    <link type="text/css" rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <link type="text/css" rel="stylesheet" href="assets/fonts/font-awesome/css/font-awesome.min.css">
-    <link type="text/css" rel="stylesheet" href="assets/fonts/flaticon/font/flaticon.css">
-
-    <!-- Favicon icon -->
-    <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon" >
-
-    <!-- Google fonts -->
-    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800%7CPoppins:400,500,700,800,900%7CRoboto:100,300,400,400i,500,700">
-
-    <!-- Custom Stylesheet -->
-    <link type="text/css" rel="stylesheet" href="assets/css/auth.css">
-    <link rel="stylesheet" type="text/css" id="style_sheet" href="assets/css/skins/default.css">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
 </head>
-<body id="top" class="login-5-bg">
-<div class="page_loader"></div>
+<body>
+<div class="login-wrap">
+    <div class="login-html">
+        <input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">Sign In</label>
+        <input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2" class="tab">Sign Up</label>
+        <div class="login-form">
+            <div class="sign-in-htm">
+                <div class="group">
+                    <label for="user" class="label">Username</label>
+                    <input id="user" type="text" class="input"/>
+                </div>
+                <div class="group">
+                    <label for="pass" class="label">Password</label>
+                    <input id="pass" type="password" class="input"/>
+                </div>
+                <div class="group">
+                    <input id="check" type="checkbox" class="check" checked>
+                    <label for="check"><span class="icon"></span>Keep me signed in </label>
+                </div>
 
-<!-- Login  start -->
 
-<div class="login-5">
-    <div class="container">
-        <div class="row login-box">
-            <div class="col-lg-6 align-self-center pad-0 bg-img">
-                <div class="form-section align-self-center">
-                    <h3>Sign into your account</h3>
-                    <div class="btn-section clearfix">
-                        <a href="/login" class="link-btn active btn-1 active-bg">Login</a>
-                        <a href="/register" class="link-btn btn-2 default-bg">Register</a>
-                    </div>
-                    <div class="clearfix"></div>
-                    <form action="/login" method="POST">
-                        @csrf
-                        <div class="form-group form-box">
-                            <input type="email" name="email" class="input-text" placeholder="Email Address">
-                        </div>
-                        <div class="form-group form-box clearfix">
-                            <input type="password" name="password" class="input-text" placeholder="Password"> <!-- Update to lowercase "password" -->
-                        </div>
-                        <div class="form-group clearfix mb-0">
-                            <button type="submit" class="btn-md btn-theme float-left">Login</button>
-                            <a href="forgot-password-5.html" class="forgot-password">Forgot Password</a>
-                        </div>
-                    </form>
 
+                <div class="group">
+                    <input type="submit" class="button" value="Sign In"/>
+                </div>
+                <div class="hr"></div>
+                <div class="foot-Ink">
+                    <a href="#forgot">Forgot Password?</a>
                 </div>
             </div>
-            <div class="col-lg-6 bg-color-5 align-self-center pad-0 none-992">
-                <div class="info clearfix">
-                    <div class="logo-2">
-                        <a href="#">
-                            <img src="assets/img/logo-2.png" alt="logo">
-                        </a>
-                    </div>
-                    <h3>Welcome to Logee</h3>
-                    <div class="social-list">
-                        <a href="#" class="facebook-bg">
-                            <i class="fa fa-facebook"></i>
-                        </a>
-                        <a href="#" class="twitter-bg">
-                            <i class="fa fa-twitter"></i>
-                        </a>
-                        <a href="#" class="google-bg">
-                            <i class="fa fa-google"></i>
-                        </a>
-                        <a href="#" class="linkedin-bg">
-                            <i class="fa fa-linkedin"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
+
         </div>
     </div>
 </div>
-<!-- Login  end -->
-
-<!-- External JS libraries -->
-<script src="assets/js/jquery-2.2.0.min.js"></script>
-<script src="assets/js/popper.min.js"></script>
-<script src="assets/js/bootstrap.min.js"></script>
-<!-- Custom JS Script -->
-
 </body>
+
+
+
+
+
+<style>
+    body {
+        margin: 0;
+        color: #6a6f8c;
+        font: 600 16px/18px 'Open Sans', sans-serif;
+        background: url('/assets/img/property-4.jpg') center/cover;
+    }
+
+    a {
+        color: inherit;
+        text-decoration: none;
+    }
+
+    .login-wrap {
+        width: 100%;
+        margin: auto;
+        max-width: 525px;
+        min-height: 670px;
+        position: relative;
+        background-size: cover;
+        box-shadow: 0 12px 15px 0 rgba(0,0,0,.24), 0 17px 50px 0 rgba(0,0,0,.19);
+    }
+
+    .login-html {
+        width: 74%;
+        height: 530px;
+        position: absolute;
+        padding: 90px 70px 50px 70px;
+        {{--  background: rgba(255,204,102,.2);  --}}
+    }
+
+    .login-html .sign-in-htm,
+    .login-html .sign-up-htm {
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        position: absolute;
+        transform: rotateY(180deg);
+        backface-visibility: hidden;
+        transition: all .4s linear;
+    }
+
+    .login-html .sign-in,
+    .login-html .sign-up,
+    .login-form .group .check {
+        display: none;
+    }
+
+    .login-html .tab,
+    .login-form .group .label,
+    .login-form .group .button {
+        text-transform: uppercase;
+    }
+
+    .login-html .tab {
+        font-size: 22px;
+        margin-right: 15px;
+        padding-bottom: 5px;
+        margin: 0 15px 10px 0;
+        display: inline-block;
+        border-bottom: 2px solid transparent;
+    }
+
+    .login-html .sign-in:checked + .tab,
+    .login-html .sign-up:checked + .tab {
+        color: #fff;
+        border-color: #1161ee;
+    }
+
+    .login-form {
+        min-height: 345px;
+        position: relative;
+        perspective: 1000px;
+        transform-style: preserve-3d;
+    }
+
+    .login-form .group {
+        margin-bottom: 15px;
+    }
+
+    .login-form .group .label,
+    .login-form .group .input,
+    .login-form .group .button {
+        width: 100%;
+        color: #fff;
+        display: block;
+    }
+
+    .login-form .group .input,
+    .login-form .group .button {
+        border: none;
+        padding: 15px 20px;
+        border-radius: 25px;
+        background: rgba(255,255,255,.1);
+    }
+
+    .login-form .group .label {
+        {{--  color: #aaa;  --}}
+        font-size: 12px;
+    }
+
+    .login-form .group .button {
+        {{--  background: #1161ee;  --}}
+    }
+
+    .login-form .group label .icon {
+        width: 15px;
+        height: 15px;
+        border-radius: 2px;
+        position: relative;
+        display: inline-block;
+        background: rgba(255,255,255,.1);
+    }
+
+    .login-form .group label .icon:before,
+    .login-form .group label .icon:after {
+        content: '';
+        width: 10px;
+        height: 2px;
+        background: #fff;
+        position: absolute;
+        transition: all .2s ease-in-out 0s;
+    }
+
+    .login-form .group label .icon:before {
+        left: 3px;
+        width: 5px;
+        bottom: 6px;
+        transform: scale(0) rotate(0);
+    }
+
+    .login-form .group label .icon:after {
+        top: 6px;
+        right: 0;
+        transform: scale(0) rotate(0);
+    }
+
+    .login-form .group .check:checked + label {
+        color: #fff;
+    }
+
+    .login-html .sign-in:checked + .tab + .sign-up + .tab + .login-form .sign-in-htm {
+        transform: rotate(0);
+    }
+
+    .login-form .group .button {
+        {{--  background: #1161ee;  --}}
+
+       background:linear-gradient(to right, #da8cff, #9a55ff);
+
+    }
+
+    .login-form .group label .icon {
+        width: 15px;
+        height: 15px;
+        border-radius: 2px;
+        position: relative;
+        display: inline-block;
+        background: rgba(255,255,255,.1);
+    }
+
+    .login-form .group label .icon:before,
+    .login-form .group label .icon:after {
+        content: '';
+        width: 10px;
+        height: 2px;
+        background: #fff;
+        position: absolute;
+        transition: all .2s ease-in-out 0s;
+    }
+
+    .login-form .group label .icon:before {
+        left: 3px;
+        width: 5px;
+        bottom: 6px;
+        transform: scale(0) rotate(0);
+    }
+
+    .login-form .group label .icon:after {
+        top: 6px;
+        right: 0;
+        transform: scale(0) rotate(0);
+    }
+
+    .login-form .group .check:checked + label {
+        color: #fff;
+    }
+
+    .login-form .group .check:checked + label .icon {
+        background: #1161ee;
+    }
+
+    .login-form .group .check:checked + label .icon:before {
+        transform: scale(1) rotate(45deg);
+    }
+
+    .login-form .group .check:checked + label .icon:after {
+        transform: scale(1) rotate(-45deg);
+    }
+
+    .login-html .sign-in:checked + .tab + .sign-up + .tab + .login-form .sign-in-htm {
+        transform: rotate(0);
+    }
+
+    .login-html .sign-up:checked + .tab + .login-form .sign-up-htm {
+        transform: rotate(0);
+    }
+
+    .hr {
+        height: 2px;
+        margin: 60px 0 50px 0;
+        background: rgba(255,255,255,.2);
+    }
+
+    .foot-Ink {
+        text-align: center;
+        font-size: 18px;
+    }
+</style>
 </html>
