@@ -127,6 +127,11 @@
   </div><!-- End Property Search Section -->>
 
   <!-- ======= Header/Navbar ======= -->
+  <div>
+    <ul>
+        <li>test</li>
+    </ul>
+  </div>
   <nav class="navbar navbar-default navbar-trans navbar-expand-lg fixed-top">
     <div class="container">
       <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarDefault" aria-controls="navbarDefault" aria-expanded="false" aria-label="Toggle navigation">

@@ -38,7 +38,6 @@
                     </div>
                     <div class="clearfix"></div>
                         <form action="/register" method="POST">
-
                         @csrf
 
                         <div class="form-group form-box">
