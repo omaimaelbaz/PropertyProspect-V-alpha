@@ -1,269 +1,225 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Page</title>
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
-</head>
-<body>
-<div class="login-wrap">
-    <div class="login-html">
-        <input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">Sign In</label>
-        <input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2" class="tab">Sign Up</label>
-        <div class="login-form">
-            <div class="sign-in-htm">
-                <div class="group">
-                    <label for="user" class="label">Username</label>
-                    <input id="user" type="text" class="input"/>
-                </div>
-                <div class="group">
-                    <label for="pass" class="label">Password</label>
-                    <input id="pass" type="password" class="input"/>
-                </div>
-                <div class="group">
-                    <input id="check" type="checkbox" class="check" checked>
-                    <label for="check"><span class="icon"></span>Keep me signed in </label>
-                </div>
+<!-- Created By CodingNepal -->
+<html lang="en" dir="ltr">
+   <head>
+      <meta charset="utf-8">
+      <title>Animated Login Form</title>
+      <link rel="stylesheet" href="style.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+   </head>
+   <body>
+      <div class="container">
+         <header>Hello</header>
+         <span id="signin-reg-msg" tabindex="-1" class="sub-heading">Sign in to RealEstate or <a id="create-account-link" href="https://signup.ebay.com/pa/crte?siteid=0&amp;co_partnerId=0&amp;UsingSSL=1&amp;rv4=1&amp;signInUrl=https%3A%2F%2Fsignin.ebay.com%2Fsignin%3Fsgn%3Dreg%26siteid%3D0%26co_partnerId%3D0%26UsingSSL%3D1%26rv4%3D1&amp;_trksid=p2487285.m5021.l46827">create an account</a></span>
 
-
-
-                <div class="group">
-                    <input type="submit" class="button" value="Sign In"/>
-                </div>
-                <div class="hr"></div>
-                <div class="foot-Ink">
-                    <a href="#forgot">Forgot Password?</a>
-                </div>
+         <form>
+            <div class="input-field">
+               <input type="text" required>
+               <label>Email or Username</label>
             </div>
-
-        </div>
-    </div>
-</div>
-</body>
-
-
-
-
+            <div class="input-field">
+               <input class="pswrd" type="password" required>
+               <span class="show">SHOW</span>
+               <label>Password</label>
+            </div>
+            <div class="button">
+               <div class="inner"></div>
+               <button>LOGIN</button>
+            </div>
+         </form>
+         <div class="auth">
+            Or login with
+         </div>
+         <div class="links">
+            <div class="facebook">
+               <i class="fab fa-facebook-square"><span>Facebook</span></i>
+            </div>
+            <div class="google">
+               <i class="fab fa-google-plus-square"><span>Google</span></i>
+            </div>
+         </div>
+         <div class="signup">
+            Not a member? <a href="#">Signup now</a>
+         </div>
+      </div>
+      <script>
+         var input = document.querySelector('.pswrd');
+         var show = document.querySelector('.show');
+         show.addEventListener('click', active);
+         function active(){
+           if(input.type === "password"){
+             input.type = "text";
+             show.style.color = "#1DA1F2";
+             show.textContent = "HIDE";
+           }else{
+             input.type = "password";
+             show.textContent = "SHOW";
+             show.style.color = "#111";
+           }
+         }
+      </script>
+   </body>
+</html>
 
 <style>
-    body {
-        margin: 0;
-        color: #6a6f8c;
-        font: 600 16px/18px 'Open Sans', sans-serif;
-        background: url('/assets/img/property-4.jpg') center/cover;
-    }
+    @import url('https://fonts.googleapis.com/css?family=Montserrat:600|Noto+Sans|Open+Sans:400,700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+body{
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  font-family: sans-serif;
+  justify-content: center;
+  background: url(bg.jpg);
+  background-size: cover;
+  background-position: center;
+}
+.container{
+  position: relative;
+  width: 400px;
+  background: white;
+  padding: 60px 40px;
+}
+header{
+  font-size: 40px;
+  margin-bottom: 60px;
+  font-family: 'Montserrat', sans-serif;
+}
+.input-field, form .button{
+  margin: 25px 0;
+  position: relative;
+  height: 50px;
+  width: 100%;
+}
+.input-field input{
+  height: 100%;
+  width: 100%;
+  border: 1px solid silver;
+  padding-left: 15px;
+  outline: none;
+  font-size: 19px;
+  transition: .4s;
+}
+input:focus{
+  border: 1px solid #1DA1F2;
+}
+.input-field label, span.show{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.input-field label{
+  left: 15px;
+  pointer-events: none;
+  color: grey;
+  font-size: 18px;
+  transition: .4s;
+}
+span.show{
+  right: 20px;
+  color: #111;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  user-select: none;
+  visibility: hidden;
+  font-family: 'Open Sans', sans-serif;
+}
+input:valid ~ span.show{
+  visibility: visible;
+}
+input:focus ~ label,
+input:valid ~ label{
+  transform: translateY(-33px);
+  background: white;
+  font-size: 16px;
+  color: #1DA1F2;
+}
+form .button{
+  margin-top: 30px;
+  overflow: hidden;
+  z-index: 111;
+}
+.button .inner{
+  position: absolute;
+  height: 100%;
+  width: 300%;
+  left: -100%;
+  z-index: -1;
+  transition: all .4s;
+  background: -webkit-linear-gradient(right,#00dbde,#fc00ff,#00dbde,#fc00ff);
+}
+.button:hover .inner{
+  left: 0;
+}
+.button button{
+  width: 100%;
+  height: 100%;
+  border: none;
+  background: none;
+  outline: none;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  font-family: 'Montserrat', sans-serif;
+}
+.container .auth{
+  margin: 35px 0 20px 0;
+  font-size: 19px;
+  color: grey;
+}
+.links{
+  display: flex;
+  cursor: pointer;
+}
+.facebook, .google{
+  height: 40px;
+  width: 100%;
+  border: 1px solid silver;
+  border-radius: 3px;
+  margin: 0 10px;
+  transition: .4s;
+}
+.facebook:hover{
+  border: 1px solid #4267B2;
+}
+.google:hover{
+  border: 1px solid #dd4b39;
+}
+.facebook i, .facebook span{
+  color: #4267B2;
+}
+.google i, .google span{
+  color: #dd4b39;
+}
+.links i{
+  font-size: 23px;
+  line-height: 40px;
+  margin-left: -90px;
+}
+.links span{
+  position: absolute;
+  font-size: 17px;
+  font-weight: bold;
+  padding-left: 8px;
+  font-family: 'Open Sans', sans-serif;
+}
+.signup{
+  margin-top: 50px;
+  font-family: 'Noto Sans', sans-serif;
+}
+.signup a{
+  color: #3498db;
+  text-decoration: none;
+}
+.signup a:hover{
+  text-decoration: underline;
+}
 
-    a {
-        color: inherit;
-        text-decoration: none;
-    }
-
-    .login-wrap {
-        width: 100%;
-        margin: auto;
-        max-width: 525px;
-        min-height: 670px;
-        position: relative;
-        background-size: cover;
-        box-shadow: 0 12px 15px 0 rgba(0,0,0,.24), 0 17px 50px 0 rgba(0,0,0,.19);
-    }
-
-    .login-html {
-        width: 74%;
-        height: 530px;
-        position: absolute;
-        padding: 90px 70px 50px 70px;
-        {{--  background: rgba(255,204,102,.2);  --}}
-    }
-
-    .login-html .sign-in-htm,
-    .login-html .sign-up-htm {
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        position: absolute;
-        transform: rotateY(180deg);
-        backface-visibility: hidden;
-        transition: all .4s linear;
-    }
-
-    .login-html .sign-in,
-    .login-html .sign-up,
-    .login-form .group .check {
-        display: none;
-    }
-
-    .login-html .tab,
-    .login-form .group .label,
-    .login-form .group .button {
-        text-transform: uppercase;
-    }
-
-    .login-html .tab {
-        font-size: 22px;
-        margin-right: 15px;
-        padding-bottom: 5px;
-        margin: 0 15px 10px 0;
-        display: inline-block;
-        border-bottom: 2px solid transparent;
-    }
-
-    .login-html .sign-in:checked + .tab,
-    .login-html .sign-up:checked + .tab {
-        color: #fff;
-        border-color: #1161ee;
-    }
-
-    .login-form {
-        min-height: 345px;
-        position: relative;
-        perspective: 1000px;
-        transform-style: preserve-3d;
-    }
-
-    .login-form .group {
-        margin-bottom: 15px;
-    }
-
-    .login-form .group .label,
-    .login-form .group .input,
-    .login-form .group .button {
-        width: 100%;
-        color: #fff;
-        display: block;
-    }
-
-    .login-form .group .input,
-    .login-form .group .button {
-        border: none;
-        padding: 15px 20px;
-        border-radius: 25px;
-        background: rgba(255,255,255,.1);
-    }
-
-    .login-form .group .label {
-        {{--  color: #aaa;  --}}
-        font-size: 12px;
-    }
-
-    .login-form .group .button {
-        {{--  background: #1161ee;  --}}
-    }
-
-    .login-form .group label .icon {
-        width: 15px;
-        height: 15px;
-        border-radius: 2px;
-        position: relative;
-        display: inline-block;
-        background: rgba(255,255,255,.1);
-    }
-
-    .login-form .group label .icon:before,
-    .login-form .group label .icon:after {
-        content: '';
-        width: 10px;
-        height: 2px;
-        background: #fff;
-        position: absolute;
-        transition: all .2s ease-in-out 0s;
-    }
-
-    .login-form .group label .icon:before {
-        left: 3px;
-        width: 5px;
-        bottom: 6px;
-        transform: scale(0) rotate(0);
-    }
-
-    .login-form .group label .icon:after {
-        top: 6px;
-        right: 0;
-        transform: scale(0) rotate(0);
-    }
-
-    .login-form .group .check:checked + label {
-        color: #fff;
-    }
-
-    .login-html .sign-in:checked + .tab + .sign-up + .tab + .login-form .sign-in-htm {
-        transform: rotate(0);
-    }
-
-    .login-form .group .button {
-        {{--  background: #1161ee;  --}}
-
-       background:linear-gradient(to right, #da8cff, #9a55ff);
-
-    }
-
-    .login-form .group label .icon {
-        width: 15px;
-        height: 15px;
-        border-radius: 2px;
-        position: relative;
-        display: inline-block;
-        background: rgba(255,255,255,.1);
-    }
-
-    .login-form .group label .icon:before,
-    .login-form .group label .icon:after {
-        content: '';
-        width: 10px;
-        height: 2px;
-        background: #fff;
-        position: absolute;
-        transition: all .2s ease-in-out 0s;
-    }
-
-    .login-form .group label .icon:before {
-        left: 3px;
-        width: 5px;
-        bottom: 6px;
-        transform: scale(0) rotate(0);
-    }
-
-    .login-form .group label .icon:after {
-        top: 6px;
-        right: 0;
-        transform: scale(0) rotate(0);
-    }
-
-    .login-form .group .check:checked + label {
-        color: #fff;
-    }
-
-    .login-form .group .check:checked + label .icon {
-        background: #1161ee;
-    }
-
-    .login-form .group .check:checked + label .icon:before {
-        transform: scale(1) rotate(45deg);
-    }
-
-    .login-form .group .check:checked + label .icon:after {
-        transform: scale(1) rotate(-45deg);
-    }
-
-    .login-html .sign-in:checked + .tab + .sign-up + .tab + .login-form .sign-in-htm {
-        transform: rotate(0);
-    }
-
-    .login-html .sign-up:checked + .tab + .login-form .sign-up-htm {
-        transform: rotate(0);
-    }
-
-    .hr {
-        height: 2px;
-        margin: 60px 0 50px 0;
-        background: rgba(255,255,255,.2);
-    }
-
-    .foot-Ink {
-        text-align: center;
-        font-size: 18px;
-    }
 </style>
-</html>
