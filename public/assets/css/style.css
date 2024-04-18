@@ -2,9 +2,12 @@
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
+
 body {
   font-family: "Poppins", sans-serif;
   color: #555555;
+
+
   /* height: auto; */
 }
 
@@ -15613,6 +15616,9 @@ a.rpl:hover {
 @media (max-width: 600px) {
   .w3l-service-breadcrum .breadcrum-bg h2 {
     font-size: 35px; } }
+
+
+
 
 
 /* login */
