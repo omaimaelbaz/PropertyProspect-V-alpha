@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
+use App\Models\Roles;
 
 class User extends Authenticatable
 {
@@ -24,6 +25,10 @@ class User extends Authenticatable
         'IsBan',
         'role_id'
     ];
+    public function role()
+    {
+        return $this->belongsTo(Roles::class);
+    }
 
     /**
      * The attributes that should be hidden for serialization.

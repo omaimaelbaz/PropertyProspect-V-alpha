@@ -35,6 +35,8 @@ Route::post('/register', [AuthController::class, 'register']);
 // admin
 
 Route::get('/users', [UserController::class, 'ShowUsers']);
+Route::get('/delete/{id}', [UserController::class, 'DeleteUsers']);
+
 
 
 

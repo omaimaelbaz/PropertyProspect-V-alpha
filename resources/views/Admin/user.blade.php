@@ -40,18 +40,27 @@
                                     </tr>
                                 </thead>
                                 <tbody>
+                                    @foreach ($users as $user )
                                     <tr>
                                         <td class="py-1">
                                             <img src="../../assets/images/faces-clipart/pic-1.png" alt="image" />
                                         </td>
-                                        <td>Herman Beck</td>
-                                        <td>admin</td>
+                                        <td>{{ $user->name }}</td>
+                                        <td>
+
+                                           {{$user->role->name}}
+
+                                        </td>
+
                                         <td><label class="badge badge-danger">Pending</label></td>
                                         <td>
                                             <a href="" class="badge badge-info">Update</a>
-                                            <a href="" class="badge badge-warning">delete</a>
+                                            <a href="/users/{{$users->id}}" class="badge badge-warning">delete</a>
                                         </td>
                                     </tr>
+
+                                    @endforeach
+
 
                                 </tbody>
                             </table>
