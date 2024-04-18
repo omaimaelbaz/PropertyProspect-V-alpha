@@ -91,6 +91,9 @@
                    <div class="btn-layer"></div>
                    <input type="submit" value="Signup">
                 </div>
+               
+
+
              </form>
 
             </div>
@@ -116,24 +119,7 @@
          });
       </script>
 
-      {{--  <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            const loginForm = document.querySelector("form.login");
-            const signupForm = document.querySelector("form.signup");
-            const loginBtn = document.querySelector("label.login");
-            const signupBtn = document.querySelector("label.signup");
 
-            loginBtn.onclick = () => {
-                loginForm.classList.remove("hidden");
-                signupForm.classList.add("hidden");
-            };
-
-            signupBtn.onclick = () => {
-                loginForm.classList.add("hidden");
-                signupForm.classList.remove("hidden");
-            };
-        });
-    </script>  --}}
 
    </body>
 </html>
