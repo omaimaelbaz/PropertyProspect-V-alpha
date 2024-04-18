@@ -50,7 +50,6 @@
                                         <td>
                                             <a href="" class="badge badge-info">Update</a>
                                             <a href="" class="badge badge-warning">delete</a>
-
                                         </td>
                                     </tr>
 

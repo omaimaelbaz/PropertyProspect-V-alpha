@@ -12,31 +12,46 @@ class AuthController extends Controller
 {
     public function registerform()
     {
-        return view('Auth.register');
+        $data = User::all();
+        // dd($data);
+        return view('Auth.register',compact('data'));
 
     }
     public function loginform()
     {
-        return view('Auth.login');
+        $data = User::all();
+
+        return view('Auth.login',compact('data'));
 
     }
+
+
     public function register(Request $request)
     {
-        // dd($request);
-        $validatedData = $request->validate([
-            'name'=>'required',
-            'email'=>'required ',
-            'password' =>'required'
-        ]);
-        $hashedPassword = Hash::make($validatedData['password']);
+        //  dd($request);
+
+        $rules = [
+            'name' => 'required',
+            'email' => 'required',
+            'password' => 'required|string|min:8',
+            'role' => 'required'
+        ];
+                // dd($rules);
+
+        $validatedData = $request->validate($rules);
 
         $user = User::create([
-        'name' => $validatedData['name'],
-        'email' => $validatedData['email'],
-        'password' => $hashedPassword,
-    ]);
+            'name' => $validatedData['name'],
+            'email' => $validatedData['email'],
+            'password' => bcrypt($validatedData['password']),
+            'role_id' => $validatedData['role']
+        ]);
+        // dd($user);
 
-            return redirect('/login');
+
+        return redirect('/login');
+
+
     }
 
 
@@ -44,20 +59,26 @@ class AuthController extends Controller
 
 
     public function login(Request $request)
-{
-    $credentials = $request->validate([
-        'email' => 'required|email',
-        'password' => 'required',
-    ]);
-
-    if (Auth::attempt($credentials)) {
-        // Authentication successful
-        return redirect()->intended('/');
-    } else {
-        // Authentication failed
-        return back()->withInput($request->only('email'))->withErrors([
-            'password' => 'The provided credentials are incorrect.',
+    {
+        $credentials = $request->validate([
+            'email' => 'required|email',
+            'password' => 'required'
         ]);
+
+        if(auth()->attempt($credentials)){
+            $user = auth()->user();
+            // dd($user);
+            if($user->role_id == '2'){
+                return redirect('/');
+            } elseif($user->role_id == '3'){
+                // return redirect('/agent');
+                return 'hey agent';
+            } else {
+                return redirect('/');
+            }
+        } else {
+            return redirect('/login')->with('error', 'Email ou mot de passe incorrect.');
+        }
     }
-}
+
 }

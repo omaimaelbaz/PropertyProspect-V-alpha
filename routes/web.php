@@ -34,7 +34,7 @@ Route::post('/register', [AuthController::class, 'register']);
 
 // admin
 
-Route::get('/users', [UserController::class, 'UserTable']);
+Route::get('/users', [UserController::class, 'ShowUsers']);
 
 
 

@@ -28,48 +28,25 @@
                <div class="slider-tab"></div>
             </div>
             <div class="form-inner">
-               {{--  <form action="#" class="login">
-                  <div class="field">
-                     <input type="text" placeholder="Email Address" required>
-                  </div>
-                  <div class="field">
-                     <input type="password" placeholder="Password" required>
-                  </div>
-                  <div class="pass-link">
-                     <a href="#">Forgot password?</a>
-                  </div>
-                  <div class="field btn">
-                     <div class="btn-layer"></div>
-                     <input type="submit" value="Login">
-                  </div>
-                  <div class="signup-link">
-                     Not a member? <a href="">Signup now</a>
-                  </div>
-
-                  <div class="auth">
-                    Or login with
-                 </div>
-                 <div class="links">
-                    <div class="facebook">
-                       <i class="fab fa-facebook-square"><span>Facebook</span></i>
-                    </div>
-                    <div class="google">
-                       <i class="fab fa-google-plus-square"><span>Google</span></i>
-                    </div>
-                 </div>
+               <form action="/register" method="POST" class="signup">
+                    @csrf
+                    <input type="hidden" name="role" value={{2}}>
 
 
-               </form>  --}}
-               <form action="#" class="signup">
+                    <div class="field">
+                        <input type="text" name="name" placeholder="name" >
+                        <span class="text text-danger">@error('name') {{$message }} @enderror</span>
+                     </div>
                   <div class="field">
-                     <input type="text" placeholder="Email Address" required>
+                     <input type="text" name="email" placeholder="Email Address" >
+                     <span class="">@error('email') {{$message }} @enderror</span>
                   </div>
                   <div class="field">
-                     <input type="password" placeholder="Password" required>
+                     <input type="password" name="password" placeholder="Password" >
+                     <span class="text text-danger">@error('password') {{$message }} @enderror</span>
+
                   </div>
-                  <div class="field">
-                     <input type="password" placeholder="Confirm password" required>
-                  </div>
+
                   <div class="field btn">
                      <div class="btn-layer"></div>
                      <input type="submit" value="Signup">
@@ -77,21 +54,29 @@
                </form>
 
 
-               <form action="#" class="login">
+               <form action="/register" method="POST" class="login">
+                @csrf
+                <input type="hidden" name="role" value="{{ 3 }}">
+
                 <div class="field">
-                   <input type="text" placeholder="Email Address" required>
-                </div>
-                <div class="field">
-                   <input type="password" placeholder="Password" required>
-                </div>
-                <div class="field">
-                   <input type="password" placeholder="Confirm password" required>
-                </div>
+                    <input type="text" name="name" placeholder="name" >
+                    <span class="text text-danger">@error('name') {{$message }} @enderror</span>
+                 </div>
+              <div class="field">
+                 <input type="text" name="email" placeholder="Email Address" >
+                 <span class="">@error('email') {{$message }} @enderror</span>
+              </div>
+              <div class="field">
+                 <input type="password" name="password" placeholder="Password" >
+                 <span class="text text-danger">@error('password') {{$message }} @enderror</span>
+
+              </div>
+
                 <div class="field btn">
                    <div class="btn-layer"></div>
                    <input type="submit" value="Signup">
                 </div>
-               
+
 
 
              </form>
@@ -130,6 +115,10 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
+}
+.field span {
+    color: red;
+
 }
 html,body{
   display: grid;

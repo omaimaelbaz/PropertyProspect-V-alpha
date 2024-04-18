@@ -12,13 +12,15 @@
          <header>Hello</header>
          <span id="signin-reg-msg" tabindex="-1" class="sub-heading">Sign in to RealEstate or <a id="create-account-link" href="https://signup.ebay.com/pa/crte?siteid=0&amp;co_partnerId=0&amp;UsingSSL=1&amp;rv4=1&amp;signInUrl=https%3A%2F%2Fsignin.ebay.com%2Fsignin%3Fsgn%3Dreg%26siteid%3D0%26co_partnerId%3D0%26UsingSSL%3D1%26rv4%3D1&amp;_trksid=p2487285.m5021.l46827">create an account</a></span>
 
-         <form>
+         <form action="/login" method="POST">
+            @csrf
+           
             <div class="input-field">
-               <input type="text" required>
+               <input name="email" type="text" required>
                <label>Email or Username</label>
             </div>
             <div class="input-field">
-               <input class="pswrd" type="password" required>
+               <input class="pswrd" type="password"  name='password'>
                <span class="show">SHOW</span>
                <label>Password</label>
             </div>
