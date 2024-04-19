@@ -12,7 +12,7 @@
   </head>
   <body>
     <div class="container-scroller">
-    
+
       <!-- partial:partials/_navbar.html -->
 
       <nav class="navbar default-layout-navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
@@ -193,6 +193,12 @@
                 <i class="mdi mdi-account menu-icon"></i>
               </a>
             </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/agent">
+                  <span class="menu-title">Agent</span>
+                  <i class="mdi mdi-account menu-icon"></i>
+                </a>
+              </li>
             <li class="nav-item">
               <a class="nav-link" data-bs-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
                 <span class="menu-title">Basic UI Elements</span>

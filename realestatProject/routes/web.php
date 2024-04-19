@@ -2,6 +2,8 @@
 
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\AgentController;
+
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -40,6 +42,14 @@ Route::get('/delete/{id}', [UserController::class, 'DeleteUsers']);
 // admin -create
 Route::get('/CreateUser', [UserController::class, 'Create']);
 Route::post('/store', [UserController::class, 'store']);
+
+
+//  agent
+Route::get('/agent', [AgentController::class, 'index']);
+
+
+
+
 
 
 

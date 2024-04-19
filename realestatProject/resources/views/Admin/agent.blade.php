@@ -1,3 +1,4 @@
+{{-- @dd($agents); --}}
 @extends('Admin.partials._tagshtml')
 
 @section('content')
@@ -12,7 +13,7 @@
                 <h3 class="page-title">
                   <span class="page-title-icon bg-gradient-primary text-white me-2">
                     <i class="mdi mdi-home menu-icon"></i>
-                  </span> Users
+                  </span> Agents
                 </h3>
 
                 <nav aria-label="breadcrumb">
@@ -27,43 +28,36 @@
             <div class="col-lg-12 grid-margin stretch-card">
                 <div class="card">
                     <div class="card-body">
-                        <h4 class="card-title">User Table</h4>
+                        <h4 class="card-title">agent Table</h4>
 
                         <div class="table-responsive">
-                                <a href="/CreateUser" class="btn btn bg-primary">Add User</a>
-
-
                             <table class="table table-striped">
 
 
                                 <thead>
                                     <tr>
-                                        <th>User</th>
+                                        <th>Agent</th>
                                         <th>First name</th>
-                                        <th>Role</th>
-                                        <th>Status</th>
+                                        <th>Email</th>
                                         <th>Action</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    @foreach ($users as $user )
+                                    @foreach ($agents as $agent )
                                     <tr>
                                         <td class="py-1">
                                             <img src="../../assets/images/faces-clipart/pic-1.png" alt="image" />
                                         </td>
-                                        <td>{{ $user->name }}</td>
+                                        <td>{{ $agent->name }}</td>
                                         <td>
 
-                                           {{$user->role->name}}
+                                           {{$agent->email}}
 
                                         </td>
 
-
-
-                                        <td><label class="badge badge-danger">Pending</label></td>
                                         <td>
                                             <a href="" class="badge badge-info">Update</a>
-                                            <a href="/delete/{{$user->id}}" class="badge badge-warning">delete</a>
+                                            <a href="" class="badge badge-warning">delete</a>
                                         </td>
                                     </tr>
 
