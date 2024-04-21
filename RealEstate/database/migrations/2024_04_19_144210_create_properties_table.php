@@ -17,6 +17,7 @@ return new class extends Migration
             $table->string('city');
             $table->unsignedSmallInteger('year_built')->nullable();
             $table->string('country', 100)->default('Morocco');
+            $table->unsignedSmallInteger('year_built')->nullable();
             $table->unsignedInteger('size_area')->nullable();
             $table->unsignedTinyInteger('num_bedrooms')->nullable();
             $table->unsignedTinyInteger('num_bathrooms')->nullable();

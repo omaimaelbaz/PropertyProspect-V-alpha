@@ -3,6 +3,8 @@
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\AgentController;
+use App\Http\Controllers\PropertiesController;
+
 
 use Illuminate\Support\Facades\Route;
 
@@ -46,3 +48,9 @@ Route::post('/store', [UserController::class, 'store']);
 
 //  agent
 Route::get('/agent', [AgentController::class, 'index']);
+
+
+// props
+
+Route::get('/props', [PropertiesController::class, 'GetProps']);
+

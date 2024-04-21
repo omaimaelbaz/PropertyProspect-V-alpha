@@ -31,20 +31,20 @@
 
   <div class="site-wrap">
 
-    {{-- <div class="site-mobile-menu">
+    <div class="site-mobile-menu">
       <div class="site-mobile-menu-header">
         <div class="site-mobile-menu-close mt-3">
           <span class="icon-close2 js-menu-toggle"></span>
         </div>
       </div>
       <div class="site-mobile-menu-body"></div>
-    </div> <!-- .site-mobile-menu --> --}}
+    </div> <!-- .site-mobile-menu -->
 
     <div class="site-navbar mt-4">
         <div class="container py-1">
           <div class="row align-items-center">
             <div class="col-8 col-md-8 col-lg-4">
-              <h1 class="mb-0"><a href="index.html" class="text-white h2 mb-0"><strong>Tig<span class="text-danger">mmi</span></strong></a></h1>
+              <h1 class="mb-0"><a href="index.html" class="text-white h2 mb-0"><strong>Homeland<span class="text-danger">.</span></strong></a></h1>
             </div>
             <div class="col-4 col-md-4 col-lg-8">
               <nav class="site-navigation text-right text-md-right" role="navigation">
@@ -53,23 +53,29 @@
 
                 <ul class="site-menu js-clone-nav d-none d-lg-block">
                   <li class="active">
-                    <a href="index.html">Home</a>
+                    <a href="/">Home</a>
                   </li>
-                  <li><a href="buy.html">Buy</a></li>
-                  <li><a href="rent.html">Rent</a></li>
+                  <li><a href="/buy">Buy</a></li>
+                  <li><a href="/rent">Rent</a></li>
                   <li class="has-children">
-                    <a href="properties.html">Properties</a>
+                    <a href="/property">Properties</a>
                     <ul class="dropdown arrow-top">
                       <li><a href="#">Condo</a></li>
                       <li><a href="#">Property Land</a></li>
                       <li><a href="#">Commercial Building</a></li>
-
+                      <li class="has-children">
+                        <a href="#">Sub Menu</a>
+                        <ul class="dropdown">
+                          <li><a href="#">Menu One</a></li>
+                          <li><a href="#">Menu Two</a></li>
+                          <li><a href="#">Menu Three</a></li>
+                        </ul>
+                      </li>
                     </ul>
                   </li>
-                  <li><a href="about.html">About</a></li>
-                  <li><a href="contact.html">Contact</a></li>
-                  <li><a href="login.html">Login</a></li>
-                  <li><a href="register.html">Register</a></li>
+                  <li><a href="/blog">Blog</a></li>
+                  <li><a href="/about">About</a></li>
+                  <li><a href="contact">Contact</a></li>
                 </ul>
               </nav>
             </div>
@@ -82,7 +88,7 @@
 
     <div class="slide-one-item home-slider owl-carousel">
 
-      <div class="site-blocks-cover overlay" style="background-image: url(images/hero_bg_4.jpg);" data-aos="fade" data-stellar-background-ratio="0.2">
+      <div class="site-blocks-cover overlay" style="background-image: url(images/hero_bg_1.jpg);" data-aos="fade" data-stellar-background-ratio="0.5">
         <div class="container">
           <div class="row align-items-center justify-content-center text-center">
             <div class="col-md-10">
@@ -515,7 +521,19 @@
             </div>
           </div>
         </div>
-
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <div class="site-pagination">
+              <a href="#" class="active">1</a>
+              <a href="#">2</a>
+              <a href="#">3</a>
+              <a href="#">4</a>
+              <a href="#">5</a>
+              <span>...</span>
+              <a href="#">10</a>
+            </div>
+          </div>
+        </div>
 
       </div>
     </div>
@@ -560,7 +578,7 @@
       </div>
     </div>
 
-    <!-- <div class="site-section bg-light">
+    <div class="site-section bg-light">
       <div class="container">
         <div class="row justify-content-center mb-5">
           <div class="col-md-7 text-center">
@@ -599,10 +617,10 @@
         </div>
 
       </div>
-    </div> -->
+    </div>
 
 
-    <div class="site-section bg-light">
+    <div class="site-section">
     <div class="container">
       <div class="row mb-5 justify-content-center">
         <div class="col-md-7">
