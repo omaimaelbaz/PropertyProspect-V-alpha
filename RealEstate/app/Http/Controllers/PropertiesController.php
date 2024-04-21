@@ -1,19 +1,24 @@
 <?php
 
 namespace App\Http\Controllers;
-use  App\Models\Images;
-use  App\Models\properties;
+
+use App\Models\Images;
+use App\Models\Properties;
+use Illuminate\Http\Request;
 
 class PropertiesController extends Controller
 {
-    public function GetProps()
+    public function getProps()
     {
-        $props = properties::get();
-        $img = Images::get();
-        // dd($img);
 
-        return view('User.proprty',compact('props','img'));
+        $props = Properties::get();
+        $imgs = Images::get();
+        // dd($props);
+
+        return view('User.propertie', compact('props', 'imgs'));
     }
 
 
+
 }
+

@@ -2,21 +2,23 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use App\Models\properties;
-
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use  App\Models\properties;
 class Images extends Model
 {
-    use HasFactory;
 
-    protected $fillable = [
-        'url',
-        'property_id',
-    ];
+        use HasFactory;
 
-    public function properties()
-    {
-        return $this->belongsTo(properties::class);
-    }
+        protected $fillable = [
+            'url',
+            'properties_id',
+        ];
+
+        public function propertie()
+        {
+            return $this->belongsTo(Properties::class, 'properties_id');
+        }
+
+
 }

@@ -4,11 +4,12 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use App\Models\images;
+use App\Models\Images; // Corrected import statement
 
 class properties extends Model
 {
     use HasFactory;
+
     protected $fillable = [
         'name',
         'address',
@@ -25,11 +26,10 @@ class properties extends Model
         'agent_id',
         'listed_by',
         'property_type_id',
-
     ];
+
     public function images()
     {
-        return $this->hasMany(Image::class);
-
+        return $this->hasMany(Images::class);
     }
 }
