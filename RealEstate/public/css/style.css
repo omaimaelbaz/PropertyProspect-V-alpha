@@ -274,7 +274,8 @@ a {
   width: 100%;
   border-bottom: none;
   position: absolute;
-  z-index: 99; }
+  z-index: 99;
+}
   .site-navbar .site-logo {
     font-weight: 200; }
     .site-navbar .site-logo a {
@@ -283,7 +284,9 @@ a {
   .site-navbar .site-navigation .site-menu {
     margin-bottom: 0;
     margin-left: 0;
-    padding-left: 0; }
+    padding-left: 0;
+}
+
     .site-navbar .site-navigation .site-menu .active > a {
       color: #fff; }
     .site-navbar .site-navigation .site-menu a {
