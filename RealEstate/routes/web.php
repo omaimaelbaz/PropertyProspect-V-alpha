@@ -4,6 +4,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\AgentController;
 use App\Http\Controllers\PropertiesController;
+use App\Http\Controllers\HomeController;
 
 
 use Illuminate\Support\Facades\Route;
@@ -19,13 +20,18 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('User.index');
-});
+// Route::get('/', function () {
+//     return view('User.index');
+// });
 Route::get('/admin', function () {
     return view('admin.dashboard');
 });
 // Ath routes
+
+// home page
+Route::get('/',[HomeController::class,'index']);
+
+
 
 
 Route::get('/login',[AuthController::class,'loginform']);

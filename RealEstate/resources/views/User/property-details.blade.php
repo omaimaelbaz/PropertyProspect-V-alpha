@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,700,900|Roboto+Mono:300,400,500"> 
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,700,900|Roboto+Mono:300,400,500">
     <link rel="stylesheet" href="fonts/icomoon/style.css">
 
     <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -18,17 +18,17 @@
     <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
     <link rel="stylesheet" href="css/fl-bigmug-line.css">
-    
-  
+
+
     <link rel="stylesheet" href="css/aos.css">
 
     <link rel="stylesheet" href="css/style.css">
-    
+
   </head>
   <body>
-  
+
   <div class="site-loader"></div>
-  
+
   <div class="site-wrap">
 
     <div class="site-mobile-menu">
@@ -63,7 +63,7 @@
                       <li><a href="#">Condo</a></li>
                       <li><a href="#">Property Land</a></li>
                       <li><a href="#">Commercial Building</a></li>
-                     
+
                     </ul>
                   </li>
                   <li><a href="about.html">About</a></li>
@@ -73,7 +73,7 @@
                 </ul>
               </nav>
             </div>
-           
+
 
           </div>
         </div>
@@ -113,17 +113,17 @@
                   <li>
                     <span class="property-specs">Beds</span>
                     <span class="property-specs-number">2 <sup>+</sup></span>
-                    
+
                   </li>
                   <li>
                     <span class="property-specs">Baths</span>
                     <span class="property-specs-number">2</span>
-                    
+
                   </li>
                   <li>
                     <span class="property-specs">SQ FT</span>
                     <span class="property-specs-number">7,000</span>
-                    
+
                   </li>
                 </ul>
                 </div>
@@ -219,12 +219,12 @@
                   <div class="px-3" style="margin-left: -15px;">
                     <a href="https://www.facebook.com/sharer/sharer.php?u=&quote=" class="pt-3 pb-3 pr-3 pl-0"><span class="icon-facebook"></span></a>
                     <a  href="https://twitter.com/intent/tweet?text=&url=" class="pt-3 pb-3 pr-3 pl-0"><span class="icon-twitter"></span></a>
-                    <a href="https://www.linkedin.com/sharing/share-offsite/?url=" class="pt-3 pb-3 pr-3 pl-0"><span class="icon-linkedin"></span></a>    
-                  </div>            
+                    <a href="https://www.linkedin.com/sharing/share-offsite/?url=" class="pt-3 pb-3 pr-3 pl-0"><span class="icon-linkedin"></span></a>
+                  </div>
             </div>
 
           </div>
-          
+
         </div>
       </div>
     </div>
@@ -239,7 +239,7 @@
             </div>
           </div>
         </div>
-      
+
         <div class="row mb-5">
           <div class="col-md-6 col-lg-4 mb-4">
             <div class="property-entry h-100">
@@ -259,17 +259,17 @@
                   <li>
                     <span class="property-specs">Beds</span>
                     <span class="property-specs-number">2 <sup>+</sup></span>
-                    
+
                   </li>
                   <li>
                     <span class="property-specs">Baths</span>
                     <span class="property-specs-number">2</span>
-                    
+
                   </li>
                   <li>
                     <span class="property-specs">SQ FT</span>
                     <span class="property-specs-number">7,000</span>
-                    
+
                   </li>
                 </ul>
 
@@ -295,17 +295,17 @@
                   <li>
                     <span class="property-specs">Beds</span>
                     <span class="property-specs-number">2 <sup>+</sup></span>
-                    
+
                   </li>
                   <li>
                     <span class="property-specs">Baths</span>
                     <span class="property-specs-number">2</span>
-                    
+
                   </li>
                   <li>
                     <span class="property-specs">SQ FT</span>
                     <span class="property-specs-number">1,620</span>
-                    
+
                   </li>
                 </ul>
 
@@ -330,17 +330,17 @@
                   <li>
                     <span class="property-specs">Beds</span>
                     <span class="property-specs-number">2 <sup>+</sup></span>
-                    
+
                   </li>
                   <li>
                     <span class="property-specs">Baths</span>
                     <span class="property-specs-number">2</span>
-                    
+
                   </li>
                   <li>
                     <span class="property-specs">SQ FT</span>
                     <span class="property-specs-number">5,500</span>
-                    
+
                   </li>
                 </ul>
 
@@ -395,10 +395,10 @@
                   <a href="#" class="pl-3 pr-3"><span class="icon-linkedin"></span></a>
                 </div>
 
-            
+
 
           </div>
-          
+
         </div>
         <div class="row pt-5 mt-5 text-center">
           <div class="col-md-12">
@@ -408,7 +408,7 @@
             <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
             </p>
           </div>
-          
+
         </div>
       </div>
     </footer>
@@ -430,6 +430,6 @@
   <script src="js/circleaudioplayer.js"></script>
 
   <script src="js/main.js"></script>
-    
+
   </body>
 </html>
