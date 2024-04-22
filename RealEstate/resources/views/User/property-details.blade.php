@@ -101,403 +101,340 @@
         {{-- en navbar --}}
 
         @foreach ($props as $prop)
-        @foreach($imgs as $img)
-            <div class="site-blocks-cover inner-page-cover overlay" style="background-image: url({{'images/'.$img->url}});"
-        @endforeach
-                data-aos="fade" data-stellar-background-ratio="0.5">
-                <div class="container">
-                    <div class="row align-items-center justify-content-center text-center">
-                        <div class="col-md-10">
-                            <span class="d-inline-block text-white px-3 mb-3 property-offer-type rounded">Property
-                                Details of</span>
-                            <h1 class="mb-2">{{ $prop->name }}</h1>
-                            <p class="mb-5"><strong class="h2 text-success font-weight-bold">{{ $prop->price  . '$'}}</strong></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        @endforeach
-
-        <div class="site-section site-section-sm">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8">
-                        <div>
-                            <div class="slide-one-item home-slider owl-carousel">
-                                <div><img src="images/hero_bg_1.jpg" alt="Image" class="img-fluid"></div>
-                                <div><img src="images/hero_bg_2.jpg" alt="Image" class="img-fluid"></div>
-                                <div><img src="images/hero_bg_3.jpg" alt="Image" class="img-fluid"></div>
-                            </div>
-                        </div>
-                        <div class="bg-white property-body border-bottom border-left border-right">
-                            <div class="row mb-5">
-                                <div class="col-md-6">
-                                    <strong class="text-success h1 mb-3">{{ $prop->price . '$'}}</strong>
-                                </div>
-                                <div class="col-md-6">
-                                    <ul class="property-specs-wrap mb-3 mb-lg-0  float-lg-right">
-                                        <li>
-                                            <span class="property-specs">Beds</span>
-                                            <span class="property-specs-number">{{$prop->num_bedrooms}}</span>
-
-                                        </li>
-                                        <li>
-                                            <span class="property-specs">Baths</span>
-                                            <span class="property-specs-number">{{$prop->num_bathrooms}}</span>
-
-                                        </li>
-                                        <li>
-                                            <span class="property-specs">SQ FT</span>
-                                            <span class="property-specs-number">{{$prop->size_area. 'm²'}}</span>
-
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="row mb-5">
-                                @foreach($propType as $type)
-                                <div class="col-md-6 col-lg-4 text-center border-bottom border-top py-3">
-                                    <span class="d-inline-block text-black mb-0 caption-text">Home Type</span>
-                                    <strong class="d-block">{{$type->name}}</strong>
-                                </div>
-                                @endforeach
-                                <div class="col-md-6 col-lg-4 text-center border-bottom border-top py-3">
-                                    <span class="d-inline-block text-black mb-0 caption-text">Year Built</span>
-                                    <strong class="d-block">2018</strong>
-                                </div>
-                                <div class="col-md-6 col-lg-4 text-center border-bottom border-top py-3">
-                                    <span class="d-inline-block text-black mb-0 caption-text">Price/Sqft</span>
-                                    <strong class="d-block">$520</strong>
-                                </div>
-                            </div>
-                            <h2 class="h4 text-black">More Info</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda aperiam perferendis
-                                deleniti vitae asperiores accusamus tempora facilis sapiente, quas! Quos asperiores
-                                alias fugiat sunt tempora molestias quo deserunt similique sequi.</p>
-                            <p>Nisi voluptatum error ipsum repudiandae, autem deleniti, velit dolorem enim quaerat rerum
-                                incidunt sed, qui ducimus! Tempora architecto non, eligendi vitae dolorem laudantium
-                                dolore blanditiis assumenda in eos hic unde.</p>
-                            <p>Voluptatum debitis cupiditate vero tempora error fugit aspernatur sint veniam laboriosam
-                                eaque eum, et hic odio quibusdam molestias corporis dicta! Beatae id magni, laudantium
-                                nulla iure ea sunt aliquam. A.</p>
-
-                            <div class="row no-gutters mt-5">
-                                <div class="col-12">
-                                    <h2 class="h4 text-black mb-3">Gallery</h2>
-                                </div>
-                                <div class="col-sm-6 col-md-4 col-lg-3">
-                                    <a href="images/img_1.jpg" class="image-popup gal-item"><img
-                                            src="images/img_1.jpg" alt="Image" class="img-fluid"></a>
-                                </div>
-                                <div class="col-sm-6 col-md-4 col-lg-3">
-                                    <a href="images/img_2.jpg" class="image-popup gal-item"><img
-                                            src="images/img_2.jpg" alt="Image" class="img-fluid"></a>
-                                </div>
-                                <div class="col-sm-6 col-md-4 col-lg-3">
-                                    <a href="images/img_3.jpg" class="image-popup gal-item"><img
-                                            src="images/img_3.jpg" alt="Image" class="img-fluid"></a>
-                                </div>
-                                <div class="col-sm-6 col-md-4 col-lg-3">
-                                    <a href="images/img_4.jpg" class="image-popup gal-item"><img
-                                            src="images/img_4.jpg" alt="Image" class="img-fluid"></a>
-                                </div>
-                                <div class="col-sm-6 col-md-4 col-lg-3">
-                                    <a href="images/img_5.jpg" class="image-popup gal-item"><img
-                                            src="images/img_5.jpg" alt="Image" class="img-fluid"></a>
-                                </div>
-                                <div class="col-sm-6 col-md-4 col-lg-3">
-                                    <a href="images/img_6.jpg" class="image-popup gal-item"><img
-                                            src="images/img_6.jpg" alt="Image" class="img-fluid"></a>
-                                </div>
-                                <div class="col-sm-6 col-md-4 col-lg-3">
-                                    <a href="images/img_7.jpg" class="image-popup gal-item"><img
-                                            src="images/img_7.jpg" alt="Image" class="img-fluid"></a>
-                                </div>
-                                <div class="col-sm-6 col-md-4 col-lg-3">
-                                    <a href="images/img_8.jpg" class="image-popup gal-item"><img
-                                            src="images/img_8.jpg" alt="Image" class="img-fluid"></a>
-                                </div>
-                                <div class="col-sm-6 col-md-4 col-lg-3">
-                                    <a href="images/img_1.jpg" class="image-popup gal-item"><img
-                                            src="images/img_1.jpg" alt="Image" class="img-fluid"></a>
-                                </div>
-                                <div class="col-sm-6 col-md-4 col-lg-3">
-                                    <a href="images/img_2.jpg" class="image-popup gal-item"><img
-                                            src="images/img_2.jpg" alt="Image" class="img-fluid"></a>
-                                </div>
-                                <div class="col-sm-6 col-md-4 col-lg-3">
-                                    <a href="images/img_3.jpg" class="image-popup gal-item"><img
-                                            src="images/img_3.jpg" alt="Image" class="img-fluid"></a>
-                                </div>
-                                <div class="col-sm-6 col-md-4 col-lg-3">
-                                    <a href="images/img_4.jpg" class="image-popup gal-item"><img
-                                            src="images/img_4.jpg" alt="Image" class="img-fluid"></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-
-                        <div class="bg-white widget border rounded">
-
-                            <h3 class="h4 text-black widget-title mb-3">Contact Agent</h3>
-                            <form action="" class="form-contact-agent">
-                                <div class="form-group">
-                                    <label for="name">Name</label>
-                                    <input type="text" id="name" class="form-control">
-                                </div>
-                                <div class="form-group">
-                                    <label for="email">Email</label>
-                                    <input type="email" id="email" class="form-control">
-                                </div>
-                                <div class="form-group">
-                                    <label for="phone">Phone</label>
-                                    <input type="text" id="phone" class="form-control">
-                                </div>
-                                <div class="form-group">
-                                    <input type="submit" id="phone" class="btn btn-primary"
-                                        value="Send Message">
-                                </div>
-                            </form>
-                        </div>
-
-                        <div class="bg-white widget border rounded">
-                            <h3 class="h4 text-black widget-title mb-3 ml-0">Share</h3>
-                            <div class="px-3" style="margin-left: -15px;">
-                                <a href="https://www.facebook.com/sharer/sharer.php?u=&quote="
-                                    class="pt-3 pb-3 pr-3 pl-0"><span class="icon-facebook"></span></a>
-                                <a href="https://twitter.com/intent/tweet?text=&url="
-                                    class="pt-3 pb-3 pr-3 pl-0"><span class="icon-twitter"></span></a>
-                                <a href="https://www.linkedin.com/sharing/share-offsite/?url="
-                                    class="pt-3 pb-3 pr-3 pl-0"><span class="icon-linkedin"></span></a>
-                            </div>
-                        </div>
-
-                    </div>
-
-                </div>
-            </div>
-        </div>
-
-        <div class="site-section site-section-sm bg-light">
-            <div class="container">
-
-                <div class="row">
-                    <div class="col-12">
-                        <div class="site-section-title mb-5">
-                            <h2>Related Properties</h2>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="row mb-5">
-                    <div class="col-md-6 col-lg-4 mb-4">
-                        <div class="property-entry h-100">
-                            <a href="property-details.html" class="property-thumbnail">
-                                <div class="offer-type-wrap">
-                                    <span class="offer-type bg-danger">Sale</span>
-                                    <span class="offer-type bg-success">Rent</span>
-                                </div>
-                                <img src="images/img_1.jpg" alt="Image" class="img-fluid">
-                            </a>
-                            <div class="p-4 property-body">
-                                <a href="#" class="property-favorite"><span class="icon-heart-o"></span></a>
-                                <h2 class="property-title"><a href="property-details.html">625 S. Berendo St</a></h2>
-                                <span class="property-location d-block mb-3"><span
-                                        class="property-icon icon-room"></span> 625 S. Berendo St Unit 607 Los Angeles,
-                                    CA 90005</span>
-                                <strong
-                                    class="property-price text-primary mb-3 d-block text-success">$2,265,500</strong>
-                                <ul class="property-specs-wrap mb-3 mb-lg-0">
-                                    <li>
-                                        <span class="property-specs">Beds</span>
-                                        <span class="property-specs-number">2 <sup>+</sup></span>
-
-                                    </li>
-                                    <li>
-                                        <span class="property-specs">Baths</span>
-                                        <span class="property-specs-number">2</span>
-
-                                    </li>
-                                    <li>
-                                        <span class="property-specs">SQ FT</span>
-                                        <span class="property-specs-number">7,000</span>
-
-                                    </li>
-                                </ul>
-
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-6 col-lg-4 mb-4">
-                        <div class="property-entry h-100">
-                            <a href="property-details.html" class="property-thumbnail">
-                                <div class="offer-type-wrap">
-                                    <span class="offer-type bg-danger">Sale</span>
-                                    <span class="offer-type bg-success">Rent</span>
-                                </div>
-                                <img src="images/img_2.jpg" alt="Image" class="img-fluid">
-                            </a>
-                            <div class="p-4 property-body">
-                                <a href="#" class="property-favorite active"><span
-                                        class="icon-heart-o"></span></a>
-                                <h2 class="property-title"><a href="property-details.html">871 Crenshaw Blvd</a></h2>
-                                <span class="property-location d-block mb-3"><span
-                                        class="property-icon icon-room"></span> 1 New York Ave, Warners Bay, NSW
-                                    2282</span>
-                                <strong
-                                    class="property-price text-primary mb-3 d-block text-success">$2,265,500</strong>
-                                <ul class="property-specs-wrap mb-3 mb-lg-0">
-                                    <li>
-                                        <span class="property-specs">Beds</span>
-                                        <span class="property-specs-number">2 <sup>+</sup></span>
-
-                                    </li>
-                                    <li>
-                                        <span class="property-specs">Baths</span>
-                                        <span class="property-specs-number">2</span>
-
-                                    </li>
-                                    <li>
-                                        <span class="property-specs">SQ FT</span>
-                                        <span class="property-specs-number">1,620</span>
-
-                                    </li>
-                                </ul>
-
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-6 col-lg-4 mb-4">
-                        <div class="property-entry h-100">
-                            <a href="property-details.html" class="property-thumbnail">
-                                <div class="offer-type-wrap">
-                                    <span class="offer-type bg-info">Lease</span>
-                                </div>
-                                <img src="images/img_3.jpg" alt="Image" class="img-fluid">
-                            </a>
-                            <div class="p-4 property-body">
-                                <a href="#" class="property-favorite"><span class="icon-heart-o"></span></a>
-                                <h2 class="property-title"><a href="property-details.html">853 S Lucerne Blvd</a></h2>
-                                <span class="property-location d-block mb-3"><span
-                                        class="property-icon icon-room"></span> 853 S Lucerne Blvd Unit 101 Los
-                                    Angeles, CA 90005</span>
-                                <strong
-                                    class="property-price text-primary mb-3 d-block text-success">$2,265,500</strong>
-                                <ul class="property-specs-wrap mb-3 mb-lg-0">
-                                    <li>
-                                        <span class="property-specs">Beds</span>
-                                        <span class="property-specs-number">2 <sup>+</sup></span>
-
-                                    </li>
-                                    <li>
-                                        <span class="property-specs">Baths</span>
-                                        <span class="property-specs-number">2</span>
-
-                                    </li>
-                                    <li>
-                                        <span class="property-specs">SQ FT</span>
-                                        <span class="property-specs-number">5,500</span>
-
-                                    </li>
-                                </ul>
-
+            @foreach ($imgs as $img)
+                <div class="site-blocks-cover inner-page-cover overlay"
+                    style="background-image: url({{ 'images/' . $img->url }});" @endforeach
+                    data-aos="fade" data-stellar-background-ratio="0.5">
+                    <div class="container">
+                        <div class="row align-items-center justify-content-center text-center">
+                            <div class="col-md-10">
+                                <span class="d-inline-block text-white px-3 mb-3 property-offer-type rounded">Property
+                                    Details of</span>
+                                <h1 class="mb-2">{{ $prop->name }}</h1>
+                                <p class="mb-5"><strong
+                                        class="h2 text-success font-weight-bold">{{ $prop->price . '$' }}</strong></p>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
+            @endforeach
 
-            <footer class="site-footer">
+            <div class="site-section site-section-sm">
                 <div class="container">
                     <div class="row">
-                        <div class="col-lg-4">
-                            <div class="mb-5">
-                                <h3 class="footer-heading mb-4">About Homeland</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe pariatur
-                                    reprehenderit vero atque, consequatur id ratione, et non dignissimos culpa? Ut
-                                    veritatis, quos illum totam quis blanditiis, minima minus odio!</p>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 mb-5 mb-lg-0">
-                            <div class="row mb-5">
-                                <div class="col-md-12">
-                                    <h3 class="footer-heading mb-4">Navigations</h3>
-                                </div>
-                                <div class="col-md-6 col-lg-6">
-                                    <ul class="list-unstyled">
-                                        <li><a href="#">Home</a></li>
-                                        <li><a href="#">Buy</a></li>
-                                        <li><a href="#">Rent</a></li>
-                                        <li><a href="#">Properties</a></li>
-                                    </ul>
-                                </div>
-                                <div class="col-md-6 col-lg-6">
-                                    <ul class="list-unstyled">
-                                        <li><a href="#">About Us</a></li>
-                                        <li><a href="#">Privacy Policy</a></li>
-                                        <li><a href="#">Contact Us</a></li>
-                                        <li><a href="#">Terms</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-
-
-                        </div>
-
-                        <div class="col-lg-4 mb-5 mb-lg-0">
-                            <h3 class="footer-heading mb-4">Follow Us</h3>
-
+                        <div class="col-lg-8">
                             <div>
-                                <a href="#" class="pl-0 pr-3"><span class="icon-facebook"></span></a>
-                                <a href="#" class="pl-3 pr-3"><span class="icon-twitter"></span></a>
-                                <a href="#" class="pl-3 pr-3"><span class="icon-instagram"></span></a>
-                                <a href="#" class="pl-3 pr-3"><span class="icon-linkedin"></span></a>
+                                <div class="slide-one-item home-slider owl-carousel">
+                                    <div><img src="images/hero_bg_1.jpg" alt="Image" class="img-fluid"></div>
+                                    <div><img src="images/hero_bg_2.jpg" alt="Image" class="img-fluid"></div>
+                                    <div><img src="images/hero_bg_3.jpg" alt="Image" class="img-fluid"></div>
+                                </div>
                             </div>
+                            <div class="bg-white property-body border-bottom border-left border-right">
+                                <div class="row mb-5">
+                                    <div class="col-md-6">
+                                        <strong class="text-success h1 mb-3">{{ $prop->price . '$' }}</strong>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <ul class="property-specs-wrap mb-3 mb-lg-0  float-lg-right">
+                                            <li>
+                                                <span class="property-specs">Beds</span>
+                                                <span class="property-specs-number">{{ $prop->num_bedrooms }}</span>
+
+                                            </li>
+                                            <li>
+                                                <span class="property-specs">Baths</span>
+                                                <span class="property-specs-number">{{ $prop->num_bathrooms }}</span>
+
+                                            </li>
+                                            <li>
+                                                <span class="property-specs">SQ FT</span>
+                                                <span
+                                                    class="property-specs-number">{{ $prop->size_area . 'm²' }}</span>
+
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="row mb-5">
+                                    <div class="col-md-6 col-lg-4 text-center border-bottom border-top py-3">
+                                        <span class="d-inline-block text-black mb-0 caption-text">Home Type</span> <br>
+                                        @foreach ($props as $prop)
+                                            {{-- <strong class="">{{ $propType->first()->name}}</strong> --}}
+                                            <strong class="">{{ $prop->PropertyTypes->name }}</strong>
+                                        @endforeach
+                                    </div>
+                                    <div class="col-md-6 col-lg-4 text-center border-bottom border-top py-3">
+                                        <span class="d-inline-block text-black mb-0 caption-text">Year Built</span>
+                                        <strong class="d-block">{{ $prop->year_built }}</strong>
+                                    </div>
+                                    <div class="col-md-6 col-lg-4 text-center border-bottom border-top py-3">
+                                        <span class="d-inline-block text-black mb-0 caption-text">Price/Sqft</span>
+                                        <strong class="d-block">$520</strong>
+                                    </div>
+                                </div>
+
+                                @foreach ($props as $property)
+                                    <h2 class="h4 text-black">Listed By</h2>
+                                    <p>{{ $property->listedBy->name }}</p>
+                                @endforeach
+                                <h2 class="h4 text-black">More Info</h2>
+                                <p>{{ $prop->description }}</p>
 
 
-
+                                <div class="row no-gutters mt-5">
+                                    <div class="col-12">
+                                        <h2 class="h4 text-black mb-3">Gallery</h2>
+                                    </div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3">
+                                        <a href="images/img_1.jpg" class="image-popup gal-item"><img
+                                                src="images/img_1.jpg" alt="Image" class="img-fluid"></a>
+                                    </div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3">
+                                        <a href="images/img_2.jpg" class="image-popup gal-item"><img
+                                                src="images/img_2.jpg" alt="Image" class="img-fluid"></a>
+                                    </div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3">
+                                        <a href="images/img_3.jpg" class="image-popup gal-item"><img
+                                                src="images/img_3.jpg" alt="Image" class="img-fluid"></a>
+                                    </div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3">
+                                        <a href="images/img_4.jpg" class="image-popup gal-item"><img
+                                                src="images/img_4.jpg" alt="Image" class="img-fluid"></a>
+                                    </div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3">
+                                        <a href="images/img_5.jpg" class="image-popup gal-item"><img
+                                                src="images/img_5.jpg" alt="Image" class="img-fluid"></a>
+                                    </div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3">
+                                        <a href="images/img_6.jpg" class="image-popup gal-item"><img
+                                                src="images/img_6.jpg" alt="Image" class="img-fluid"></a>
+                                    </div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3">
+                                        <a href="images/img_7.jpg" class="image-popup gal-item"><img
+                                                src="images/img_7.jpg" alt="Image" class="img-fluid"></a>
+                                    </div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3">
+                                        <a href="images/img_8.jpg" class="image-popup gal-item"><img
+                                                src="images/img_8.jpg" alt="Image" class="img-fluid"></a>
+                                    </div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3">
+                                        <a href="images/img_1.jpg" class="image-popup gal-item"><img
+                                                src="images/img_1.jpg" alt="Image" class="img-fluid"></a>
+                                    </div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3">
+                                        <a href="images/img_2.jpg" class="image-popup gal-item"><img
+                                                src="images/img_2.jpg" alt="Image" class="img-fluid"></a>
+                                    </div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3">
+                                        <a href="images/img_3.jpg" class="image-popup gal-item"><img
+                                                src="images/img_3.jpg" alt="Image" class="img-fluid"></a>
+                                    </div>
+                                    <div class="col-sm-6 col-md-4 col-lg-3">
+                                        <a href="images/img_4.jpg" class="image-popup gal-item"><img
+                                                src="images/img_4.jpg" alt="Image" class="img-fluid"></a>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
 
-                    </div>
-                    <div class="row pt-5 mt-5 text-center">
-                        <div class="col-md-12">
-                            <p>
-                                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                                Copyright &copy;
-                                <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
-                                <script>
-                                    document.write(new Date().getFullYear());
-                                </script> All rights reserved | This template is made with <i
-                                    class="icon-heart text-danger" aria-hidden="true"></i> by <a
-                                    href="https://colorlib.com" target="_blank">Colorlib</a>
-                                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                            </p>
+
+                        <div class="col-lg-4">
+
+                            <div class="bg-white widget border rounded">
+
+                                <h3 class="h4 text-black widget-title mb-3">Contact Agent</h3>
+                                <form action="" class="form-contact-agent">
+                                    <div class="form-group">
+                                        <label for="name">Name</label>
+                                        <input type="text" id="name" class="form-control">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="email">Email</label>
+                                        <input type="email" id="email" class="form-control">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="phone">Phone</label>
+                                        <input type="text" id="phone" class="form-control">
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="submit" id="phone" class="btn btn-primary"
+                                            value="Send Message">
+                                    </div>
+                                </form>
+                            </div>
+
+                            <div class="bg-white widget border rounded">
+                                <h3 class="h4 text-black widget-title mb-3 ml-0">Share</h3>
+                                <div class="px-3" style="margin-left: -15px;">
+                                    <a href="https://www.facebook.com/sharer/sharer.php?u=&quote="
+                                        class="pt-3 pb-3 pr-3 pl-0"><span class="icon-facebook"></span></a>
+                                    <a href="https://twitter.com/intent/tweet?text=&url="
+                                        class="pt-3 pb-3 pr-3 pl-0"><span class="icon-twitter"></span></a>
+                                    <a href="https://www.linkedin.com/sharing/share-offsite/?url="
+                                        class="pt-3 pb-3 pr-3 pl-0"><span class="icon-linkedin"></span></a>
+                                </div>
+                            </div>
+
                         </div>
 
                     </div>
                 </div>
-            </footer>
+            </div>
 
-        </div>
 
-        <script src="js/jquery-3.3.1.min.js"></script>
-        <script src="js/jquery-migrate-3.0.1.min.js"></script>
-        <script src="js/jquery-ui.js"></script>
-        <script src="js/popper.min.js"></script>
-        <script src="js/bootstrap.min.js"></script>
-        <script src="js/owl.carousel.min.js"></script>
-        <script src="js/mediaelement-and-player.min.js"></script>
-        <script src="js/jquery.stellar.min.js"></script>
-        <script src="js/jquery.countdown.min.js"></script>
-        <script src="js/jquery.magnific-popup.min.js"></script>
-        <script src="js/bootstrap-datepicker.min.js"></script>
-        <script src="js/aos.js"></script>
-        <script src="js/circleaudioplayer.js"></script>
+            {{-- props for each agent  --}}
+            <div class="site-section site-section-sm bg-light">
+                <div class="container">
 
-        <script src="js/main.js"></script>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="site-section-title mb-5">
+                                <h2>Related Properties</h2>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row mb-5">
+                        @foreach ($props as $prop)
+                            <div class="col-md-6 col-lg-4 mb-4">
+                                <div class="property-entry h-100">
+                                    <a href="/details" class="property-thumbnail">
+
+                                        <div class="offer-type-wrap">
+                                            <span class="offer-type bg-danger">{{ $prop->status }}</span>
+
+                                        </div>
+                                        @foreach ($imgs as $img)
+                                            <img src="{{ 'images/' . $img->url }}" alt="Image" class="img-fluid">
+                                        @endforeach
+                                    </a>
+                                    <div class="p-4 property-body">
+                                        <a href="#" class="property-favorite"><span
+                                                class="icon-heart-o"></span></a>
+                                        <h2 class="property-title"><a href="/details">{{ $prop->name }}</a>
+                                        </h2>
+                                        <span class="property-location d-block mb-3"><span
+                                                class="property-icon icon-room"></span> {{ $prop->address }} , <br>
+
+                                            {{ $prop->country }} {{ $prop->city }}</span>
+                                        <strong
+                                            class="property-price text-primary mb-3 d-block text-success">{{ $prop->price }}$</strong>
+                                        <ul class="property-specs-wrap mb-3 mb-lg-0">
+                                            <li>
+                                                <span class="property-specs">Beds</span>
+                                                <span class="property-specs-number">{{ $prop->num_bedrooms }}</span>
+
+                                            </li>
+                                            <li>
+                                                <span class="property-specs">Baths</span>
+                                                <span class="property-specs-number">{{ $prop->num_bathrooms }}</span>
+
+                                            </li>
+                                            <li>
+                                                <span class="property-specs">SQ FT</span>
+                                                <span class="property-specs-number">{{ $prop->size_area . 'm2' }}
+                                                </span>
+
+                                            </li>
+                                        </ul>
+
+                                    </div>
+                                </div>
+                            </div>
+                        @endforeach
+
+                    </div>
+
+                    <footer class="site-footer">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-4">
+                                    <div class="mb-5">
+                                        <h3 class="footer-heading mb-4">About Homeland</h3>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe pariatur
+                                            reprehenderit vero atque, consequatur id ratione, et non dignissimos culpa?
+                                            Ut
+                                            veritatis, quos illum totam quis blanditiis, minima minus odio!</p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 mb-5 mb-lg-0">
+                                    <div class="row mb-5">
+                                        <div class="col-md-12">
+                                            <h3 class="footer-heading mb-4">Navigations</h3>
+                                        </div>
+                                        <div class="col-md-6 col-lg-6">
+                                            <ul class="list-unstyled">
+                                                <li><a href="#">Home</a></li>
+                                                <li><a href="#">Buy</a></li>
+                                                <li><a href="#">Rent</a></li>
+                                                <li><a href="#">Properties</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-md-6 col-lg-6">
+                                            <ul class="list-unstyled">
+                                                <li><a href="#">About Us</a></li>
+                                                <li><a href="#">Privacy Policy</a></li>
+                                                <li><a href="#">Contact Us</a></li>
+                                                <li><a href="#">Terms</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+
+                                <div class="col-lg-4 mb-5 mb-lg-0">
+                                    <h3 class="footer-heading mb-4">Follow Us</h3>
+
+                                    <div>
+                                        <a href="#" class="pl-0 pr-3"><span class="icon-facebook"></span></a>
+                                        <a href="#" class="pl-3 pr-3"><span class="icon-twitter"></span></a>
+                                        <a href="#" class="pl-3 pr-3"><span class="icon-instagram"></span></a>
+                                        <a href="#" class="pl-3 pr-3"><span class="icon-linkedin"></span></a>
+                                    </div>
+
+
+
+                                </div>
+
+                            </div>
+                            <div class="row pt-5 mt-5 text-center">
+                                <div class="col-md-12">
+                                    <p>
+                                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                                        Copyright &copy;
+                                        <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+                                        <script>
+                                            document.write(new Date().getFullYear());
+                                        </script> All rights reserved | This template is made with <i
+                                            class="icon-heart text-danger" aria-hidden="true"></i> by <a
+                                            href="https://colorlib.com" target="_blank">Colorlib</a>
+                                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                                    </p>
+                                </div>
+
+                            </div>
+                        </div>
+                    </footer>
+
+                </div>
+
+                <script src="js/jquery-3.3.1.min.js"></script>
+                <script src="js/jquery-migrate-3.0.1.min.js"></script>
+                <script src="js/jquery-ui.js"></script>
+                <script src="js/popper.min.js"></script>
+                <script src="js/bootstrap.min.js"></script>
+                <script src="js/owl.carousel.min.js"></script>
+                <script src="js/mediaelement-and-player.min.js"></script>
+                <script src="js/jquery.stellar.min.js"></script>
+                <script src="js/jquery.countdown.min.js"></script>
+                <script src="js/jquery.magnific-popup.min.js"></script>
+                <script src="js/bootstrap-datepicker.min.js"></script>
+                <script src="js/aos.js"></script>
+                <script src="js/circleaudioplayer.js"></script>
+
+                <script src="js/main.js"></script>
 
 </body>
 

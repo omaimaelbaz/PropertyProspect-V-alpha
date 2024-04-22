@@ -3,7 +3,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Images;
 use App\Models\Properties;
-use App\Models\PropertyType; 
+use App\Models\PropertyTypes;
 
 use Illuminate\Http\Request;
 
@@ -21,7 +21,7 @@ class PropertiesController extends Controller
     {
         $props = Properties::get();
         $imgs = Images::get();
-        $propType = PropertyType::get(); // Use PropertyType model
+        $propType = PropertyTypes::get(); // Use PropertyType model
         return view('User.property-details', compact('props', 'imgs', 'propType'));
     }
 }

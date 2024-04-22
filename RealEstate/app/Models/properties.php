@@ -4,7 +4,8 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use App\Models\Images; // Corrected import statement
+use App\Models\Images;
+use App\Models\PropertyTypes;
 
 class properties extends Model
 {
@@ -33,8 +34,12 @@ class properties extends Model
         return $this->hasMany(Images::class);
     }
 
-    public function PropertyType()
+    public function PropertyTypes()
     {
-        return $this->blongsTo(PropertyType::class);
+        return $this->belongsTo(PropertyTypes::class);
+    }
+    public function listedBy()
+    {
+        return $this->belongsTo(User::class, 'listed_by');
     }
 }

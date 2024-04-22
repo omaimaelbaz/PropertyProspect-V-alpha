@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class PropertyType extends Model
+class PropertyTypes extends Model
 {
     use HasFactory;
     protected $fillable =[

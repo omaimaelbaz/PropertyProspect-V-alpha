@@ -26,13 +26,13 @@ return new class extends Migration
             $table->timestamp('listed_date')->nullable();
             $table->unsignedBigInteger('agent_id')->nullable();
             $table->unsignedBigInteger('listed_by'); // User ID of the person who listed
-            $table->unsignedBigInteger('property_type_id');
+            $table->unsignedBigInteger('property_types_id');
 
             $table->timestamps();
 
             $table->foreign('agent_id')->references('id')->on('agents')->onDelete('set null');
             $table->foreign('listed_by')->references('id')->on('users')->onDelete('cascade');
-            $table->foreign('property_type_id')->references('id')->on('property_type')->onDelete('cascade');
+            $table->foreign('property_types_id')->references('id')->on('property_types')->onDelete('cascade');
         });
     }
 
