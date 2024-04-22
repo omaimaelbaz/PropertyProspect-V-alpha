@@ -264,17 +264,23 @@
                                 </form>
                             </div>
 
-                            <div class="bg-white widget border rounded">
-                                <h3 class="h4 text-black widget-title mb-3 ml-0">Share</h3>
-                                <div class="px-3" style="margin-left: -15px;">
-                                    <a href="https://www.facebook.com/sharer/sharer.php?u=&quote="
-                                        class="pt-3 pb-3 pr-3 pl-0"><span class="icon-facebook"></span></a>
-                                    <a href="https://twitter.com/intent/tweet?text=&url="
-                                        class="pt-3 pb-3 pr-3 pl-0"><span class="icon-twitter"></span></a>
-                                    <a href="https://www.linkedin.com/sharing/share-offsite/?url="
-                                        class="pt-3 pb-3 pr-3 pl-0"><span class="icon-linkedin"></span></a>
+                            @foreach ($props as $property)
+                                <div class="bg-white widget border rounded">
+                                    <h3 class="h4 text-black widget-title mb-3 ml-0">Share</h3>
+                                    <div class="px-3" style="margin-left: -15px;">
+                                        <!-- Facebook -->
+                                        <a href="https://www.facebook.com/sharer/sharer.php?u={{ url('/props/' . $property->id) }}&quote={{ $property->name }}&amp;picture={{ urlencode($property->image_url) }}"
+                                            class="pt-3 pb-3 pr-3 pl-0"><span class="icon-facebook"></span></a>
+                                        <!-- Twitter -->
+                                        <a href="https://twitter.com/intent/tweet?text={{ urlencode($property->name) }}&url={{ url('/props/' . $property->id) }}&amp;media={{ urlencode($property->image_url) }}"
+                                            class="pt-3 pb-3 pr-3 pl-0"><span class="icon-twitter"></span></a>
+                                        <!-- LinkedIn -->
+                                        <a href="https://www.linkedin.com/sharing/share-offsite/?url={{ url('/props/' . $property->id) }}&amp;summary=&amp;source=&amp;title=&amp;mini=true&amp;url=&amp;summary=&amp;source=&amp;picture={{ urlencode($property->image_url) }}"
+                                            class="pt-3 pb-3 pr-3 pl-0"><span class="icon-linkedin"></span></a>
+                                    </div>
                                 </div>
-                            </div>
+                            @endforeach
+
 
                         </div>
 

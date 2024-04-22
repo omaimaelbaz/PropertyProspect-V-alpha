@@ -20,8 +20,9 @@ class PropertiesController extends Controller
     public function getDetails()
     {
         $props = Properties::get();
+        // dd($props);
         $imgs = Images::get();
-        $propType = PropertyTypes::get(); // Use PropertyType model
+        $propType = PropertyTypes::get();
         return view('User.property-details', compact('props', 'imgs', 'propType'));
     }
 }
