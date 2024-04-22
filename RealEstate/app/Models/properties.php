@@ -32,4 +32,9 @@ class properties extends Model
     {
         return $this->hasMany(Images::class);
     }
+
+    public function PropertyType()
+    {
+        return $this->blongsTo(PropertyType::class);
+    }
 }

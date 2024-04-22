@@ -41,6 +41,9 @@ Route::post('/login',[AuthController::class,'login']);
 Route::get('/register', [AuthController::class, 'registerform']);
 Route::post('/register', [AuthController::class, 'register']);
 
+Route::get('/logout', [AuthController::class, 'LogOut']);
+
+
 
 // admin
 
@@ -59,4 +62,6 @@ Route::get('/agent', [AgentController::class, 'index']);
 // props
 
 Route::get('/props', [PropertiesController::class, 'GetProps']);
+Route::get('/details', [PropertiesController::class, 'getDetails']);
+
 
