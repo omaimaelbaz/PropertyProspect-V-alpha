@@ -62,6 +62,6 @@ Route::get('/agent', [AgentController::class, 'index']);
 // props
 
 Route::get('/props', [PropertiesController::class, 'GetProps']);
-Route::get('/details', [PropertiesController::class, 'getDetails']);
+Route::get('/details/{id}', [PropertiesController::class, 'getDetails']);
 
 

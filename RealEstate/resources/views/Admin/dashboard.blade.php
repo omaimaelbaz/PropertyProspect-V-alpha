@@ -196,12 +196,18 @@
               </a>
             </li>
             <li class="nav-item">
+                <a class="nav-link" href="/permission">
+                  <span class="menu-title">permission role</span>
+                  <i class="mdi mdi-account menu-icon"></i>
+                </a>
+              </li>
+            <li class="nav-item">
                 <a class="nav-link" href="/agent">
                   <span class="menu-title">Agent</span>
                   <i class="mdi mdi-account menu-icon"></i>
                 </a>
               </li>
-           
+
           </ul>
         </nav>
         <!-- partial -->

@@ -31,12 +31,12 @@ class properties extends Model
 
     public function images()
     {
-        return $this->hasMany(Images::class);
+            return $this->hasMany(Images::class,'property_id');
     }
 
     public function PropertyTypes()
     {
-        return $this->belongsTo(PropertyTypes::class);
+        return $this->belongsTo(PropertyTypes::class,'property_types_id');
     }
     public function listedBy()
     {

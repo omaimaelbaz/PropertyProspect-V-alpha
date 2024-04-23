@@ -12,12 +12,12 @@ class Images extends Model
 
         protected $fillable = [
             'url',
-            'properties_id',
+            'property_id',
         ];
 
-        public function propertie()
+        public function property()
         {
-            return $this->belongsTo(Properties::class, 'properties_id');
+            return $this->belongsTo(Properties::class);
         }
 
 

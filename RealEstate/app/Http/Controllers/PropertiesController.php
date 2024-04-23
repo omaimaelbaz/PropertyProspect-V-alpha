@@ -14,15 +14,13 @@ class PropertiesController extends Controller
         $props = Properties::get();
         $imgs = Images::get();
 
-        return view('User.propertie', compact('props', 'imgs'));
+        return view('User.propertie', compact('props'));
     }
 
     public function getDetails()
     {
-        $props = Properties::get();
-        // dd($props);
-        $imgs = Images::get();
-        $propType = PropertyTypes::get();
-        return view('User.property-details', compact('props', 'imgs', 'propType'));
+        $properties = Properties::get();
+        return view('User.property-details', compact('properties'));
     }
+
 }

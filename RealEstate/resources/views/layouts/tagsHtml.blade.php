@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Homeland &mdash; Colorlib Website Template</title>
+    <title>Tegemmi &mdash; Colorlib Website Template</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -24,7 +24,7 @@
 
     <link rel="stylesheet" href="css/aos.css">
 
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
 
 </head>
 
