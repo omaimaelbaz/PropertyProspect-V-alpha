@@ -9,6 +9,7 @@ use App\Models\PropertyTypes;
 
 
 
+
 class HomeController extends Controller
 {
     public function index()
@@ -17,5 +18,26 @@ class HomeController extends Controller
         $types = PropertyTypes::get();
         return view('User.index',compact('props','types'));
     }
+    public function Showprofile()
+    {
+        return view('User.profile');
+    }
 
+    public function updateProfile(Request $request)
+    {
+        // dd($request);
+        $user = auth()->user();
+        $validatedData = $request->validate([
+            'name' => 'required',
+            'email' => 'required|email',
+            'Address' => 'required',
+            'City' => 'required',
+        ]);
+
+
+        $user->update($validatedData);
+
+        return redirect('/profile');
+    }
 }
+

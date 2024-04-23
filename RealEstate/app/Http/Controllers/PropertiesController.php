@@ -17,10 +17,15 @@ class PropertiesController extends Controller
         return view('User.propertie', compact('props'));
     }
 
-    public function getDetails()
+    public function getDetails($id)
     {
-        $properties = Properties::get();
-        return view('User.property-details', compact('properties'));
+
+
+
+        $props = Properties::with('images','PropertyTypes')->find($id);
+
+        //  dd($props);
+        return view('User.property-details', compact('props'));
     }
 
 }

@@ -33,9 +33,11 @@ class AuthController extends Controller
             'name' => 'required',
             'email' => 'required',
             'password' => 'required|string|min:8',
-            'role' => 'required'
+            'role' => 'required',
+
         ];
-                // dd($rules);
+
+        // dd($rules);
 
         $validatedData = $request->validate($rules);
 
@@ -43,14 +45,13 @@ class AuthController extends Controller
             'name' => $validatedData['name'],
             'email' => $validatedData['email'],
             'password' => bcrypt($validatedData['password']),
-            'role_id' => $validatedData['role']
+            'role_id' => $validatedData['role'],
+           
         ]);
-        //  dd($user);
 
+        // dd($user);
 
         return redirect('/login');
-
-
     }
 
 

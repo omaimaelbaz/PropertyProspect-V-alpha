@@ -30,6 +30,9 @@ Route::get('/admin', function () {
 
 // home page
 Route::get('/',[HomeController::class,'index']);
+Route::get('/profile',[HomeController::class,'Showprofile']);
+
+Route::post('/updateProfile',[HomeController::class,'updateProfile']);
 
 
 
