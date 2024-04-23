@@ -66,5 +66,7 @@ Route::get('/agent', [AgentController::class, 'index']);
 
 Route::get('/props', [PropertiesController::class, 'GetProps']);
 Route::get('/details/{id}', [PropertiesController::class, 'getDetails']);
+Route::get('/relatedProp', [PropertyTypeController::class, 'PropByCategory']);
+
 
 

@@ -24,8 +24,14 @@ class PropertiesController extends Controller
 
         $props = Properties::with('images','PropertyTypes')->find($id);
 
-        //  dd($props);
-        return view('User.property-details', compact('props'));
+        //   dd($props);
+        $CategoryId = $props->property_types_id;
+        $relatedCategory = Properties::where('property_types_id',  $CategoryId)
+        ->where('id', '!=', $id)
+        ->with('images','PropertyTypes')->get();
+        // dd($relatedCategory);
+
+        return view('User.property-details', compact('props','relatedCategory'));
     }
 
 }

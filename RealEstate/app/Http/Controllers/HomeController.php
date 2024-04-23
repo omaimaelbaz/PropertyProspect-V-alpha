@@ -12,12 +12,7 @@ use App\Models\PropertyTypes;
 
 class HomeController extends Controller
 {
-    public function index()
-    {
-        $props = Properties::get();
-        $types = PropertyTypes::get();
-        return view('User.index',compact('props','types'));
-    }
+
     public function Showprofile()
     {
         return view('User.profile');
@@ -39,5 +34,15 @@ class HomeController extends Controller
 
         return redirect('/profile');
     }
+
+
+    public function index()
+    {
+        $props = Properties::get();
+        $types = PropertyTypes::get();
+        return view('User.index',compact('props','types'));
+    }
+
+  
 }
 
