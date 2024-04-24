@@ -5,6 +5,7 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\AgentController;
 use App\Http\Controllers\PropertiesController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\RequestController;
 
 
 use Illuminate\Support\Facades\Route;
@@ -67,6 +68,11 @@ Route::get('/agent', [AgentController::class, 'index']);
 Route::get('/props', [PropertiesController::class, 'GetProps']);
 Route::get('/details/{id}', [PropertiesController::class, 'getDetails']);
 Route::get('/relatedProp', [PropertyTypeController::class, 'PropByCategory']);
+  //--------- send request to agent -----//
+
+  Route::post('/createrequest', [RequestController::class, 'SendRequest']);
+
+
 
 
 

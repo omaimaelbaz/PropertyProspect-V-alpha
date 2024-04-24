@@ -30,7 +30,7 @@
             <div class="form-inner">
                <form action="/register" method="POST" class="signup">
                     @csrf
-                    <input type="hidden" name="role" value={{2}}>
+                    <input type="hidden" name="role" value={{3}}>
 
 
                     <div class="field">
@@ -56,7 +56,7 @@
 
                <form action="/register" method="POST" class="login">
                 @csrf
-                <input type="hidden" name="role" value="{{ 3 }}">
+                <input type="hidden" name="role" value="{{ 2 }}">
 
                 <div class="field">
                     <input type="text" name="name" placeholder="name" >

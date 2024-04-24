@@ -90,33 +90,45 @@
                   <div class="bg-white widget border rounded">
 
                     <h3 class="h4 text-black widget-title mb-3">Contact Agent</h3>
-                    <form action="" class="form-contact-agent">
+                    <form action="/createrequest" method="POST" class="form-contact-agent">
+                        @csrf
                       <div class="form-group">
                         <label for="name">Name</label>
-                        <input type="text" id="name" class="form-control">
+                        <input  type="text" name="name" id="name" class="form-control">
                       </div>
                       <div class="form-group">
                         <label for="email">Email</label>
-                        <input type="email" id="email" class="form-control">
+                        <input type="email" name="email" id="email" class="form-control">
                       </div>
                       <div class="form-group">
                         <label for="phone">Phone</label>
-                        <input type="text" id="phone" class="form-control">
+                        <input type="text" name="phone" id="phone" class="form-control">
                       </div>
+                      <div class="form-group">
+                        <label for="phone">Message</label>
+                        <textarea name="message", id="" cols="30" rows="10"  class="form-control"></textarea>
+                      </div>
+                      {{-- <input name="user_id" value="{{Auth::user()->id}}" type="hidden"> --}}
+                      <input type="hidden" name="agent_id" value="{{$props->agent_id }}">
+                      <input type="hidden" name="property_id" value="{{ $props->id }}">
                       <div class="form-group">
                         <input type="submit" id="phone" class="btn btn-primary" value="Send Message">
                       </div>
                     </form>
                   </div>
 
-                  <div class="bg-white widget border rounded">
+
+                <div class="bg-white widget border rounded">
                     <h3 class="h4 text-black widget-title mb-3 ml-0">Share</h3>
-                        <div class="px-3" style="margin-left: -15px;">
-                          <a href="https://www.facebook.com/sharer/sharer.php?u=&quote=" class="pt-3 pb-3 pr-3 pl-0"><span class="icon-facebook"></span></a>
-                          <a  href="https://twitter.com/intent/tweet?text=&url=" class="pt-3 pb-3 pr-3 pl-0"><span class="icon-twitter"></span></a>
-                          <a href="https://www.linkedin.com/sharing/share-offsite/?url=" class="pt-3 pb-3 pr-3 pl-0"><span class="icon-linkedin"></span></a>
-                        </div>
-                  </div>
+                    <div class="px-3" style="margin-left: -15px;">
+                        @foreach($props->images as $image)
+                            <a href="https://www.facebook.com/sharer/sharer.php?u={{ urlencode(url()->current()) }}&quote=Check out this property: {{$props->name}} - {{$props->price}}&picture={{ urlencode(asset('images/' . $image->url)) }}" class="pt-3 pb-3 pr-3 pl-0"><span class="icon-facebook"></span></a>
+                            <a href="https://twitter.com/intent/tweet?url={{ urlencode(url()->current()) }}&text=Check out this property: {{$props->name}} - {{$props->price}}&media={{ urlencode(asset('images/' . $image->url)) }}" class="pt-3 pb-3 pr-3 pl-0"><span class="icon-twitter"></span></a>
+                            <a href="https://www.linkedin.com/sharing/share-offsite/?url={{ urlencode(url()->current()) }}&title=Check out this property: {{$props->name}} - {{$props->price}}&source={{ urlencode(asset('images/' . $image->url)) }}" class="pt-3 pb-3 pr-3 pl-0"><span class="icon-linkedin"></span></a>
+                        @endforeach
+                    </div>
+                </div>
+
 
                 </div>
 
@@ -143,7 +155,7 @@
                     <div class="offer-type-wrap">
                       <span class="offer-type bg-info">Lease</span>
                     </div>
-                    <img src="{{asset('images/' . $img->url)}}" alt="Image" class="img-fluid">
+                    <img src="{{asset('images/' . $category->images->first()->url)}}" alt="Image" class="img-fluid">
                   </a>
                   <div class="p-4 property-body">
                     <a href="#" class="property-favorite"><span class="icon-heart-o"></span></a>

@@ -46,7 +46,7 @@ class AuthController extends Controller
             'email' => $validatedData['email'],
             'password' => bcrypt($validatedData['password']),
             'role_id' => $validatedData['role'],
-           
+
         ]);
 
         // dd($user);
@@ -69,9 +69,9 @@ class AuthController extends Controller
         if(auth()->attempt($credentials)){
             $request->session()->regenerate();
             $user = auth()->user();
-            if($user->role_id == '2'){
+            if($user->role_id == '3'){
                 return redirect('/');
-            } elseif($user->role_id == '3'){
+            } elseif($user->role_id == '2'){
                 return 'hey agent';
             } else {
                 return redirect->intended('/');
