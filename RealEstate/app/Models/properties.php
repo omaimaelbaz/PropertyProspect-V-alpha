@@ -45,4 +45,9 @@ class properties extends Model
         return $this->belongsTo(User::class, 'listed_by');
     }
 
+    public function wishlist()
+    {
+        return $this->hasMany(wishlists::class);
+    }
+
 }

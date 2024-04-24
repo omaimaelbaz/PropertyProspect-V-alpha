@@ -32,7 +32,7 @@ Route::get('/admin', function () {
 // home page
 Route::get('/',[HomeController::class,'index']);
 Route::get('/profile',[HomeController::class,'ShowWishlist']);
-Route::get('/wishlist',[HomeController::class,'Showwishlist']);
+Route::get('/favoriteprop/{id}',[HomeController::class,'addwishlist']);
 
 
 Route::post('/updateProfile',[HomeController::class,'updateProfile']);

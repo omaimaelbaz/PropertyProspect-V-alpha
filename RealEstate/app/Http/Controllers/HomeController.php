@@ -7,6 +7,7 @@ use App\Models\Images;
 use App\Models\Properties;
 use App\Models\PropertyTypes;
 use App\Models\User;
+use App\Models\wishlists;
 
 class HomeController extends Controller
 {
@@ -38,9 +39,19 @@ class HomeController extends Controller
     {
         return view('User.wishlist');
     }
-    public function addwishlist()
+    public function addwishlist($id)
     {
-                
+
+        $wishlistItem = wishlists::where('property_id',$id)->where('user_id', auth()->user()->id)->count();
+
+        if($wishlistItem == 0)
+        {
+            wishlists::create([
+                'property_id' => $id,
+                'user_id' => auth()->user()->id,
+
+            ]);
+        }
     }
 
 

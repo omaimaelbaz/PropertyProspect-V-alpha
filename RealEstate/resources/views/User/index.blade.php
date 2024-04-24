@@ -132,7 +132,7 @@
                             @endforeach
                         </a>
                         <div class="p-4 property-body">
-                            <a href="/favoriteprop" class="property-favorite active"><span class="icon-heart-o"></span></a>
+                            <a href="/favoriteprop/{{$prop->id}}" class="property-favorite active"><span class="icon-heart-o"></span></a>
                             <h2 class="property-title"><a href="/details/{{ $prop->id }}">{{ $prop->name }}</a>
                             </h2>
                             <span class="property-location d-block mb-3"><span class="property-icon icon-room"></span>

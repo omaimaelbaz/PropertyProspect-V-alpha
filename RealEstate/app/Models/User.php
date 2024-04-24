@@ -30,13 +30,10 @@ class User extends Authenticatable
     {
         return $this->hasMany(properties::class);
     }
-    public function agent()
-    {
-        return $this->hasOne(Agents::class);
-    }
+ 
     public function wishlist()
     {
-        return $this->hasOne(wishlists::class);
+        return $this->hasMany(wishlists::class);
     }
 
     /**

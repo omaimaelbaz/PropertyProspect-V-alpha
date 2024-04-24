@@ -64,6 +64,8 @@
             </div>
 
             <div class="col-lg-8 pb-5">
+               
+
 
                 <div class="cart-item d-md-flex justify-content-between"><span class="remove-item"><i
                             class="fa fa-times"></i></span>
@@ -80,7 +82,7 @@
                     </div>
                 </div>
 
-             
+
             </div>
         </div>
     </div>
