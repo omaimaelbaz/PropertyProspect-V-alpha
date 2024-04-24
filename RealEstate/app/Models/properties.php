@@ -38,9 +38,11 @@ class properties extends Model
     {
         return $this->belongsTo(PropertyTypes::class,'property_types_id');
     }
- 
-    public function listedBy()
+
+
+    public function user()
     {
         return $this->belongsTo(User::class, 'listed_by');
     }
+
 }

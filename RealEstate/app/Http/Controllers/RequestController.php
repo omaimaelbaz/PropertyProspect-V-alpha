@@ -11,22 +11,26 @@ use Illuminate\Support\Facades\Auth;
 class RequestController extends Controller
 {
     public function SendRequest(HttpRequest $request)
-    {
+{
+//    dd($request);
 
 
 
-        $validateData = $request->validate([
-            'name' => 'required',
-            'email' => 'required|email',
-            'phone' => 'required',
-            'message' => 'required',
-            'agent_id' => 'required',
-            'property_id' => 'required',
-            'user_id' => 'required',
-        ]);
-// dd('djdj');
-        $request = Requests::create($validateData);
+    // Validation des données du formulaire
+    $validateData = $request->validate([
+        'name' => 'required',
+        'email' => 'required|email',
+        'phone' => 'required',
+        'message' => 'required',
+        'agent_id' => 'required',
+        'property_id' => 'required',
+        'user_id' => 'required',
+    ]);
 
-        // Pass agent and property data to the view
-        return redirect('/details/'.$request->property_id);
-}}
+    $requestObject = Requests::create($validateData);
+
+
+    return redirect('/details/'.$requestObject->property_id);
+}
+
+}

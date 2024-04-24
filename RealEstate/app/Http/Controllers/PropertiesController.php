@@ -22,11 +22,11 @@ class PropertiesController extends Controller
 
 
 
-        $props = Properties::with('images','PropertyTypes')->find($id);
+        $props = Properties::with('images','PropertyTypes','user')->find($id);
 
-        //   dd($props);
+        //    dd($props);
         $CategoryId = $props->property_types_id;
-        
+
         $relatedCategory = Properties::where('property_types_id',  $CategoryId)
         ->where('id', '!=', $id)
         ->with('images','PropertyTypes')->get();

@@ -26,6 +26,14 @@ class User extends Authenticatable
     {
         return $this->belongsTo(Roles::class);
     }
+    public function properties()
+    {
+        return $this->hasMany(properties::class);
+    }
+    public function agent()
+    {
+        return $this->hasOne(Agents::class);
+    }
 
     /**
      * The attributes that should be hidden for serialization.
@@ -37,10 +45,6 @@ class User extends Authenticatable
         'remember_token',
     ];
 
-    public function properties()
-    {
-        return $this->hasMany(properties::class);
-    }
 
     /**
      * The attributes that should be cast.
