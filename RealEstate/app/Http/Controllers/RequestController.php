@@ -29,6 +29,8 @@ class RequestController extends Controller
 
     $requestObject = Requests::create($validateData);
 
+ 
+
 
     return redirect('/details/'.$requestObject->property_id);
 }

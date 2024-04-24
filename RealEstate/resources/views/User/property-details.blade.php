@@ -90,10 +90,12 @@
                         <div class="col-lg-4">
 
                             <div class="bg-white widget border rounded">
+
                                 <h3 class="h4 text-black widget-title mb-3">Contact Agent</h3>
                                 @if (Auth::user())
                                 <form action="/createrequest" method="POST" class="form-contact-agent">
                                     @csrf
+
                                     <div class="form-group">
                                         <label for="name">Name</label>
                                         <input type="text" name="name" id="name" class="form-control">
@@ -115,11 +117,21 @@
                                     <input type="hidden" name="property_id" value="{{ $props->id }}">
                                     <div class="form-group">
                                         @if(Auth::user())
-                                        <input type="submit" class="btn btn-primary" value="Send Message">
+                                            @if($countRequest >0)
+                                            <div>
+                                                <p>u are alreday send request </p>
+                                            </div>
+                                            @else
+                                            <input type="submit" class="btn btn-primary" value="Send Message">
+
+                                            @endif
+
                                         @else
                                         <a href="/login" class="btn btn-primary">Send Message</a>
                                         @endif
+                                        {{-- @dd($countRequest) --}}
                                      </div>
+
                                 </form>
 
                                 @else

@@ -31,7 +31,9 @@ Route::get('/admin', function () {
 
 // home page
 Route::get('/',[HomeController::class,'index']);
-Route::get('/profile',[HomeController::class,'Showprofile']);
+Route::get('/profile',[HomeController::class,'ShowWishlist']);
+Route::get('/wishlist',[HomeController::class,'Showwishlist']);
+
 
 Route::post('/updateProfile',[HomeController::class,'updateProfile']);
 
@@ -67,7 +69,7 @@ Route::get('/agent', [AgentController::class, 'index']);
 
 Route::get('/props', [PropertiesController::class, 'GetProps']);
 Route::get('/details/{id}', [PropertiesController::class, 'getDetails']);
-Route::get('/relatedProp', [PropertyTypeController::class, 'PropByCategory']);
+Route::get('/relatedProp', [PropertiesController::class, 'PropByCategory']);
   //--------- send request to agent -----//
 
   Route::post('/createrequest', [RequestController::class, 'SendRequest']);

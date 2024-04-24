@@ -34,6 +34,10 @@ class User extends Authenticatable
     {
         return $this->hasOne(Agents::class);
     }
+    public function wishlist()
+    {
+        return $this->hasOne(wishlists::class);
+    }
 
     /**
      * The attributes that should be hidden for serialization.

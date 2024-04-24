@@ -34,7 +34,7 @@ class Requests extends Model
      */
     public function agent()
     {
-        return $this->belongsTo(Agent::class);
+        return $this->belongsTo(Agents::class);
     }
 
     /**
@@ -42,6 +42,6 @@ class Requests extends Model
      */
     public function property()
     {
-        return $this->belongsTo(Property::class);
+        return $this->belongsTo(properties::class);
     }
 }

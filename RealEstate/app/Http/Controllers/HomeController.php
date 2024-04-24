@@ -6,9 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Images;
 use App\Models\Properties;
 use App\Models\PropertyTypes;
-
-
-
+use App\Models\User;
 
 class HomeController extends Controller
 {
@@ -21,7 +19,8 @@ class HomeController extends Controller
     public function updateProfile(Request $request)
     {
         // dd($request);
-        $user = auth()->user();
+        // $user = auth()->user();
+        $user = User::find(auth()->user()->id);
         $validatedData = $request->validate([
             'name' => 'required',
             'email' => 'required|email',
@@ -35,6 +34,15 @@ class HomeController extends Controller
         return redirect('/profile');
     }
 
+    public function ShowWishlist()
+    {
+        return view('User.wishlist');
+    }
+    public function addwishlist()
+    {
+                
+    }
+
 
     public function index()
     {
@@ -43,6 +51,6 @@ class HomeController extends Controller
         return view('User.index',compact('props','types'));
     }
 
-  
+
 }
 
