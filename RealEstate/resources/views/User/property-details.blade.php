@@ -108,13 +108,17 @@
                                         <label for="phone">Phone</label>
                                         <input type="text" name="phone" id="phone" class="form-control">
                                     </div>
+                                        {{-- @dd( auth()->user()->agent->id) --}}
+                                    <input type="hidden" name="agent_id" value="{{$props->user_id }}">
+                                    <input type="hidden" name="user_id" value="{{ auth()->user()->id }}">
+
+                                    <input type="hidden" name="property_id" value="{{ $props->id }}">
                                     <div class="form-group">
                                         <label for="message">Message</label>
                                         <textarea name="message" id="message" cols="30" rows="10" class="form-control"></textarea>
                                     </div>
                                     <div class="form-group">
-                                        <input type="hidden" name="agent_id" value="{{ $props->user->id }}">
-                                        <input type="hidden" name="property_id" value="{{ $props->id }}">
+
                                         @if (Auth::check())
                                             @if ($countRequest > 0)
                                                 <div>
