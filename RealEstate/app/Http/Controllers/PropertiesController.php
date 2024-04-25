@@ -22,9 +22,7 @@ class PropertiesController extends Controller
     public function getDetails($id)
     {
         $props = Properties::with('images','PropertyTypes','user')->find($id);
-
         $CategoryId = $props->property_types_id;
-
         $relatedCategory = Properties::where('property_types_id',  $CategoryId)
         ->where('id', '!=', $id)
         ->with('images','PropertyTypes')->get();

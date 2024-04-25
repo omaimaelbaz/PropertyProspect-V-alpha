@@ -25,7 +25,7 @@ class properties extends Model
         'description',
         'listed_date',
         'agent_id',
-        'listed_by',
+        'user_id',
         'property_type_id',
     ];
 
@@ -42,7 +42,7 @@ class properties extends Model
 
     public function user()
     {
-        return $this->belongsTo(User::class, 'listed_by');
+        return $this->belongsTo(User::class,'user_id');
     }
 
     public function wishlist()

@@ -66,9 +66,12 @@ class AuthController extends Controller
             'password' => 'required'
         ]);
 
+
         if(auth()->attempt($credentials)){
+
             $request->session()->regenerate();
             $user = auth()->user();
+
             if($user->role_id == '3'){
                 return redirect('/');
             } elseif($user->role_id == '2'){

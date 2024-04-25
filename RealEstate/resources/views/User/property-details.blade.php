@@ -89,13 +89,13 @@
                         </div>
                         <div class="col-lg-4">
 
-                            <div class="bg-white widget border rounded">
 
-                                <h3 class="h4 text-black widget-title mb-3">Contact Agent</h3>
-                                @if (Auth::user())
+                            @if ($props->status == 'sale')
+
+                                <!-- Displaying a form for sending a message to agent -->
+
                                 <form action="/createrequest" method="POST" class="form-contact-agent">
                                     @csrf
-
                                     <div class="form-group">
                                         <label for="name">Name</label>
                                         <input type="text" name="name" id="name" class="form-control">
@@ -112,61 +112,45 @@
                                         <label for="message">Message</label>
                                         <textarea name="message" id="message" cols="30" rows="10" class="form-control"></textarea>
                                     </div>
-                                    <input name="user_id" value="{{ Auth::user()->id }}" type="hidden">
-                                    <input type="hidden" name="agent_id" value="{{ $props->user->id }}">
-                                    <input type="hidden" name="property_id" value="{{ $props->id }}">
                                     <div class="form-group">
-                                        @if(Auth::user())
-                                            @if($countRequest >0)
-                                            <div>
-                                                <p>u are alreday send request </p>
-                                            </div>
+                                        <input type="hidden" name="agent_id" value="{{ $props->user->id }}">
+                                        <input type="hidden" name="property_id" value="{{ $props->id }}">
+                                        @if (Auth::check())
+                                            @if ($countRequest > 0)
+                                                <div>
+                                                    <p>You have already sent a request.</p>
+                                                </div>
                                             @else
-                                            <input type="submit" class="btn btn-primary" value="Send Message">
-
+                                                <input type="submit" class="btn btn-primary" value="Send Message">
                                             @endif
-
                                         @else
-                                        <a href="/login" class="btn btn-primary">Send Message</a>
+                                            <a href="/login" class="btn btn-primary">Send Message</a>
                                         @endif
-                                        {{-- @dd($countRequest) --}}
-                                     </div>
-
+                                    </div>
                                 </form>
+                            @else
+                                <!-- Displaying a section for reserving the property  -->
+                                <div class="form-group" id="reserver">
+                                    <div class="reservation-container">
+                                        <h3>Interested in Renting?</h3>
+                                        <p>Reserve the property now by clicking the button below:</p>
+                                        <form action="/reserveproperty" method="POST">
+                                            @csrf
+                                            <input type="hidden" name="property_id" value="{{ $props->id }}">
+                                            <button type="submit" class="btn btn-primary btn-reserve">Reserve Now</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            @endif
 
-                                @else
-                                <form action="/createrequest" method="POST" class="form-contact-agent">
-                                    @csrf
-                                    <div class="form-group">
-                                        <label for="name">Name</label>
-                                        <input type="text" name="name" id="name" class="form-control">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="email">Email</label>
-                                        <input type="email" name="email" id="email" class="form-control">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="phone">Phone</label>
-                                        <input type="text" name="phone" id="phone" class="form-control">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="message">Message</label>
-                                        <textarea name="message" id="message" cols="30" rows="10" class="form-control"></textarea>
-                                    </div>
-                                    {{-- <input name="user_id" value="{{ Auth::user()->id }}" type="hidden">
-                                    <input type="hidden" name="agent_id" value="{{ $props->agent_id }}">
-                                    <input type="hidden" name="property_id" value="{{ $props->id }}"> --}}
-                                    <div class="form-group">
-                                        @if(Auth::user())
-                                        <input type="submit" class="btn btn-primary" value="Send Message">
-                                        @else
-                                        <a href="/login" class="btn btn-primary">Send Message</a>
-                                        @endif
-                                     </div>
-                                </form>
-                                @endif
+                            <style>
+                                #reserver {
+                                    margin-top: 120px
+                                }
+                            </style>
 
-                            </div>
+
+
 
 
 
