@@ -10,5 +10,12 @@ class Reservations extends Model
     use HasFactory;
 
     protected $fillable = [
+        'start_date',
+        'end_date',
+        'status',
+        'user_id',
+        'agent_id',
+        'property_id'
     ];
+    
 }

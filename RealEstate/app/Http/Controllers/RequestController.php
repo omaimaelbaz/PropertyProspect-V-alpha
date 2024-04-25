@@ -19,6 +19,7 @@ class RequestController extends Controller
 
 
     // Validation des données du formulaire
+    
     $validateData = $request->validate([
         'name' => 'required',
         'email' => 'required|email',

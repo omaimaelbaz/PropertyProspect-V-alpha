@@ -6,8 +6,7 @@ use App\Http\Controllers\AgentController;
 use App\Http\Controllers\PropertiesController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\RequestController;
-
-
+use App\Http\Controllers\ReservationController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -78,9 +77,16 @@ Route::get('/relatedProp', [PropertiesController::class, 'PropByCategory']);
   Route::post('/createrequest', [RequestController::class, 'SendRequest']);
 
 
-  //sortprop by price
+ // reservation
 
-//   Route::get('/sort',[HomeController::class,'SortProperty']);
+
+ Route::get('/reserver', [ReservationController::class,'index']);
+
+ Route::post('/reservation', [ReservationController::class,'reserverNow']);
+
+
+
+
 
 
 

@@ -23,6 +23,8 @@ class PropertiesController extends Controller
     {
         $props = Properties::with('images','PropertyTypes','user')->find($id);
 
+
+
         $CategoryId = $props->property_types_id;
         $relatedCategory = Properties::where('property_types_id',  $CategoryId)
         ->where('id', '!=', $id)
@@ -33,7 +35,7 @@ class PropertiesController extends Controller
         $countRequest = Requests::where('property_id', $id)
             ->where('user_id', Auth::user()->id)
             ->count();
-           
+
     } else {
         $countRequest = 0;
     }

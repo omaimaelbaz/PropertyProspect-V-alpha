@@ -108,11 +108,13 @@
                                         <label for="phone">Phone</label>
                                         <input type="text" name="phone" id="phone" class="form-control">
                                     </div>
-                                        {{-- @dd( auth()->user()->agent->id) --}}
-                                    <input type="hidden" name="agent_id" value="{{$props->user_id }}">
-                                    <input type="hidden" name="user_id" value="{{ auth()->user()->id }}">
+                                        @if(Auth::check())
+                                        <input type="hidden" name="user_id" value="{{ auth()->user()->id }}">
+                                        @endif
 
-                                    <input type="hidden" name="property_id" value="{{ $props->id }}">
+                                    <input type="hidden" name="agent_id" value="{{$props->user_id}}">
+
+                                    <input type="hidden" name="property_id" value="{{$props->id }}">
                                     <div class="form-group">
                                         <label for="message">Message</label>
                                         <textarea name="message" id="message" cols="30" rows="10" class="form-control"></textarea>
@@ -138,10 +140,10 @@
                                     <div class="reservation-container">
                                         <h3>Interested in Renting?</h3>
                                         <p>Reserve the property now by clicking the button below:</p>
-                                        <form action="/reserveproperty" method="POST">
+                                        <form action="/" method="POST">
                                             @csrf
                                             <input type="hidden" name="property_id" value="{{ $props->id }}">
-                                            <button type="submit" class="btn btn-primary btn-reserve">Reserve Now</button>
+                                            <a href="/reserver" type="submit" class="btn btn-primary btn-reserve">Reserve Now</a>
                                         </form>
                                     </div>
                                 </div>
