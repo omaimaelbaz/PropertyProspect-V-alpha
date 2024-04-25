@@ -2048,6 +2048,8 @@ fieldset:disabled a.btn {
 
 .btn-success {
   color: #212529;
+  width: 138px;
+  border-radius: 10px;
   background-color: #7cbd1e;
   border-color: #7cbd1e; }
   .btn-success:hover {

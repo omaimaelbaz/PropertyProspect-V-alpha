@@ -72,7 +72,8 @@ class AuthController extends Controller
             if($user->role_id == '3'){
                 return redirect('/');
             } elseif($user->role_id == '2'){
-             return 'hey agent';
+                return redirect('/');
+
             } else {
                 return redirect('/');
             }

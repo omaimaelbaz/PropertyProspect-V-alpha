@@ -102,6 +102,7 @@
                                     <option value="">Sort by</option>
                                     <option value="">Price Ascending</option>
                                     <option value="">Price Descending</option>
+
                                 </select>
                             </div>
                         </div>

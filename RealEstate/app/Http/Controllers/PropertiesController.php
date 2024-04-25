@@ -30,14 +30,14 @@ class PropertiesController extends Controller
         ->with('images','PropertyTypes')->get();
 
         //
-        $countRequest = Requests::where('property_id',$id)
-        ->where('user_id', Auth::user()->id)->count();
-
-        //  dd($countRequest);
-
-
-
-
+         // Check if the user is authenticated
+    if (Auth::check()) {
+        $countRequest = Requests::where('property_id', $id)
+            ->where('user_id', Auth::user()->id)
+            ->count();
+    } else {
+        $countRequest = 0;
+    }
 
         return view('User.property-details', compact('props','relatedCategory','countRequest'));
     }

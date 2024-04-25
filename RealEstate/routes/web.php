@@ -50,6 +50,9 @@ Route::post('/register', [AuthController::class, 'register']);
 Route::get('/logout', [AuthController::class, 'LogOut']);
 
 
+// dipay prop by typ  rent and buy
+
+
 
 // admin
 
@@ -73,6 +76,11 @@ Route::get('/relatedProp', [PropertiesController::class, 'PropByCategory']);
   //--------- send request to agent -----//
 
   Route::post('/createrequest', [RequestController::class, 'SendRequest']);
+
+
+  //sortprop by price
+
+//   Route::get('/sort',[HomeController::class,'SortProperty']);
 
 
 

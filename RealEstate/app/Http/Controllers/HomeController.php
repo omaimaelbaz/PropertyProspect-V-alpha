@@ -8,6 +8,7 @@ use App\Models\Properties;
 use App\Models\PropertyTypes;
 use App\Models\User;
 use App\Models\wishlists;
+use PhpParser\Node\Expr\PropertyFetch;
 
 class HomeController extends Controller
 {
@@ -37,21 +38,27 @@ class HomeController extends Controller
 
     public function ShowWishlist()
     {
-        return view('User.wishlist');
+        $wishlist = Wishlists::with('user','property')->get();
+
+        return view('User.wishlist',compact('wishlist'));
     }
     public function addwishlist($id)
     {
 
         $wishlistItem = wishlists::where('property_id',$id)->where('user_id', auth()->user()->id)->count();
 
+        // dd(wishlists::where('property_id',$id)->where('user_id', auth()->user()->id));
+
         if($wishlistItem == 0)
         {
-            wishlists::create([
+          wishlists::create([
                 'property_id' => $id,
                 'user_id' => auth()->user()->id,
 
             ]);
         }
+
+            return redirect()->back();
     }
 
 
@@ -59,8 +66,15 @@ class HomeController extends Controller
     {
         $props = Properties::get();
         $types = PropertyTypes::get();
-        return view('User.index',compact('props','types'));
+        $sortedProperties = Properties::orderBy('price', 'desc')->get();
+
+        return view('User.index',compact('props','types','sortedProperties'));
     }
+
+
+
+
+
 
 
 }

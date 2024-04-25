@@ -21,7 +21,8 @@
                         style="background-image: url(https://bootdey.com/img/Content/flores-amarillas-wallpaper.jpeg);">
                         <a class="btn btn-style-1 btn-white btn-sm" href="#" data-toggle="tooltip" title
                             data-original-title="You currently have 290 Reward points to spend"><i
-                                class="fa fa-award text-md"></i>&nbsp;290 points</a></div>
+                                class="fa fa-award text-md"></i>&nbsp;290 points</a>
+                    </div>
                     <div class="author-card-profile">
                         <div class="author-card-avatar"><img src="https://bootdey.com/img/Content/avatar/avatar1.png"
                                 alt="Daniel Adams">
@@ -63,24 +64,41 @@
                 </div>
             </div>
 
+
+
+
             <div class="col-lg-8 pb-5">
-               
 
+                @foreach ($wishlist as $fav)
+                    <div class="cart-item d-md-flex justify-content-between"><span class="remove-item"><i
+                                class="fa fa-times"></i></span>
+                        <div class="px-3 my-3">
+                            <a class="cart-item-product" href="#">
+                                <div class="cart-item-product-thumb">
+                                    @foreach ($fav->property->images as $image)
+                                        <img src="{{ 'images/'.$image->url }}" alt="Product">
+                                    @endforeach
+                                </div>
 
-                <div class="cart-item d-md-flex justify-content-between"><span class="remove-item"><i
-                            class="fa fa-times"></i></span>
-                    <div class="px-3 my-3">
-                        <a class="cart-item-product" href="#">
-                            <div class="cart-item-product-thumb"><img
-                                    src="https://bootdey.com/img/Content/avatar/avatar1.png" alt="Product"></div>
-                            <div class="cart-item-product-info">
-                                <h4 class="cart-item-product-title">Canon EOS M50 Mirrorless Camera</h4>
-                                <div class="text-lg text-body font-weight-medium pb-1">$910.00</div><span>Availability:
-                                    <span class="text-success font-weight-medium">In Stock</span></span>
-                            </div>
-                        </a>
+                                <div class="cart-item-product-info">
+                                    <h4 class="cart-item-product-title">{{ $fav->property->name }}</h4>
+                                    <div class="text-lg text-body font-weight-medium pb-1">${{ $fav->property->price }}
+                                    </div><span>status:
+                                        <span
+                                            class="text-success font-weight-medium">{{ $fav->property->status }}</span></span>
+                                </div>
+
+                                <div class="d-block">
+                                       <button>resrver now</button>
+                                       <button>resrver now</button>
+
+                                </div>
+                            </a>
+                        </div>
                     </div>
-                </div>
+                @endforeach
+
+
 
 
             </div>
