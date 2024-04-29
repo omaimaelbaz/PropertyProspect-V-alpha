@@ -27,35 +27,30 @@
                     </div>
 
                     <div class="container">
-                        <h2 class="my-4">Ajouter un utilisateur</h2>
-                        <form method="POST" action="/createUser">
+                        <h2 class="my-4">Modifier un utilisateur</h2>
+                        <form method="POST" action="/update/{{$user->id}}">
                             @csrf
                           <div class="form-group">
                             <label for="username">Nom d'utilisateur</label>
-                            <input name="name" type="text" class="form-control" id="username" placeholder="Entrez le nom d'utilisateur">
+                            <input value="{{$user->name}}" name="name" type="text" class="form-control" id="username" placeholder="Entrez le nom d'utilisateur">
                           </div>
                           <div class="form-group">
                             <label for="email">Email</label>
-                            <input name="email" type="email" class="form-control" id="email" placeholder="Entrez votre email">
+                            <input  value="{{$user->email}}" name="email" type="email" class="form-control" id="email" placeholder="Entrez votre email">
                           </div>
                           <div class="form-group">
                             <label for="password">Mot de passe</label>
-                            <input  name="password"  type="password" class="form-control" id="password" placeholder="Entrez votre mot de passe">
+                            <input  value="{{$user->password}}" name="password"  type="password" class="form-control" id="password" placeholder="Entrez votre mot de passe">
                           </div>
                           <div class="form-group">
                             <label for="role">Role</label> <br>
 
 
-
-
                             <select class="form-control" name="role" id="role">
-                                @foreach($roles as $role)
-                                <option  value="{{$role->id}}">{{$role->name}}</option>
-                                @endforeach
+                                <option value="{{ $user->role->id }}">{{ $user->role->name }}</option>
                             </select>
-
                           </div>
-                          <button type="submit" class="btn btn-primary">Ajouter</button>
+                          <button type="submit" class="btn btn-primary">Modifier</button>
                         </form>
                       </div>
 

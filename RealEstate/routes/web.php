@@ -33,7 +33,15 @@ use App\Http\Controllers\Admin\UserController;
 
     Route::get('/user', [UserController::class,'ShowUsers']);
     Route::get('/deleteUser/{id}', [UserController::class, 'deleteUsers']);
+
+    // create user
     Route::get('/createUser', [UserController::class, 'Create']);
+    Route::post('/createUser', [UserController::class, 'store']);
+    // update user
+    Route::get('/update/{id}', [UserController::class, 'updateUser']);
+     Route::post('/update/{id}', [UserController::class, 'modify']);
+
+
 
 
 

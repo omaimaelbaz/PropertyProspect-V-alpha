@@ -61,14 +61,14 @@
 
                                                     </td>
                                                     <td>
-                                                        <a href="/banuser/{{$user->id}}" class="badge badge-{{$user->IsBan ? 'danger' :'success'}}">{{$user->IsBan ? 'allow': 'ban'}}</a>
+                                                        <a href="/banuser/{{$user->id}}" class="badge badge-{{$user->IsBan ? 'danger' :'success'}}">{{$user->IsBan ? 'ban': 'unban'}}</a>
                                                     </td>
 
 
 
 
                                                     <td>
-                                                        <a href="" class="badge badge-info">Update</a>
+                                                        <a href="/update/{{$user->id}}" class="badge badge-info">Update</a>
                                                         <a href="/delete/{{ $user->id }}"
                                                             class="badge badge-warning">delete</a>
                                                     </td>
