@@ -49,5 +49,9 @@ class properties extends Model
     {
         return $this->hasMany(wishlists::class);
     }
+    public function investments()
+    {
+        return $this->hasMany(investments::class);
+    }
 
 }

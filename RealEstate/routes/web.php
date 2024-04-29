@@ -29,7 +29,10 @@ Route::get('/admin', function () {
 // Ath routes
 
 // home page
+
 Route::get('/',[HomeController::class,'index']);
+ Route::get('/filter',[HomeController::class,'filter']);
+
 Route::get('/profile',[HomeController::class,'ShowWishlist']);
 Route::get('/favoriteprop/{id}',[HomeController::class,'addwishlist']);
 

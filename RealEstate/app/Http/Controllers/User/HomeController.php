@@ -64,13 +64,47 @@ class HomeController extends Controller
 
     public function index()
     {
-        $props = Properties::get();
-        $types = PropertyTypes::get();
-        $sortedProperties = Properties::orderBy('price', 'desc')->get();
+        $filter2 = Properties::get();
+        $filter1 = PropertyTypes::get();
 
-        return view('User.index',compact('props','types','sortedProperties'));
+
+        return view('User.index',compact('filter1','filter2'));
     }
 
+    public function filter(Request $request)
+    {
+        $query1 = PropertyTypes::query();
+        $query2 = Properties::query();
+
+        // Check if list_types parameter exists
+        if ($request->has('list_types')) {
+            $listingType = $request->list_types;
+            // Adjust filtering logic
+            $query1->where('name', $listingType);
+        }
+
+        // Check if offer_types parameter exists
+        if ($request->has('offer_types')) {
+            $offerTypes = $request->offer_types;
+            // Adjust filtering logic
+            switch ($offerTypes) {
+                case 'rent':
+                case 'soldout':
+                case 'sale':
+                    $query2->where('status', $offerTypes);
+                    break;
+            }
+        }
+        if ($offerTypes !== 'all') { // If a specific status is selected
+            $query2->where('status', $offerTypes);
+        }
+
+        $filter1 = $query1->get();
+        $filter2 = $query2->get();
+        // dd($filter2);
+
+        return view('User.index', compact('filter1', 'filter2'));
+    }
 
 
 

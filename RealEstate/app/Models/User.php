@@ -39,6 +39,10 @@ class User extends Authenticatable
     {
         return $this->hasOne(agents::class);
     }
+    public function investment()
+    {
+        return $this->hasMany(investments::class);
+    }
     /**
      * The attributes that should be hidden for serialization.
      *

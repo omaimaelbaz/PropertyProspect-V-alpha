@@ -3,8 +3,8 @@
     <div class="site-wrap">
         {{-- slide --}}
 
-        <div class="slide-one-item home-slider owl-carousel">
-            @foreach ($props as $prop)
+         <div class="slide-one-item home-slider owl-carousel">
+            @foreach ($filter2 as $prop)
                 @foreach ($prop->images as $img)
                     <div class="site-blocks-cover overlay" style="background-image: url({{ 'images/' . $img->url }});"
                         data-aos="fade" data-stellar-background-ratio="0.3">
@@ -30,46 +30,45 @@
     <div class="site-section site-section-sm pb-0">
         <div class="container">
             <div class="row">
-                <form class="form-search col-md-12" style="margin-top: -100px;">
+                <form action="/filter" class="form-search col-md-12" style="margin-top: -100px;">
+                    {{-- @csrf --}}
                     <div class="row  align-items-end">
                         <div class="col-md-3">
-                            <label for="list-types">Listing Types</label>
+                            <label for="">Listing Types</label>
 
                             <div class="select-wrap">
                                 <span class="icon icon-arrow_drop_down"></span>
-                                <select name="list-types" id="list-types" class="form-control d-block rounded-0">
-                                    @foreach ($types as $type)
-                                        <option value="{{ $type->id }}">{{ $type->name }}</option>
+                                <select name="list_types" class="form-control d-block rounded-0">
+                                    @foreach ($filter1 as $type)
+                                        <option value="{{ $type->name }}">{{ $type->name }}</option>
                                     @endforeach
-
                                 </select>
                             </div>
 
                         </div>
                         <div class="col-md-3">
-                            <label for="offer-types">Offer Type</label>
+                            <label for="">Offer Type</label>
                             <div class="select-wrap">
                                 <span class="icon icon-arrow_drop_down"></span>
-                                <select name="offer-types" id="offer-types" class="form-control d-block rounded-0">
-                                    @foreach (['rent', 'soldout', 'sale'] as $statusOption)
-                                        <option value="{{ $statusOption }}">{{ $statusOption }}</option>
+                                <select name="offer_types" id="offer-types" class="form-control d-block rounded-0">
+                                    @foreach ($filter2 as $typeservice)
+                                        <option value="{{$typeservice->status}}">{{ $typeservice->status }}</option>
                                     @endforeach
-
                                 </select>
                             </div>
                         </div>
-                        <div class="col-md-3">
+                        {{-- <div class="col-md-3">
                             <label for="select-city">Select City</label>
                             <div class="select-wrap">
                                 <span class="icon icon-arrow_drop_down"></span>
-                                <select name="select-city" id="select-city" class="form-control d-block rounded-0">
+                                <select name="select_city" id="select-city" class="form-control d-block rounded-0">
                                     @foreach ($props as $prop)
                                         <option value="{{ $prop->id }}">{{ $prop->city }}</option>
                                     @endforeach
 
                                 </select>
                             </div>
-                        </div>
+                        </div> --}}
                         <div class="col-md-3">
                             <input type="submit" class="btn btn-success text-white btn-block rounded-0" value="Search">
                         </div>
@@ -119,7 +118,7 @@
     <div class="site-section site-section-sm bg-light">
         <div class="container">
             <div class="row mb-5">
-                @foreach ($props as $prop)
+                @foreach ($filter2 as $prop)
                     <div class="col-md-6 col-lg-4 mb-4">
                         <div class="property-entry h-100">
                             <a href="/details" class="property-thumbnail">
