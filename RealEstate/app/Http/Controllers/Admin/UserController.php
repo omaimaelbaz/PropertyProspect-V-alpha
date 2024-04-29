@@ -1,37 +1,60 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
 
-use App\Models\Roles;
+use App\Http\Controllers\Controller;
 use App\Models\User;
 use Illuminate\Http\Request;
 
 class UserController extends Controller
 {
+    public function index()
+    {
+        return view('Admin.dashboard');
+    }
+    public function banUsers($id)
+    {
+        $user = User::find($id);
+
+        if($user)
+        {
+            if($user->IsBan == 0)
+            {
+                $user->IsBan = 1;
+            } 
+             else
+            {
+                $user->IsBan = 0;
+
+            }
+
+            $user->save();
+        }
+
+        return back();
+    }
+
+
+
+
 
     public function ShowUsers()
     {
-       $users = User::all();
-       $roles = Roles::all();
-    //    dd($roles);
-        return view('Admin.user',compact('users','roles'));
+        $users = User::get();
+        return view('Admin.user' ,compact('users'));
     }
-
-    public function DeleteUsers($id)
+    public function deleteUsers($id)
     {
-        $users = User::find($id);
-
-        $users->delete();
-
-        return redirect('/users');
-
+        $user = User::find($id);
+        // dd($user);
+        if ($user) {
+            $user->delete();
+        }
+        return redirect('/admin');
     }
     public function Create()
     {
-        return view('Admin.CreateUser');
+        return view ('Admin.addUser');
     }
-    public function store(Request $request)
-    {
 
-    }
 }

@@ -1,13 +1,16 @@
 <?php
 
 use App\Http\Controllers\AuthController;
-use App\Http\Controllers\UserController;
 use App\Http\Controllers\AgentController;
+use App\Http\Controllers\AuthController as ControllersAuthController;
 use App\Http\Controllers\PropertiesController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\RequestController;
 use App\Http\Controllers\ReservationController;
 use Illuminate\Support\Facades\Route;
+
+
+use App\Http\Controllers\Admin\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,12 +23,26 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Route::get('/', function () {
-//     return view('User.index');
-// });
-Route::get('/admin', function () {
-    return view('admin.dashboard');
-});
+// admin
+
+
+    Route::get('/admin', [UserController::class,'index']);
+    Route::get('/banuser/{id}', [UserController::class, 'banUsers']);
+
+
+
+    Route::get('/user', [UserController::class,'ShowUsers']);
+    Route::get('/deleteUser/{id}', [UserController::class, 'deleteUsers']);
+    Route::get('/createUser', [UserController::class, 'Create']);
+
+
+
+
+
+
+
+
+
 // Ath routes
 
 // home page
