@@ -24,17 +24,16 @@ return new class extends Migration
             $table->decimal('price', 10, 2);
             $table->text('description')->nullable();
             $table->timestamp('listed_date')->nullable();
-            $table->unsignedBigInteger('agent_id')->nullable();
             $table->unsignedBigInteger('user_id');
-            $table->unsignedBigInteger('property_types_id');
+            $table->unsignedBigInteger('category_id');
+            $table->unsignedBigInteger('is_published')->default(false);
             $table->boolean('is_investment_property')->default(false);
 
 
             $table->timestamps();
 
-            $table->foreign('agent_id')->references('id')->on('agents')->onDelete('set null');
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
-            $table->foreign('property_types_id')->references('id')->on('property_types')->onDelete('cascade');
+            $table->foreign('category_id')->references('id')->on('categories')->onDelete('cascade');
         });
     }
 

@@ -24,34 +24,39 @@ class properties extends Model
         'price',
         'description',
         'listed_date',
-        'agent_id',
         'user_id',
-        'property_type_id',
+        'category_id',
+        'is_published',
+        'is_investment_property'
     ];
 
     public function images()
     {
             return $this->hasMany(Images::class,'property_id');
     }
-
-    public function PropertyTypes()
+    public function category()
     {
-        return $this->belongsTo(PropertyTypes::class,'property_types_id');
+        return $this->belongsTo(categories::class, 'category_id');
     }
 
+    // public function PropertyTypes()
+    // {
+    //     return $this->belongsTo(PropertyTypes::class,'property_types_id');
+    // }
 
-    public function user()
-    {
-        return $this->belongsTo(User::class,'user_id');
-    }
 
-    public function wishlist()
-    {
-        return $this->hasMany(wishlists::class);
-    }
-    public function investments()
-    {
-        return $this->hasMany(investments::class);
-    }
+    // public function user()
+    // {
+    //     return $this->belongsTo(User::class,'user_id');
+    // }
+
+    // public function wishlist()
+    // {
+    //     return $this->hasMany(wishlists::class);
+    // }
+    // public function investments()
+    // {
+    //     return $this->hasMany(investments::class);
+    // }
 
 }

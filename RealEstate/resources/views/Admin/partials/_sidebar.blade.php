@@ -34,6 +34,18 @@
         </a>
     </li>
     <li class="nav-item">
+        <a class="nav-link" href="/category">
+          <span class="menu-title">Property Category</span>
+          <i class="mdi mdi-home menu-icon"></i>
+        </a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="/property">
+          <span class="menu-title">Accept Post</span>
+          <i class="mdi mdi-home menu-icon"></i>
+        </a>
+    </li>
+    <li class="nav-item">
         <a class="nav-link" href="/agent">
           <span class="menu-title"></span>
           <i class="mdi mdi-home menu-icon"></i>

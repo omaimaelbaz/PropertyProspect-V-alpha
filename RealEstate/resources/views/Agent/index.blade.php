@@ -45,7 +45,7 @@
                     @if(auth()->check())
                   <p class="mb-1 text-black">{{auth()->user()->name}}</p>
                   @else
-                  <p class="mb-1 text-black">Admin</p>
+                  <p class="mb-1 text-black">Agent</p>
 
                   @endif
                 </div>
@@ -179,48 +179,33 @@
                   <span class="login-status online"></span>
                 </div>
                 <div class="nav-profile-text d-flex flex-column">
-                  <span class="font-weight-bold mb-2">{{ Auth::check() ? auth()->user()->name : 'Admin' }}
+                  <span class="font-weight-bold mb-2">{{ Auth::check() ? auth()->user()->name : 'Agent' }}
                 </span>
-                  <span class="text-secondary text-small">{{ Auth::check() ?  auth()->user()->role->name : 'Admin'}}</span>
+                  <span class="text-secondary text-small">{{ Auth::check() ?  auth()->user()->role->name : 'Agent'}}</span>
                 </div>
                 <i class="mdi mdi-bookmark-check text-success nav-profile-badge"></i>
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/admin">
+              <a class="nav-link" href="/agent">
                 <span class="menu-title">Dashboard</span>
                 <i class="mdi mdi-home menu-icon"></i>
               </a>
             </li>
 
             <li class="nav-item">
-              <a class="nav-link" href="/user">
-                <span class="menu-title">Users</span>
+              <a class="nav-link" href="/myproperty">
+                <span class="menu-title">Properties</span>
                 <i class="mdi mdi-account menu-icon"></i>
               </a>
             </li>
 
             <li class="nav-item">
-                <a class="nav-link" href="/agent">
-                  <span class="menu-title">Agent</span>
+                <a class="nav-link" href="/reservation">
+                  <span class="menu-title">Reservation</span>
                   <i class="mdi mdi-account menu-icon"></i>
                 </a>
               </li>
-
-              <li class="nav-item">
-                <a class="nav-link" href="/category">
-                  <span class="menu-title">property category</span>
-                  <i class="mdi mdi-account menu-icon"></i>
-                </a>
-              </li>
-
-              <li class="nav-item">
-                <a class="nav-link" href="/property">
-                  <span class="menu-title">Accept Post</span>
-                  <i class="mdi mdi-account menu-icon"></i>
-                </a>
-              </li>
-
 
           </ul>
         </nav>
