@@ -27,6 +27,8 @@ return new class extends Migration
             $table->unsignedBigInteger('agent_id')->nullable();
             $table->unsignedBigInteger('user_id');
             $table->unsignedBigInteger('property_types_id');
+            $table->boolean('is_investment_property')->default(false);
+
 
             $table->timestamps();
 

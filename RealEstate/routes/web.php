@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\AgentController;
 use App\Http\Controllers\AuthController as ControllersAuthController;
@@ -23,14 +24,14 @@ use App\Http\Controllers\Admin\UserController;
 |
 */
 
-// admin
+//=============================Admin========================================//
 
 
     Route::get('/admin', [UserController::class,'index']);
     Route::get('/banuser/{id}', [UserController::class, 'banUsers']);
 
 
-
+//------------------------ User table ------------------------------//
     Route::get('/user', [UserController::class,'ShowUsers']);
     Route::get('/deleteUser/{id}', [UserController::class, 'deleteUsers']);
 
@@ -40,6 +41,43 @@ use App\Http\Controllers\Admin\UserController;
     // update user
     Route::get('/update/{id}', [UserController::class, 'updateUser']);
      Route::post('/update/{id}', [UserController::class, 'modify']);
+
+//------------------------End User table ------------------------------//
+
+//------------------------ Property category table ------------------------------//
+Route::get('/category', [CategoryController::class, 'getCategory']);
+
+Route::get('/CreateCategory', [CategoryController::class, 'categoryFormAdd']);
+Route::post('/CreateCategory', [CategoryController::class, 'addCategory']);
+
+Route::get('/deleteCategory/{id}', [CategoryController::class, 'deleteCategory']);
+
+Route::get('/updateCategory/{id}', [CategoryController::class, 'updateCategory']);
+Route::post('/updateCategory/{id}', [CategoryController::class, 'modifyCategory']);
+
+//------------------------ End Property category table ------------------------------//
+
+
+
+
+
+
+
+
+
+
+
+
+//------------------------End Property category table ------------------------------//
+
+
+
+
+//============================= End Admin========================================//
+
+
+
+
 
 
 

@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Purple Admin</title>
@@ -9,7 +8,6 @@
     <link rel="stylesheet" href="assets/vendors/css/vendor.bundle.base.css">
 
     <link rel="stylesheet" href="assets/css/style.css">
-    <!-- End layout styles -->
     <link rel="shortcut icon" href="assets/images/favicon.ico" />
   </head>
   <body>
@@ -44,14 +42,19 @@
                   <span class="availability-status online"></span>
                 </div>
                 <div class="nav-profile-text">
-                  <p class="mb-1 text-black">David Greymaax</p>
+                    @if(auth()->check())
+                  <p class="mb-1 text-black">{{auth()->user()->name}}</p>
+                  @else
+                  <p class="mb-1 text-black">Admin</p>
+
+                  @endif
                 </div>
               </a>
               <div class="dropdown-menu navbar-dropdown" aria-labelledby="profileDropdown">
                 <a class="dropdown-item" href="#">
                   <i class="mdi mdi-cached me-2 text-success"></i> Activity Log </a>
                 <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#">
+                <a class="dropdown-item" href="/logout">
                   <i class="mdi mdi-logout me-2 text-primary"></i> Signout </a>
               </div>
             </li>
@@ -176,8 +179,9 @@
                   <span class="login-status online"></span>
                 </div>
                 <div class="nav-profile-text d-flex flex-column">
-                  <span class="font-weight-bold mb-2">David Grey. H</span>
-                  <span class="text-secondary text-small">Project Manager</span>
+                  <span class="font-weight-bold mb-2">{{ Auth::check() ? auth()->user()->name : 'Admin' }}
+                </span>
+                  <span class="text-secondary text-small">{{ Auth::check() ?  auth()->user()->role->name : 'Admin'}}</span>
                 </div>
                 <i class="mdi mdi-bookmark-check text-success nav-profile-badge"></i>
               </a>
@@ -190,20 +194,22 @@
             </li>
 
             <li class="nav-item">
-              <a class="nav-link" href="/users">
+              <a class="nav-link" href="/user">
                 <span class="menu-title">Users</span>
                 <i class="mdi mdi-account menu-icon"></i>
               </a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/permission">
-                  <span class="menu-title">permission role</span>
-                  <i class="mdi mdi-account menu-icon"></i>
-                </a>
-              </li>
+
             <li class="nav-item">
                 <a class="nav-link" href="/agent">
                   <span class="menu-title">Agent</span>
+                  <i class="mdi mdi-account menu-icon"></i>
+                </a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="/category">
+                  <span class="menu-title">property category</span>
                   <i class="mdi mdi-account menu-icon"></i>
                 </a>
               </li>
