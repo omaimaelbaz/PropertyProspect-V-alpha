@@ -20,7 +20,7 @@ return new class extends Migration
             $table->unsignedInteger('size_area')->nullable();
             $table->unsignedTinyInteger('num_bedrooms')->nullable();
             $table->unsignedTinyInteger('num_bathrooms')->nullable();
-            $table->enum('status', ['sale', 'soldout', 'rent']);
+            $table->enum('status', ['sale', 'soldout', 'rent'])->default('rent');
             $table->decimal('price', 10, 2);
             $table->text('description')->nullable();
             $table->timestamp('listed_date')->nullable();

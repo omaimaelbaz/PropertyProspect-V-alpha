@@ -32,7 +32,7 @@
                                 <h4 class="card-title">Properties Table</h4>
 
                                 <div class="table-responsive">
-                                    <a href="/add" class="btn btn bg-primary">Add Property</a>
+                                    <a href="/add/" class="btn btn bg-primary">Add Property</a>
 
 
                                     <table class="table table-striped">
@@ -57,9 +57,14 @@
                                         <tbody>
                                             @foreach ($properties as $props)
                                                 <tr>
+                                                   
                                                     <td class="py-1">
-                                                        <img src="../../assets/images/faces-clipart/pic-1.png"
-                                                            alt="image" />
+                                                        @if ($props->images->isNotEmpty())
+                                                            <img src="{{ asset($props->images->first()->url) }}" alt="Property Image" />
+                                                        @endif
+                                                    </td>
+
+
                                                     </td>
                                                     <td>{{ $props->name }}</td>
                                                     <td>{{ $props->address }}</td>
