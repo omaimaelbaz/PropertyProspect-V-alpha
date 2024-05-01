@@ -26,7 +26,7 @@ return new class extends Migration
             $table->timestamp('listed_date')->nullable();
             $table->unsignedBigInteger('user_id');
             $table->unsignedBigInteger('category_id');
-            $table->unsignedBigInteger('is_published')->default(false);
+            $table->enum('postStatus', ['pending', 'active'])->default('pending');
             $table->boolean('is_investment_property')->default(false);
 
 

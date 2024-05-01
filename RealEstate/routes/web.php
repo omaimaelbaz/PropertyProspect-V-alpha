@@ -13,6 +13,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PropertiesController;
 use App\Http\Controllers\RequestController;
 use App\Http\Controllers\ReservationController;
+use App\Http\Controllers\StatistiqueController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -60,10 +61,14 @@ Route::post('/updateCategory/{id}', [CategoryController::class, 'modifyCategory'
 //------------------------  Gestion of Property 'accept or refuse Post '  ------------------------------//
 
 Route::get('/property', [acceptProController::class, 'displayProperty']);
+Route::get('/accept/{id}', [acceptProController::class, 'acceptProperty']);
+Route::get('/reject/{id}', [acceptProController::class, 'rejectProperty']);
+
+
 
 //------------------------ End Property category table ------------------------------//
 
-//------------------------End Property category table ------------------------------//
+
 
 //============================= End Admin========================================//
 

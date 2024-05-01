@@ -39,16 +39,18 @@ class properties extends Model
         return $this->belongsTo(categories::class, 'category_id');
     }
 
+    public function user()
+    {
+        return $this->belongsTo(User::class,'user_id');
+    }
+
     // public function PropertyTypes()
     // {
     //     return $this->belongsTo(PropertyTypes::class,'property_types_id');
     // }
 
 
-    // public function user()
-    // {
-    //     return $this->belongsTo(User::class,'user_id');
-    // }
+
 
     // public function wishlist()
     // {

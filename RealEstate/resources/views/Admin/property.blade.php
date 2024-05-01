@@ -29,44 +29,62 @@
                         <div class="card">
                             <div class="card-body">
                                 <h4 class="card-title">Proprties Table</h4>
+                                @if (session('message'))
+                                    <div class="alert alert-success">
+                                        {{ session('message') }}
+                                    </div>
+                                @endif
+
 
                                 <div class="table-responsive">
 
 
                                     <table class="table table-striped">
 
-
                                         <thead>
                                             <tr>
-                                                <th>images</th>
-                                                <th>Property name</th>
-                                                <th>Property price</th>
-                                                <th>listed By</th>
+                                                <th>Images</th>
+                                                <th>Property Name</th>
+                                                <th>Property Price</th>
+                                                <th>Listed By</th>
+                                                <th>Post Status</th>
+                                                <th> Status Accept</th>
+                                                <th> Status Reject</th>
+
+
+
                                                 <th>Action</th>
                                             </tr>
                                         </thead>
                                         <tbody>
-                                             @foreach ($property as $props)
-                                             {{-- @dd($props->images); --}}
+                                            @foreach ($property as $prop)
                                                 <tr>
-                                                    <td class="py-1">
-                                                        <img src="{{$props->images->url}}"
-                                                     />
+                                                    <td>
+                                                        @foreach ($prop->images->take(1) as $image)
+                                                            <img src="{{ asset($image->url) }}" alt="Property Image" />
+                                                        @endforeach
                                                     </td>
-                                                    <td>{{$props->name}}</td>
-                                                    <td>{{$props->price}}</td>
-                                                    <td>{{$props->price}}</td>
-
+                                                    <td>{{ $prop->name }}</td>
+                                                    <td>{{ $prop->price }}</td>
+                                                    <td>{{ $prop->user->email }}</td>
+                                                    <td>
+                                                        {{ $prop->postStatus }}
+                                                    </td>
 
 
                                                     <td>
-                                                        {{-- <a href="/banuser/{{$user->id}}" class="badge badge-{{$user->IsBan ? 'danger' :'success'}}">{{$user->IsBan ? 'ban': 'unban'}}</a> --}}
+                                                        <a
+                                                            href="/accept/{{ $prop->id }}"class="badge badge-primary">Accept</a>
+                                                    </td>
+
+                                                    <td>
+                                                        <a
+                                                            href="/reject/{{ $prop->id }}"class="badge badge-danger">Reject</a>
                                                     </td>
                                                 </tr>
                                             @endforeach
-
-
                                         </tbody>
+
                                     </table>
                                 </div>
                             </div>

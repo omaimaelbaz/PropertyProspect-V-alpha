@@ -30,7 +30,7 @@
     <div class="site-section site-section-sm pb-0">
         <div class="container">
             <div class="row">
-                <form action="/filter" class="form-search col-md-12" style="margin-top: -100px;">
+                {{-- <form action="/filter" class="form-search col-md-12" style="margin-top: -100px;">
                     {{-- @csrf --}}
                     <div class="row  align-items-end">
                         <div class="col-md-3">
@@ -74,7 +74,7 @@
                         </div>
 
                     </div>
-                </form>
+                {{-- </form> --}} --}}
             </div>
             {{-- filter By rent sale price  --}}
 

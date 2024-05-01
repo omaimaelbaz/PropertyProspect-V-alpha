@@ -68,7 +68,7 @@ class AgentController extends Controller
         $property->price = $validatedData['price'];
         $property->description = $validatedData['description'];
         $property->category_id = $validatedData['category_id'];
-        $property->is_published = 0;
+        $property->postStatus = 'pending';
         $property->user_id = Auth::user()->id;
         $property->save();
 

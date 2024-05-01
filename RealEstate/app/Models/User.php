@@ -32,18 +32,18 @@ class User extends Authenticatable
         return $this->hasMany(properties::class);
     }
 
-    public function wishlist()
-    {
-        return $this->hasMany(wishlists::class);
-    }
-    public function agent()
-    {
-        return $this->hasOne(agents::class);
-    }
-    public function investment()
-    {
-        return $this->hasMany(investments::class);
-    }
+    // public function wishlist()
+    // {
+    //     return $this->hasMany(wishlists::class);
+    // }
+    // public function agent()
+    // {
+    //     return $this->hasOne(agents::class);
+    // }
+    // public function investment()
+    // {
+    //     return $this->hasMany(investments::class);
+    // }
     /**
      * The attributes that should be hidden for serialization.
      *

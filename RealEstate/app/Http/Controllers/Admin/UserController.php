@@ -4,6 +4,8 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\UserRequest;
+use App\Models\properties;
+use App\Models\Reservations;
 use App\Models\Roles;
 use App\Models\User;
 
@@ -11,7 +13,12 @@ class UserController extends Controller
 {
     public function index()
     {
-        return view('Admin.dashboard');
+        $totalProperties = properties::count();
+        $totalBookings = Reservations::count();
+        $pendingProperties= properties::where('postStatus', 'pending')->count();
+        // $activeProperties= properties::where('postStatus', 'active')->count();
+
+        return view('Admin.dashboard',compact('totalProperties', 'totalBookings' ,'pendingProperties'));
     }
 
     public function banUsers($id)
