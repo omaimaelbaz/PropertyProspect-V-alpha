@@ -57,7 +57,11 @@
                                             </tr>
                                         </thead>
                                         <tbody>
+
+
                                             @foreach ($property as $prop)
+
+
                                                 <tr>
                                                     <td>
                                                         @foreach ($prop->images->take(1) as $image)
@@ -66,7 +70,7 @@
                                                     </td>
                                                     <td>{{ $prop->name }}</td>
                                                     <td>{{ $prop->price }}</td>
-                                                    <td>{{ $prop->user->email }}</td>
+                                                    <td>{{ $prop->user->name }}</td>
                                                     <td>
                                                         {{ $prop->postStatus }}
                                                     </td>

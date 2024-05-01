@@ -77,12 +77,12 @@ class AgentController extends Controller
             foreach ($files as $file) {
                 $extention = uniqid().'.'.$file->getClientOriginalExtension();
                 $filename =time(). '.' .$extention;
-                $path = 'public/images';
+                $path = 'storage/images';
                 $file->move($path,$filename);
 
                 $imagesData[] = [
 
-                    'url' => $path . '/' . $filename,
+                    'url' => $filename,
                     'property_id' => $property->id,
                 ];
                 Images::insert($imagesData);

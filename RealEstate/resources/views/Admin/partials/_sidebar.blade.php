@@ -9,7 +9,7 @@
                 </div>
                 <div class="nav-profile-text d-flex flex-column">
                     @if (Auth::check())
-                        <span class="font-weight-bold mb-2">{{ auth()->user()->role }}</span>
+                        <span class="font-weight-bold mb-2">{{ auth()->user()->name}}</span>
                     @else
                         <span class="font-weight-bold mb-2">anonymos</span>
                     @endif

@@ -10,14 +10,10 @@
                         <div class="account-settings">
                             <div class="user-profile">
                                 <div class="user-avatar">
-                                    <img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="Maxwell Admin">
+                                    <img src="/images/profile.png" alt=" User">
                                 </div>
 
                                 <h5 class="user-name"> {{ auth()->user()->name }}</h5>
-
-                                <h6 class="user-email"><a href="/cdn-cgi/l/email-protection" class="__cf_email__"
-                                        data-cfemail="4e373b25270e032f36392b2222602d2123">[email&#160;protected]</a>
-                                </h6>
                             </div>
                             <div class="about">
                                 <h5>About</h5>
@@ -59,14 +55,14 @@
                                 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
                                     <div class="form-group">
                                         <label for="Street">Street</label>
-                                        <input type="name" name="Address" class="form-control" id="Street"
+                                        <input  value="{{auth()->user()->Address}}" type="name" name="Address" class="form-control" id="Street"
                                             placeholder="Enter Street">
                                     </div>
                                 </div>
                                 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
                                     <div class="form-group">
                                         <label for="ciTy">City</label>
-                                        <input type="name" name="City" class="form-control" id="ciTy" placeholder="Enter City">
+                                        <input value="{{auth()->user()->City}}" type="name" name="City" class="form-control" id="ciTy" placeholder="Enter City">
                                     </div>
                                 </div>
 

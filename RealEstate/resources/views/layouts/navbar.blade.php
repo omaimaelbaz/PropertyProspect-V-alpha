@@ -32,7 +32,7 @@
     <div class="navbarhome" id="navbarhome">
         <div class="containertest">
             <div class="logo">
-                <h3>home</h3>
+                <img src="{{asset('realestatelogo.jpg')}}" alt="Tegimi">
             </div>
             <div class="navhome">
                 <ul>
@@ -47,11 +47,11 @@
                     <li><a href="/login">Login</a></li>
                     <li><a href="/register">Register</a></li>
 
-                    @if(Auth::check() && Auth::user()->role_id == '2')
+                    {{-- @if(Auth::check() && Auth::user()->role_id == '2')
                     <li>
                         <a href="" class="btn btn-success">Add Listing</a>
-                    </li>
-                    @endif
+                    </li> --}}
+                    {{-- @endif --}}
                     <li class="">
                         @guest
                             @if (Route::has('login'))
@@ -69,18 +69,15 @@
                                 </span>
                                 @if(auth()->user()->role_id == 3)
                                 <div class="dropdown-menu" aria-labelledby="userDropdown">
-                                    <a class="dropdown-item" href="/profile">Profile</a>
+                                    <a class="dropdown-item" href="/myprofile">Profile</a>
                                     <a class="dropdown-item" href="/dashboard">Dashboard</a>
 
                                     <a class="dropdown-item" href="/wishlist">wishlist</a>
                                     <div class="dropdown-divider"></div>
                                     <a href="/logout" class="dropdown-item">Logout</a>
-                                    @else
+                                @endif
 
-                                    @endif
-                                    <div class="dropdown-menu" aria-labelledby="userDropdown">
-                                        <a class="dropdown-item" href="/agentdashboard">Dashboard</a>
-                                        <a href="/logout" class="dropdown-item">Logout</a>
+
 
 
 

@@ -20,8 +20,7 @@ class HomeController extends Controller
 
     public function updateProfile(Request $request)
     {
-        // dd($request);
-        // $user = auth()->user();
+
         $user = User::find(auth()->user()->id);
         $validatedData = $request->validate([
             'name' => 'required',
@@ -46,8 +45,6 @@ class HomeController extends Controller
     {
 
         $wishlistItem = wishlists::where('property_id',$id)->where('user_id', auth()->user()->id)->count();
-
-        // dd(wishlists::where('property_id',$id)->where('user_id', auth()->user()->id));
 
         if($wishlistItem == 0)
         {

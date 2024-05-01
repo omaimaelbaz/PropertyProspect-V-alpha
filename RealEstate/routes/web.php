@@ -8,8 +8,11 @@ use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\Agent\AgentController;
 
 
+use App\Http\Controllers\User\HomeController;
+
+
+
 use App\Http\Controllers\AuthController;
-use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PropertiesController;
 use App\Http\Controllers\RequestController;
 use App\Http\Controllers\ReservationController;
@@ -96,17 +99,69 @@ Route::post('/addproperty', [AgentController::class, 'store']);
 
 
 
+//============================= User ========================================//
+
+//------------------------ Home Page ------------------------------//
+Route::get('/', [HomeController::class, 'index']);
+
+
+
+Route::get('/myprofile', [HomeController::class, 'profile']);
+Route::post('/updateProfile', [HomeController::class, 'updateProfile']);
+
+
+//------------------------ Details ------------------------------//
+
+ Route::get('/details/{id}', [HomeController::class, 'getDetails']);
+
+
+
+
+
+//------------------------ wishList ------------------------------//
+
+
+Route::get('/mywishlist', [HomeController::class, 'ShowWishlist']);
+
+
+//------------------------ End wishList ------------------------------//
+
+
+
+
+
+
+
+
+
+//------------------------  End Home Page ------------------------------//
+
+
+
+
+//============================= End User ========================================//
+
+
+
+
+
+
+
+
+
+
+
 // Ath routes
 
 // home page
 
-Route::get('/', [HomeController::class, 'index']);
-Route::get('/filter', [HomeController::class, 'filter']);
+// Route::get('/', [HomeController::class, 'index']);
+// Route::get('/filter', [HomeController::class, 'filter']);
 
-Route::get('/profile', [HomeController::class, 'ShowWishlist']);
-Route::get('/favoriteprop/{id}', [HomeController::class, 'addwishlist']);
+// Route::get('/profile', [HomeController::class, 'ShowWishlist']);
+// Route::get('/favoriteprop/{id}', [HomeController::class, 'addwishlist']);
 
-Route::post('/updateProfile', [HomeController::class, 'updateProfile']);
+// Route::post('/updateProfile', [HomeController::class, 'updateProfile']);
 
 Route::get('/login', [AuthController::class, 'loginform']);
 
@@ -121,26 +176,26 @@ Route::get('/logout', [AuthController::class, 'LogOut']);
 
 // admin
 
-Route::get('/users', [UserController::class, 'ShowUsers']);
-Route::get('/delete/{id}', [UserController::class, 'DeleteUsers']);
+// Route::get('/users', [UserController::class, 'ShowUsers']);
+// Route::get('/delete/{id}', [UserController::class, 'DeleteUsers']);
 
-// admin -create
-Route::get('/CreateUser', [UserController::class, 'Create']);
-Route::post('/store', [UserController::class, 'store']);
+// // admin -create
+// Route::get('/CreateUser', [UserController::class, 'Create']);
+// Route::post('/store', [UserController::class, 'store']);
 
 
 
 // props
 
-Route::get('/props', [PropertiesController::class, 'GetProps']);
-Route::get('/details/{id}', [PropertiesController::class, 'getDetails']);
-Route::get('/relatedProp', [PropertiesController::class, 'PropByCategory']);
-//--------- send request to agent -----//
+// Route::get('/props', [PropertiesController::class, 'GetProps']);
+// Route::get('/details/{id}', [PropertiesController::class, 'getDetails']);
+// Route::get('/relatedProp', [PropertiesController::class, 'PropByCategory']);
+// //--------- send request to agent -----//
 
-Route::post('/createrequest', [RequestController::class, 'SendRequest']);
+// Route::post('/createrequest', [RequestController::class, 'SendRequest']);
 
 // reservation
 
-Route::get('/reserver', [ReservationController::class, 'index']);
+// Route::get('/reserver', [ReservationController::class, 'index']);
 
-Route::post('/reservation', [ReservationController::class, 'reserverNow']);
+// Route::post('/reservation', [ReservationController::class, 'reserverNow']);
