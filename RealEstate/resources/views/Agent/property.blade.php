@@ -57,10 +57,10 @@
                                         <tbody>
                                             @foreach ($properties as $props)
                                                 <tr>
-                                                   
+
                                                     <td class="py-1">
                                                         @if ($props->images->isNotEmpty())
-                                                            <img src="{{ asset($props->images->first()->url) }}" alt="Property Image" />
+                                                            <img src="{{asset('assets/images/'.$props->images->first()->url) }}" alt="Property Image" />
                                                         @endif
                                                     </td>
 

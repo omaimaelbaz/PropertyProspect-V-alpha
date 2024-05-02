@@ -77,7 +77,7 @@ class AgentController extends Controller
             foreach ($files as $file) {
                 $extention = uniqid().'.'.$file->getClientOriginalExtension();
                 $filename =time(). '.' .$extention;
-                $path = 'storage/images';
+                $path = 'assets/images';
                 $file->move($path,$filename);
 
                 $imagesData[] = [

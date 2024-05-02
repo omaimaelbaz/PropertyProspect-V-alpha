@@ -53,32 +53,28 @@
                                     </div>
                                     <div class="col-sm-6">
                                         <input type="hidden" name="user_id" value="{{ auth()->user()->id }}">
-                                        @foreach ($props as $prop)
-                                            <input type="hidden" name="agent_id" value="{{ $prop->user_id }}">
-                                            <input type="hidden" name="property_id" value="{{ $prop->id }}">
-                                        @endforeach
+
+                                            <input type="hidden" name="property_id" value="{{$property_id}}">
 
 
                                     </div>
                                 </div>
 
                                 <div class="form-btn">
-                                    <button class="submit-btn" type="submit">Check availability</button>
+                                    <button class="submit-btn" type="submi-èt">Check availability</button>
                                 </div>
-                                @if (session('success'))
-                                    <div class="alert alert-success">
-                                        {{ session('success') }}
-                                    </div>
-                                @endif
-                                @if ($errors->any())
-                                <div class="alert alert-danger">
-                                    <ul>
-                                        @foreach ($errors->all() as $error)
-                                            <li>{{ $error }}</li>
-                                        @endforeach
-                                    </ul>
+                                @if(session('success'))
+                                <div class="alert alert-success">
+                                    {{ session('success') }}
                                 </div>
                             @endif
+
+                            @if(session('error'))
+                                <div class="alert alert-danger">
+                                    {{ session('error') }}
+                                </div>
+                            @endif
+
 
                             </form>
                         </div>

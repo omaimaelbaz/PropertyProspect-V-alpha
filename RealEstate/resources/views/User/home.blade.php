@@ -2,33 +2,30 @@
 @section('content')
 
 {{-- slider --}}
-    <div class="slide-one-item home-slider owl-carousel">
-        @foreach ($properties as $property)
-
-
-           @foreach($property->images as $img)
-
-           <div class="site-blocks-cover overlay" style="background-image: url({{'/assets/images'.$img->url}});" data-aos="fade"
-            data-stellar-background-ratio="0.3">
-            @endforeach
-                    <div class="container">
-                        <div class="row align-items-center justify-content-center text-center">
-                            <div class="col-md-10">
-                                <span class="d-inline-block bg-success text-white px-3 mb-3 property-offer-type rounded">
-                                    {{ $property->status }}
-                                </span>
-                                <h1 class="mb-2">{{ $property->address }}</h1>
-                                <p class="mb-5"><strong
-                                        class="h2 text-success font-weight-bold">{{ $property->price }}</strong></p>
-                                <p><a href="/details" class="btn btn-white btn-outline-white py-3 px-5 rounded-0 btn-2">See
-                                        Details</a></p>
-                            </div>
-                        </div>
+<div class="slide-one-item home-slider owl-carousel">
+    @foreach ($properties as $property)
+        <div class="site-blocks-cover overlay" style="background-image: url('{{ asset('assets/images/'.$property->images->first()->url) }}');" data-aos="fade" data-stellar-background-ratio="0.3">
+            <div class="container">
+                <div class="row align-items-center justify-content-center text-center">
+                    <div class="col-md-10">
+                        <span class="d-inline-block bg-success text-white px-3 mb-3 property-offer-type rounded">
+                            {{ $property->status }}
+                        </span>
+                        <h1 class="mb-2">{{ $property->address }}</h1>
+                        <p class="mb-5">
+                            <strong class="h2 text-success font-weight-bold">{{ $property->price }}</strong>
+                        </p>
+                        <p>
+                            <a href="/details" class="btn btn-white btn-outline-white py-3 px-5 rounded-0 btn-2">See Details</a>
+                        </p>
                     </div>
                 </div>
+            </div>
+        </div>
+    @endforeach
+</div>
 
-        @endforeach
-    </div>
+
 {{-- end slider --}}
 
 
@@ -118,59 +115,51 @@
 
 {{-- property Listing --}}
 
-    <div class="site-section site-section-sm bg-light">
-        <div class="container">
-
-            <div class="row mb-5">
-                @foreach ($properties as $prop)
-
-                <div class="col-md-6 col-lg-4 mb-4">
-                    <div class="property-entry h-100">
-                        <a href="property-details.html" class="property-thumbnail">
-                            <div class="offer-type-wrap">
-                                @if ($property->status == 'rent')
-                                    <span class="offer-type bg-success">Rent</span>
-                                @else
-                                    <span class="offer-type bg-danger">Sale</span>
-                                @endif
-                            </div>
-
-                            <img src="{{ asset($img->url) }}" alt="Image class="img-fluid>
-
-                        </a>
-                        <div class="p-4 property-body">
-                            <a href="/mywishlist" class="property-favorite"><span class="icon-heart-o"></span></a>
-                            <h2 class="property-title"><a href="/details/{{$prop->id}}">{{$prop->name}}</a></h2>
-                            <span class="property-location d-block mb-3"><span class="property-icon icon-room"></span>
-                            {{$prop->address}}, {{$prop->city}} {{$prop->country}}</span>
-                            <strong class="property-price text-primary mb-3 d-block text-success">${{$prop->price}}</strong>
-                            <ul class="property-specs-wrap mb-3 mb-lg-0">
-                                <li>
-                                    <span class="property-specs">Beds</span>
-                                    <span class="property-specs-number">{{$prop->num_bedrooms}}</span>
-
-                                </li>
-                                <li>
-                                    <span class="property-specs">Baths</span>
-                                    <span class="property-specs-number">{{$prop->num_bathrooms}}</span>
-
-                                </li>
-                                <li>
-                                    <span class="property-specs">SQ FT</span>
-                                    <span class="property-specs-number">{{$prop->size_area}}</span>
-
-                                </li>
-                            </ul>
-
+<div class="site-section site-section-sm bg-light">
+    <div class="container">
+        <div class="row mb-5">
+            @foreach ($properties as $prop)
+            <div class="col-md-6 col-lg-4 mb-4">
+                <div class="property-entry h-100">
+                    <a href="property-details.html" class="property-thumbnail">
+                        <div class="offer-type-wrap">
+                            @if ($prop->status == 'rent')
+                                <span class="offer-type bg-success">Rent</span>
+                            @else
+                                <span class="offer-type bg-danger">Sale</span>
+                            @endif
                         </div>
+                        @foreach($prop->images as $img)
+                            <img src="{{ asset('assets/images/'.$img->url) }}" alt="Image" class="img-fluid">
+                        @endforeach
+                    </a>
+                    <div class="p-4 property-body">
+                        <a href="/mywishlist" class="property-favorite"><span class="icon-heart-o"></span></a>
+                        <h2 class="property-title"><a href="/details/{{$prop->id}}">{{$prop->name}}</a></h2>
+                        <span class="property-location d-block mb-3"><span class="property-icon icon-room"></span>{{$prop->address}}, {{$prop->city}} {{$prop->country}}</span>
+                        <strong class="property-price text-primary mb-3 d-block text-success">${{$prop->price}}</strong>
+                        <ul class="property-specs-wrap mb-3 mb-lg-0">
+                            <li>
+                                <span class="property-specs">Beds</span>
+                                <span class="property-specs-number">{{$prop->num_bedrooms}}</span>
+                            </li>
+                            <li>
+                                <span class="property-specs">Baths</span>
+                                <span class="property-specs-number">{{$prop->num_bathrooms}}</span>
+                            </li>
+                            <li>
+                                <span class="property-specs">SQ FT</span>
+                                <span class="property-specs-number">{{$prop->size_area}}</span>
+                            </li>
+                        </ul>
                     </div>
                 </div>
-                @endforeach
-
-
             </div>
+            @endforeach
         </div>
     </div>
+</div>
+
 {{-- end property listing  --}}
 
 

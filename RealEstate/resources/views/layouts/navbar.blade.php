@@ -32,7 +32,7 @@
     <div class="navbarhome" id="navbarhome">
         <div class="containertest">
             <div class="logo">
-                <img src="{{asset('realestatelogo.jpg')}}" alt="Tegimi">
+                <h5>Tegemmi</h5>
             </div>
             <div class="navhome">
                 <ul>

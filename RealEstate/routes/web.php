@@ -118,13 +118,16 @@ Route::post('/updateProfile', [HomeController::class, 'updateProfile']);
 
 
 
-//------------------------ wishList ------------------------------//
+//------------------------ Reswervation ------------------------------//
+
+Route::get('/reservationHistory', [App\Http\Controllers\User\HomeController::class, 'reservationHistory']);
+Route::post('/annulerReservation/{id}', [App\Http\Controllers\User\HomeController::class,'annulerReservation']);
 
 
-Route::get('/mywishlist', [HomeController::class, 'ShowWishlist']);
 
 
-//------------------------ End wishList ------------------------------//
+
+//------------------------ End reservation ------------------------------//
 
 
 
@@ -196,6 +199,6 @@ Route::get('/logout', [AuthController::class, 'LogOut']);
 
 // reservation
 
-// Route::get('/reserver', [ReservationController::class, 'index']);
+Route::get('/reserver/{id}', [ReservationController::class, 'index']);
 
-// Route::post('/reservation', [ReservationController::class, 'reserverNow']);
+Route::post('/reservation', [ReservationController::class, 'reserverNow']);
